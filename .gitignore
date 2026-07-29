@@ -1,0 +1,40 @@
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+credentials*
+secrets*
+
+# Generated and large build artifacts
+*.img
+*.iso
+*.bin
+*.o
+*.ko
+*.dtb
+*.tar
+*.tar.gz
+*.tar.xz
+*.zip
+core
+vmcore*
+
+# Temporary benchmark files
+results/tmp/
+*.raw
+*.yuv
+*.nv12
+
