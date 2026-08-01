@@ -1,0 +1,14 @@
+rkisp-statistics (platform: rkisp):
+	/dev/video7
+	/dev/video8
+
+rkisp_mainpath (platform:rkisp-vir0):
+	/dev/video0
+	/dev/video1
+	/dev/video2
+	/dev/video3
+	/dev/video4
+	/dev/video5
+	/dev/video6
+	/dev/media0
+

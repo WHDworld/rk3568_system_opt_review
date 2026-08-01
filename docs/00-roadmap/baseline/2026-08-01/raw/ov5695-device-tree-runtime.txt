@@ -1,0 +1,26 @@
+=== I2C binding ===
+lrwxrwxrwx 1 root root 0 8月   1 18:00 /sys/bus/i2c/devices/2-0036/driver -> ../../../../../bus/i2c/drivers/ov5695
+/sys/bus/i2c/drivers/ov5695
+=== OF full name ===
+/bin/sh: 1: cannot open /sys/bus/i2c/devices/2-0036/of_node/full_name: No such file
+=== compatible ===
+ovti,ov5695
+=== module string properties ===
+rockchip,camera-module-facing: back
+rockchip,camera-module-name: TongJu
+rockchip,camera-module-lens-name: CHT842-MD
+clock-names: xvclk
+status: okay
+=== binary DT properties ===
+-- reg
+ 00 00 00 36
+-- reset-gpios
+ 00 00 00 8d 00 00 00 1c 00 00 00 01
+-- pwdn-gpios
+ 00 00 00 8d 00 00 00 1d 00 00 00 00
+-- clocks
+ 00 00 00 25 00 00 00 d6
+-- power-domains
+ 00 00 00 27 00 00 00 08
+-- endpoint data-lanes
+ 00 00 00 01 00 00 00 02

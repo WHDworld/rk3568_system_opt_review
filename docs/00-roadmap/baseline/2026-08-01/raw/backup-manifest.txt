@@ -1,0 +1,29 @@
+=== backup location ===
+/home/whd/experiment/rk3568_linux_5.10_20250211/device-backups/topeet-rk3568/2026-08-01
+=== device partition metadata ===
+uboot      /dev/mmcblk0p1
+4194304
+misc       /dev/mmcblk0p2
+4194304
+boot       /dev/mmcblk0p3
+67108864
+recovery   /dev/mmcblk0p4
+134217728
+backup     /dev/mmcblk0p5
+33554432
+rootfs     /dev/mmcblk0p6
+31016845312
+=== device boot SHA-256 ===
+8b285a8bb93f61c8440c4047a44933714a89c00d460ab22cddad8d713aa1a253  /dev/block/by-name/boot
+=== pulled boot SHA-256 ===
+8b285a8bb93f61c8440c4047a44933714a89c00d460ab22cddad8d713aa1a253  /home/whd/experiment/rk3568_linux_5.10_20250211/device-backups/topeet-rk3568/2026-08-01/boot-current-emmc.img
+=== pulled boot metadata ===
+/home/whd/experiment/rk3568_linux_5.10_20250211/device-backups/topeet-rk3568/2026-08-01/boot-current-emmc.img size=67108864 mtime=2026-08-01 20:53:48.297953368 +0800
+/home/whd/experiment/rk3568_linux_5.10_20250211/device-backups/topeet-rk3568/2026-08-01/boot-current-emmc.img: Device Tree Blob version 17, size=1536, boot CPU=0, string block size=190, DT structure block size=1004
+=== SDK kernel images ===
+kernel/boot.img size=39625216 mtime=2026-07-26 17:08:53.978996179 +0800
+kernel/resource.img size=145408 mtime=2026-07-26 17:08:53.562983777 +0800
+output/update/Image/update.img size=3744008778 mtime=2026-07-05 00:59:54.277641236 +0800
+cd581b682bc079139144e150de0ee5b9e30bd6d2cf1252a7085a8a4bff42895f  kernel/boot.img
+840a6a562c88265d2c20efec30f877d4886c2d8c04ccf9471641eebe11e28761  kernel/resource.img
+d50d79baf33d71e849e79ae5a3d0a523f957b36745ae20483cc67d8046d7ef58  output/update/Image/update.img

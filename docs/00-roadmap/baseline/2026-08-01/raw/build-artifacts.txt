@@ -1,0 +1,13 @@
+Build command: ./build.sh kernel
+Build date: 2026-08-01
+Exit status: 0
+Kernel DTS target: topeet-rk3568-linux
+
+9b63fe2e0dea2a15e3deec56846e26899c3887649f77a628eef079c100ec0aa6  kernel/boot.img
+840a6a562c88265d2c20efec30f877d4886c2d8c04ccf9471641eebe11e28761  kernel/resource.img
+1d992de82ffa39902863a957c602cd6b7e29e7a71c0d32f4658c4fe1582710c1  kernel/arch/arm64/boot/dts/rockchip/topeet-rk3568-linux.dtb
+
+kernel/boot.img 39625216 bytes 2026-08-01 20:55:20 +0800
+kernel/resource.img 145408 bytes 2026-08-01 20:55:20 +0800
+kernel/arch/arm64/boot/dts/rockchip/topeet-rk3568-linux.dtb 107343 bytes 2026-08-01 16:08:46 +0800
+

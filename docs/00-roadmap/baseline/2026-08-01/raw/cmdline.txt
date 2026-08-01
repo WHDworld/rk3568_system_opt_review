@@ -1,0 +1,1 @@
+storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  root=/dev/mmcblk0p6 androidboot.verifiedbootstate=orange rw rootwait earlycon=uart8250,mmio32,0xfe660000 console=ttyFIQ0

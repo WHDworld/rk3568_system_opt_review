@@ -1,0 +1,93 @@
+[    1.694702] cma: Reserved 16 MiB at 0x00000000eec00000
+[    1.936187] Memory: 7829612K/8108032K available (20992K kernel code, 3566K rwdata, 6508K rodata, 7232K init, 558K bss, 262036K reserved, 16384K cma-reserved)
+[    3.795636] iommu: Default domain type: Translated 
+[    3.798978] SCSI subsystem initialized
+[    4.286166] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+[    4.286840] rockchip-csi2-dphy-hw fe870000.csi2-dphy-hw: csi2 dphy hw probe successfully!
+[    4.287651] rockchip-csi2-dphy csi2-dphy0: csi2 dphy0 probe successfully!
+[    4.303066] mpp_vdpu2 fdea0400.vdpu: Adding to iommu group 1
+[    4.304239] mpp_vepu2 fdee0000.vepu: Adding to iommu group 3
+[    4.305497] mpp-iep2 fdef0000.iep: Adding to iommu group 4
+[    4.306511] mpp_jpgdec fded0000.jpegd: Adding to iommu group 2
+[    4.322496] rockchip-vop2 fe040000.vop: Adding to iommu group 8
+[    4.328831] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp0 assign plane mask: 0x0, primary plane phy id: -1
+[    4.328851] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp1 assign plane mask: 0x2a, primary plane phy id: 5
+[    4.328862] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp2 assign plane mask: 0x15, primary plane phy id: 4
+[    4.329129] [drm] failed to init overlay plane Cluster0-win1
+[    4.329173] [drm] failed to init overlay plane Cluster1-win1
+[    4.329302] rockchip-drm display-subsystem: bound fe040000.vop (ops 0xffffffc0095ae288)
+[    4.798729] i2c /dev entries driver
+[    4.855538] input: rk805 pwrkey as /devices/platform/fdd40000.i2c/i2c-0/0-0020/rk805-pwrkey/input/input0
+[    5.007870] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.104540] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.201187] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.297859] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.394517] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.491189] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.587110] <<-GTP-ERROR->> I2C read 0x8000, 10 bytes, double check failed!
+[    5.587876] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    5.683776] <<-GTP-ERROR->> GTP i2c test failed time 1.
+[    5.701190] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    5.797107] <<-GTP-ERROR->> GTP i2c test failed time 2.
+[    5.814531] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    5.910450] <<-GTP-ERROR->> GTP i2c test failed time 3.
+[    5.927873] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    6.023775] <<-GTP-ERROR->> GTP i2c test failed time 4.
+[    6.041187] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    6.137107] <<-GTP-ERROR->> GTP i2c test failed time 5.
+[    6.153776] <goodix_ts_probe>_2804    I2C communication ERROR!
+[    6.154176]  i2c_new_client_device+0x148/0x340
+[    6.154184]  of_i2c_register_devices+0x104/0x1d0
+[    6.154190]  i2c_register_adapter+0x1e8/0x68c
+[    6.154197]  __i2c_add_numbered_adapter+0x64/0xb4
+[    6.154205]  i2c_add_numbered_adapter+0x24/0x40
+[    6.154211]  rk3x_i2c_probe+0x2f8/0x4ac
+[    6.154288]  rk3x_i2c_driver_init+0x24/0x30
+[    6.176687] rkisp_hw fdff0000.rkisp: Adding to iommu group 7
+[    6.176923] rkisp_hw fdff0000.rkisp: is_thunderboot: 0
+[    6.176936] rkisp_hw fdff0000.rkisp: max input:0x0@0fps
+[    6.176970] rkisp_hw fdff0000.rkisp: can't request region for resource [mem 0xfdff0000-0xfdffffff]
+[    6.177202] rkisp_hw fdff0000.rkisp: no find phandle sram
+[    6.177711] rkisp rkisp-vir0: rkisp driver version: v02.02.01
+[    6.177860] rkisp rkisp-vir0: No memory-region-thunderboot specified
+[    6.178058] rkisp rkisp-vir0: Entity type for entity rkisp-isp-subdev was not initialized!
+[    6.178080] rkisp rkisp-vir0: Entity type for entity rkisp-csi-subdev was not initialized!
+[    6.204036] rk-multicodecs rk809-sound: Audio routing invalid/unspecified
+[    6.217897] ov5695 2-0036: driver version: 00.01.04
+[    6.218012] ov5695 2-0036: supply avdd not found, using dummy regulator
+[    6.218158] ov5695 2-0036: supply dovdd not found, using dummy regulator
+[    6.218208] ov5695 2-0036: supply dvdd not found, using dummy regulator
+[    6.220013] ov5695 2-0036: Detected OV005695 sensor
+[    6.220072] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov5695 2-0036:bus type 5
+[    6.220462] rockchip-pinctrl pinctrl: could not request pin 144 (gpio4-16) from group cif-clk  on device rockchip-pinctrl
+[    6.225117] rga_iommu: IOMMU binding successfully, default mapping core[0x4]
+[    6.248156] mpp_rkvenc fdf40000.rkvenc: Adding to iommu group 5
+[    6.250299] mpp_rkvdec2 fdf80200.rkvdec: Adding to iommu group 6
+[    6.259121] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp0 assign plane mask: 0x0, primary plane phy id: -1
+[    6.259146] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp1 assign plane mask: 0x2a, primary plane phy id: 5
+[    6.259158] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp2 assign plane mask: 0x15, primary plane phy id: 4
+[    6.259457] [drm] failed to init overlay plane Cluster0-win1
+[    6.259504] [drm] failed to init overlay plane Cluster1-win1
+[    6.259658] rockchip-drm display-subsystem: bound fe040000.vop (ops 0xffffffc0095ae288)
+[    6.259870] rockchip-drm display-subsystem: bound fdc60000.syscon:lvds (ops 0xffffffc0095c0330)
+[    6.272551] rockchip-drm display-subsystem: [drm] fb0: rockchipdrmfb frame buffer device
+[    6.273404] [drm] Initialized rockchip 3.0.0 20140818 for display-subsystem on minor 0
+[    6.277339] RKNPU fde40000.npu: Adding to iommu group 0
+[    6.277849] RKNPU fde40000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+[    6.278528] [drm] Initialized rknpu 0.9.6 20240322 for fde40000.npu on minor 1
+[    6.304967] rkisp rkisp-vir0: clear unready subdev num: 1
+[    6.305517] rkisp-vir0: Async subdev notifier completed
+[    7.721540] rkisp rkisp-vir0: first params buf queue
+[   17.240743] Freeing drm_logo memory: 736K
+[   22.161599] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[   22.163115] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[   22.163157] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[   24.213268] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[   24.213293] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[   24.232662] rkisp rkisp-vir0: first params buf queue
+[  176.301608] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  176.303319] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  176.303361] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  176.748728] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  176.748740] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  176.761182] rkisp rkisp-vir0: first params buf queue

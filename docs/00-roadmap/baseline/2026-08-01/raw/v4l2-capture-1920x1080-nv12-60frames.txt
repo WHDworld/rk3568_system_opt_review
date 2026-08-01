@@ -1,0 +1,87 @@
+VIDIOC_QUERYCAP: ok
+VIDIOC_G_FMT: ok
+VIDIOC_S_FMT: ok
+Format Video Capture Multiplanar:
+	Width/Height      : 1920/1080
+	Pixel Format      : 'NV12' (Y/CbCr 4:2:0)
+	Field             : None
+	Number of planes  : 1
+	Flags             : 
+	Colorspace        : Default
+	Transfer Function : Default
+	YCbCr/HSV Encoding: Default
+	Quantization      : Full Range
+	Plane 0           :
+	   Bytes per Line : 1920
+	   Size Image     : 3110400
+		VIDIOC_REQBUFS returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QUERYBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_QBUF returned 0 (Success)
+		VIDIOC_STREAMON returned 0 (Success)
+cap dqbuf: 0 seq:      0 bytesused: 3110400 ts: 11054.528988 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:      1 bytesused: 3110400 ts: 11054.562181 delta: 33.193 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:      2 bytesused: 3110400 ts: 11054.595463 delta: 33.282 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:      3 bytesused: 3110400 ts: 11054.629074 delta: 33.611 ms (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:      4 bytesused: 3110400 ts: 11054.662031 delta: 32.957 ms fps: 30.07 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:      5 bytesused: 3110400 ts: 11054.695326 delta: 33.295 ms fps: 30.06 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:      6 bytesused: 3110400 ts: 11054.728599 delta: 33.273 ms fps: 30.06 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:      7 bytesused: 3110400 ts: 11054.761883 delta: 33.284 ms fps: 30.06 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:      8 bytesused: 3110400 ts: 11054.795500 delta: 33.617 ms fps: 30.02 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:      9 bytesused: 3110400 ts: 11054.828785 delta: 33.285 ms fps: 30.02 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     10 bytesused: 3110400 ts: 11054.861732 delta: 32.947 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     11 bytesused: 3110400 ts: 11054.895345 delta: 33.613 ms fps: 30.03 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     12 bytesused: 3110400 ts: 11054.928627 delta: 33.282 ms fps: 30.03 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     13 bytesused: 3110400 ts: 11054.961909 delta: 33.282 ms fps: 30.03 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     14 bytesused: 3110400 ts: 11054.994862 delta: 32.953 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     15 bytesused: 3110400 ts: 11055.028483 delta: 33.621 ms fps: 30.03 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     16 bytesused: 3110400 ts: 11055.061760 delta: 33.277 ms fps: 30.03 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     17 bytesused: 3110400 ts: 11055.095047 delta: 33.287 ms fps: 30.03 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     18 bytesused: 3110400 ts: 11055.128000 delta: 32.953 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     19 bytesused: 3110400 ts: 11055.161280 delta: 33.280 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     20 bytesused: 3110400 ts: 11055.194902 delta: 33.622 ms fps: 30.03 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     21 bytesused: 3110400 ts: 11055.227850 delta: 32.948 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     22 bytesused: 3110400 ts: 11055.261133 delta: 33.283 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     23 bytesused: 3110400 ts: 11055.294418 delta: 33.285 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     24 bytesused: 3110400 ts: 11055.328027 delta: 33.609 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     25 bytesused: 3110400 ts: 11055.361315 delta: 33.288 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     26 bytesused: 3110400 ts: 11055.394598 delta: 33.283 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     27 bytesused: 3110400 ts: 11055.427551 delta: 32.953 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     28 bytesused: 3110400 ts: 11055.461159 delta: 33.608 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     29 bytesused: 3110400 ts: 11055.494118 delta: 32.959 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     30 bytesused: 3110400 ts: 11055.527729 delta: 33.611 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     31 bytesused: 3110400 ts: 11055.560686 delta: 32.957 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     32 bytesused: 3110400 ts: 11055.594292 delta: 33.606 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     33 bytesused: 3110400 ts: 11055.627580 delta: 33.288 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     34 bytesused: 3110400 ts: 11055.660537 delta: 32.957 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     35 bytesused: 3110400 ts: 11055.694146 delta: 33.609 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     36 bytesused: 3110400 ts: 11055.727434 delta: 33.288 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     37 bytesused: 3110400 ts: 11055.760385 delta: 32.951 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     38 bytesused: 3110400 ts: 11055.793670 delta: 33.285 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     39 bytesused: 3110400 ts: 11055.827286 delta: 33.616 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     40 bytesused: 3110400 ts: 11055.860238 delta: 32.952 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     41 bytesused: 3110400 ts: 11055.893522 delta: 33.284 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     42 bytesused: 3110400 ts: 11055.927139 delta: 33.617 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     43 bytesused: 3110400 ts: 11055.960085 delta: 32.946 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     44 bytesused: 3110400 ts: 11055.993370 delta: 33.285 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     45 bytesused: 3110400 ts: 11056.026656 delta: 33.286 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     46 bytesused: 3110400 ts: 11056.059942 delta: 33.286 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     47 bytesused: 3110400 ts: 11056.093224 delta: 33.282 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     48 bytesused: 3110400 ts: 11056.126835 delta: 33.611 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     49 bytesused: 3110400 ts: 11056.160120 delta: 33.285 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     50 bytesused: 3110400 ts: 11056.193072 delta: 32.952 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     51 bytesused: 3110400 ts: 11056.226691 delta: 33.619 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     52 bytesused: 3110400 ts: 11056.259971 delta: 33.280 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     53 bytesused: 3110400 ts: 11056.292925 delta: 32.954 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     54 bytesused: 3110400 ts: 11056.326539 delta: 33.614 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     55 bytesused: 3110400 ts: 11056.359821 delta: 33.282 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 0 seq:     56 bytesused: 3110400 ts: 11056.393104 delta: 33.283 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 1 seq:     57 bytesused: 3110400 ts: 11056.426390 delta: 33.286 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+cap dqbuf: 2 seq:     58 bytesused: 3110400 ts: 11056.459340 delta: 32.950 ms fps: 30.05 (ts-monotonic, ts-src-eof)
+cap dqbuf: 3 seq:     59 bytesused: 3110400 ts: 11056.492966 delta: 33.626 ms fps: 30.04 (ts-monotonic, ts-src-eof)
+

@@ -6,9 +6,9 @@
 
 | 里程碑 | 验收条件 | 状态 |
 |---|---|---|
-| M0：构建与回滚 | 能编译、部署、确认版本并恢复 | 待复核 |
-| M1：OV5695 BSP 基线 | probe、chip ID、media topology | 待执行 |
-| M2：V4L2 采集 | NV12 连续采集、统计丢帧 | 待执行 |
+| M0：构建与回滚 | 能编译、部署、确认版本并恢复 | 进行中：构建/部署已验证，待受控回滚演练 |
+| M1：OV5695 BSP 基线 | probe、chip ID、media topology | 已完成 |
+| M2：V4L2 采集 | NV12 连续采集、统计丢帧 | 进行中：已完成 60 帧短测，待长时间丢帧统计 |
 | M3：DRM 独立显示 | test pattern + atomic modeset | 待执行 |
 | M4：DMA-BUF 直显 | PRIME import、正确 buffer 生命周期 | 待执行 |
 | M5：性能与内存 | A/B benchmark、perf/ftrace、CMA | 待执行 |
@@ -18,3 +18,6 @@
 
 - [RK3568 OV5695 Camera 项目计划](../03-camera-pipeline/RK3568_OV5695_MIPI_V4L2_DRM项目设计与四周学习计划.md)
 
+最新基线与验收记录：
+
+- [2026-08-01 RK3568 + OV5695 项目基线](baseline/2026-08-01/README.md)

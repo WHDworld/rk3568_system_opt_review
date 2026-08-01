@@ -1,0 +1,93 @@
+00110000-0012ffff : ramoops:dmesg
+00130000-001affff : ramoops:console
+001b0000-001fffff : ramoops:pmsg
+00200000-083fffff : System RAM
+  00200000-01cfffff : Kernel code
+  01d00000-0240ffff : reserved
+  02410000-0281ffff : Kernel data
+  08300000-0831afff : reserved
+09400000-efffffff : System RAM
+  e9f00000-edfb7fff : reserved
+  eec00000-efbfffff : reserved
+  eff00000-eff07fff : reserved
+fcc0c100-fcffffff : fcc00000.dwc3 dwc3@fcc00000
+fd000000-fd007fff : dwc3@fd000000
+  fd000000-fd007fff : xhci-hcd.0.auto dwc3@fd000000
+fd00c100-fd3fffff : fd000000.dwc3 dwc3@fd000000
+fd800000-fd83ffff : fd800000.usb usb@fd800000
+fd840000-fd87ffff : fd840000.usb usb@fd840000
+fd880000-fd8bffff : fd880000.usb usb@fd880000
+fd8c0000-fd8fffff : fd8c0000.usb usb@fd8c0000
+fdcc0000-fdccafff : fdcc0000.sram sram@fdcc0000
+fdd40000-fdd40fff : fdd40000.i2c i2c@fdd40000
+fdd60000-fdd600ff : fdd60000.gpio0 gpio0@fdd60000
+fde00000-fde000ff : fde00000.pvtm pvtm@fde00000
+fde4b000-fde4b03f : fde4b000.iommu iommu@fde4b000
+fde60000-fde63fff : fde60000.gpu
+fde80000-fde800ff : fde80000.pvtm pvtm@fde80000
+fde90000-fde900ff : fde90000.pvtm pvtm@fde90000
+fdea0800-fdea083f : fdea0800.iommu iommu@fdea0800
+fded0480-fded04bf : fded0480.iommu iommu@fded0480
+fdee0800-fdee083f : fdee0800.iommu iommu@fdee0800
+fdef0800-fdef08ff : fdef0800.iommu iommu@fdef0800
+fdf40f00-fdf40f3f : fdf40f00.iommu iommu@fdf40f00
+fdf40f40-fdf40f7f : fdf40f00.iommu iommu@fdf40f00
+fdf80800-fdf8083f : fdf80800.iommu iommu@fdf80800
+fdf80840-fdf8087f : fdf80800.iommu iommu@fdf80800
+fdff1a00-fdff1aff : fdff1a00.iommu iommu@fdff1a00
+fe010000-fe01ffff : fe010000.ethernet ethernet@fe010000
+fe040000-fe042fff : fe040000.vop regs
+fe043e00-fe043eff : fe043e00.iommu iommu@fe043e00
+fe043f00-fe043fff : fe043e00.iommu iommu@fe043e00
+fe044000-fe044fff : fe040000.vop gamma_lut
+fe102000-fe1023ff : fe102000.nocp-cpu nocp-cpu@fe102000
+fe102400-fe1027ff : fe102400.nocp-gpu-vpu-rga-venc nocp-gpu-vpu-rga-venc@fe102400
+fe102800-fe102bff : fe102800.nocp-vdec nocp-vdec@fe102800
+fe102c00-fe102fff : fe102c00.nocp-vi-usb-peri-pipe nocp-vi-usb-peri-pipe@fe102c00
+fe103000-fe1033ff : fe103000.nocp-vo nocp-vo@fe103000
+fe230000-fe2303ff : fe230000.dfi dfi@fe230000
+fe2a0000-fe2affff : fe2a0000.ethernet ethernet@fe2a0000
+fe2b0000-fe2b3fff : fe2b0000.dwmmc dwmmc@fe2b0000
+fe300000-fe303fff : fe300000.spi spi@fe300000
+fe310000-fe31ffff : fe310000.sdhci sdhci@fe310000
+fe388000-fe389fff : fe388000.rng rng@fe388000
+fe38c000-fe38ffff : fe38c000.otp otp@fe38c000
+fe400000-fe400fff : fe400000.i2s i2s@fe400000
+fe410000-fe410fff : fe410000.i2s i2s@fe410000
+fe530000-fe533fff : dmac@fe530000
+  fe530000-fe533fff : fe530000.dmac dmac@fe530000
+fe550000-fe553fff : dmac@fe550000
+  fe550000-fe553fff : fe550000.dmac dmac@fe550000
+fe580000-fe580fff : fe580000.can can@fe580000
+fe5a0000-fe5a0fff : fe5a0000.i2c i2c@fe5a0000
+fe5b0000-fe5b0fff : fe5b0000.i2c i2c@fe5b0000
+fe5e0000-fe5e0fff : fe5e0000.i2c i2c@fe5e0000
+fe600000-fe6000ff : fe600000.watchdog watchdog@fe600000
+fe680000-fe68001f : serial
+fe6b0000-fe6b001f : serial
+fe6d0000-fe6d001f : serial
+fe710000-fe7100ff : fe710000.tsadc tsadc@fe710000
+fe720000-fe7200ff : fe720000.saradc saradc@fe720000
+fe740000-fe7400ff : fe740000.gpio1 gpio1@fe740000
+fe750000-fe7500ff : fe750000.gpio2 gpio2@fe750000
+fe760000-fe7600ff : fe760000.gpio3 gpio3@fe760000
+fe770000-fe7700ff : fe770000.gpio4 gpio4@fe770000
+fe820000-fe8200ff : fe820000.phy phy@fe820000
+fe830000-fe8300ff : fe830000.phy phy@fe830000
+fe840000-fe8400ff : fe840000.phy phy@fe840000
+fe850000-fe85ffff : fe850000.phy phy
+fe870000-fe870fff : fe870000.csi2-dphy-hw csi2-dphy-hw@fe870000
+fe8a0000-fe8affff : fe8a0000.usb2-phy usb2-phy@fe8a0000
+fe8b0000-fe8bffff : fe8b0000.usb2-phy usb2-phy@fe8b0000
+fe8c0000-fe8dffff : fe8c0000.phy phy@fe8c0000
+100000000-1ffffffff : System RAM
+  1f6600000-1fedfffff : reserved
+  1fef12000-1fef71fff : reserved
+  1fef72000-1fef72fff : reserved
+  1fef73000-1fefeefff : reserved
+  1feff1000-1feff1fff : reserved
+  1feff2000-1feff2fff : reserved
+  1feff3000-1ff003fff : reserved
+  1ff004000-1ff004fff : reserved
+  1ff005000-1ff088fff : reserved
+  1ff089000-1ffffffff : reserved

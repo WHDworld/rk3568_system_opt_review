@@ -1,0 +1,21 @@
+=== serial devices ===
+crw------- 1 root tty     253,  0 8月   1 18:00 /dev/ttyFIQ0
+crw-rw---- 1 root dialout   4, 68 8月   1 18:00 /dev/ttyS4
+crw-rw---- 1 root dialout   4, 71 8月   1 18:00 /dev/ttyS7
+crw-rw---- 1 root dialout   4, 73 8月   1 18:00 /dev/ttyS9
+=== console cmdline ===
+storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  root=/dev/mmcblk0p6 androidboot.verifiedbootstate=orange rw rootwait earlycon=uart8250,mmio32,0xfe660000 console=ttyFIQ0
+=== serial log evidence ===
+[    1.396029] earlycon: uart8250 at MMIO32 0x00000000fe660000 (options '')
+[    1.490334] printk: bootconsole [uart8250] enabled
+[    1.774757] Kernel command line: storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  root=/dev/mmcblk0p6 androidboot.verifiedbootstate=orange rw rootwait earlycon=uart8250,mmio32,0xfe660000 console=ttyFIQ0
+[    2.250007] Console: colour dummy device 80x25
+[    2.656580] ramoops: console	0x80000@0x0000000000130000
+[    2.668126] printk: console [ramoops-1] enabled
+[    3.778089] printk: console [ttyFIQ0] enabled
+[    3.787217] printk: bootconsole [uart8250] disabled
+[    3.792757] Registered fiq debugger ttyFIQ0
+[    4.318377] fe680000.serial: ttyS4 at MMIO 0xfe680000 (irq = 79, base_baud = 1500000) is a 16550A
+[    4.318921] fe6b0000.serial: ttyS7 at MMIO 0xfe6b0000 (irq = 80, base_baud = 1500000) is a 16550A
+[    4.319545] fe6d0000.serial: ttyS9 at MMIO 0xfe6d0000 (irq = 81, base_baud = 1500000) is a 16550A
+[   13.827796] ttyFIQ ttyFIQ0: tty_port_close_start: tty->count = 1 port count = 2

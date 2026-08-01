@@ -1,0 +1,38 @@
+[    4.286840] rockchip-csi2-dphy-hw fe870000.csi2-dphy-hw: csi2 dphy hw probe successfully!
+[    4.287651] rockchip-csi2-dphy csi2-dphy0: csi2 dphy0 probe successfully!
+[    6.176687] rkisp_hw fdff0000.rkisp: Adding to iommu group 7
+[    6.176923] rkisp_hw fdff0000.rkisp: is_thunderboot: 0
+[    6.176936] rkisp_hw fdff0000.rkisp: max input:0x0@0fps
+[    6.176970] rkisp_hw fdff0000.rkisp: can't request region for resource [mem 0xfdff0000-0xfdffffff]
+[    6.177202] rkisp_hw fdff0000.rkisp: no find phandle sram
+[    6.177711] rkisp rkisp-vir0: rkisp driver version: v02.02.01
+[    6.177860] rkisp rkisp-vir0: No memory-region-thunderboot specified
+[    6.178058] rkisp rkisp-vir0: Entity type for entity rkisp-isp-subdev was not initialized!
+[    6.178080] rkisp rkisp-vir0: Entity type for entity rkisp-csi-subdev was not initialized!
+[    6.217897] ov5695 2-0036: driver version: 00.01.04
+[    6.218012] ov5695 2-0036: supply avdd not found, using dummy regulator
+[    6.218158] ov5695 2-0036: supply dovdd not found, using dummy regulator
+[    6.218208] ov5695 2-0036: supply dvdd not found, using dummy regulator
+[    6.220013] ov5695 2-0036: Detected OV005695 sensor
+[    6.220072] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov5695 2-0036:bus type 5
+[    6.304967] rkisp rkisp-vir0: clear unready subdev num: 1
+[    6.305517] rkisp-vir0: Async subdev notifier completed
+[    7.721540] rkisp rkisp-vir0: first params buf queue
+[   22.161599] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[   22.163115] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[   22.163157] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[   24.213268] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[   24.213293] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[   24.232662] rkisp rkisp-vir0: first params buf queue
+[  176.301608] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  176.303319] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  176.303361] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  176.748728] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  176.748740] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  176.761182] rkisp rkisp-vir0: first params buf queue
+[11056.838881] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[11056.840515] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[11056.840559] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[11058.916813] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[11058.916825] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[11058.929342] rkisp rkisp-vir0: first params buf queue

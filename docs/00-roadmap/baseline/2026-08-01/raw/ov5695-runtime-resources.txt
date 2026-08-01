@@ -1,0 +1,20 @@
+=== clock summary filtered ===
+ xin24m                              25       27        0    24000000          0     0  50000
+    clk_cif_out                       1        2        0    24000000          0     0  50000
+          clk_isp                     1        2        0   297000000          0     0  50000
+                pclk_mipicsiphy       1        1        0    99000000          0     0  50000
+                aclk_isp              1        4        0   396000000          0     0  50000
+                   pclk_csi2host1       0        0        0    99000000          0     0  50000
+                   hclk_isp           1        4        0   198000000          0     0  50000
+             clk_ref24m               0        0        0    20000000          0     0  50000
+=== gpio debug filtered ===
+gpiochip3: GPIOs 96-127, parent: platform/fe760000.gpio3, gpio3:
+ gpio-104 (                    |snps,reset          ) out hi ACTIVE LOW
+ gpio-111 (                    |snps,reset          ) out hi ACTIVE LOW
+ gpio-124 (                    |reset               ) out hi ACTIVE LOW
+ gpio-125 (                    |pwdn                ) out hi 
+=== PM runtime ===
+runtime_status=active
+runtime_active_time=10975365
+runtime_suspended_time=1219
+control=auto

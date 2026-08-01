@@ -1,0 +1,69 @@
+=== CPU ===
+processor	: 0
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x2
+CPU part	: 0xd05
+CPU revision	: 0
+
+processor	: 1
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x2
+CPU part	: 0xd05
+CPU revision	: 0
+
+processor	: 2
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x2
+CPU part	: 0xd05
+CPU revision	: 0
+
+processor	: 3
+BogoMIPS	: 48.00
+Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm lrcpc dcpop asimddp
+CPU implementer	: 0x41
+CPU architecture: 8
+CPU variant	: 0x2
+CPU part	: 0xd05
+CPU revision	: 0
+
+Serial		: 0c265e7b71750cfd
+=== DT model ===
+TOPEET RK3568 EVB1 DDR4 V10 Board
+=== RAM ===
+              总计         已用        空闲      共享    缓冲/缓存    可用
+内存：       7.5Gi       568Mi       6.5Gi        17Mi       463Mi       6.8Gi
+交换：          0B          0B          0B
+MemTotal:        7853964 kB
+CmaTotal:          16384 kB
+CmaFree:           13264 kB
+=== block ===
+NAME                SIZE TYPE MOUNTPOINT
+mmcblk0      31268536320 disk 
+├─mmcblk0p1      4194304 part 
+├─mmcblk0p2      4194304 part 
+├─mmcblk0p3     67108864 part 
+├─mmcblk0p4    134217728 part 
+├─mmcblk0p5     33554432 part 
+└─mmcblk0p6  31016845312 part /
+mmcblk0boot0     4194304 disk 
+mmcblk0boot1     4194304 disk 
+=== partitions ===
+major minor  #blocks  name
+
+   1        0       4096 ram0
+ 179        0   30535680 mmcblk0
+ 179        1       4096 mmcblk0p1
+ 179        2       4096 mmcblk0p2
+ 179        3      65536 mmcblk0p3
+ 179        4     131072 mmcblk0p4
+ 179        5      32768 mmcblk0p5
+ 179        6   30289888 mmcblk0p6
