@@ -16,6 +16,11 @@
 #include <time.h>
 #include <unistd.h>
 
+#ifdef HAVE_X11
+#include <X11/Xlib.h>
+#include <X11/Xutil.h>
+#endif
+
 #define MAX_PLANES VIDEO_MAX_PLANES
 
 struct mapped_plane {
@@ -42,7 +47,25 @@ struct options {
 	int timeout_ms;
 	unsigned int log_every;
 	bool enumerate_only;
+	bool preview;
+	unsigned int preview_width;
+	unsigned int preview_height;
 };
+
+#ifdef HAVE_X11
+struct preview {
+	Display *display;
+	Window window;
+	GC gc;
+	Atom wm_delete;
+	XImage *image;
+	uint8_t *pixels;
+	unsigned int width;
+	unsigned int height;
+	uint64_t title_frames;
+	uint64_t title_start_ns;
+};
+#endif
 
 struct capture {
 	int fd;
@@ -54,6 +77,13 @@ struct capture {
 	unsigned int num_planes;
 	FILE *output;
 	FILE *csv;
+	uint32_t width;
+	uint32_t height;
+	uint32_t pixfmt;
+	uint32_t bytesperline;
+#ifdef HAVE_X11
+	struct preview preview;
+#endif
 };
 
 static volatile sig_atomic_t stop_requested;
@@ -117,6 +147,8 @@ static void usage(const char *program)
 		"  -c, --csv FILE          save per-frame diagnostics as CSV\n"
 		"  -t, --timeout MS        poll timeout (default 2000)\n"
 		"  -l, --log-every N       print every N frames (default 30)\n"
+		"  -P, --preview           show an X11 preview window\n"
+		"      --preview-size WxH  window size (default 640x360)\n"
 		"  -e, --enumerate         enumerate capabilities and exit\n"
 		"  -h, --help              show this help\n",
 		program);
@@ -135,6 +167,8 @@ static struct options parse_options(int argc, char **argv)
 		.fps_den = 1,
 		.timeout_ms = 2000,
 		.log_every = 30,
+		.preview_width = 640,
+		.preview_height = 360,
 	};
 	static const struct option long_options[] = {
 		{ "device", required_argument, NULL, 'd' },
@@ -148,13 +182,15 @@ static struct options parse_options(int argc, char **argv)
 		{ "csv", required_argument, NULL, 'c' },
 		{ "timeout", required_argument, NULL, 't' },
 		{ "log-every", required_argument, NULL, 'l' },
+		{ "preview", no_argument, NULL, 'P' },
+		{ "preview-size", required_argument, NULL, 1000 },
 		{ "enumerate", no_argument, NULL, 'e' },
 		{ "help", no_argument, NULL, 'h' },
 		{ NULL, 0, NULL, 0 },
 	};
 	int ch;
 
-	while ((ch = getopt_long(argc, argv, "d:W:H:p:b:n:r:o:c:t:l:eh",
+	while ((ch = getopt_long(argc, argv, "d:W:H:p:b:n:r:o:c:t:l:Peh",
 				 long_options, NULL)) != -1) {
 		switch (ch) {
 		case 'd': opt.device = optarg; break;
@@ -174,6 +210,15 @@ static struct options parse_options(int argc, char **argv)
 		case 'c': opt.csv = optarg; break;
 		case 't': opt.timeout_ms = strtol(optarg, NULL, 0); break;
 		case 'l': opt.log_every = strtoul(optarg, NULL, 0); break;
+		case 'P': opt.preview = true; break;
+		case 1000:
+			if (sscanf(optarg, "%ux%u", &opt.preview_width,
+				   &opt.preview_height) != 2 || !opt.preview_width ||
+			    !opt.preview_height) {
+				fprintf(stderr, "invalid preview size; use WxH\n");
+				exit(EXIT_FAILURE);
+			}
+			break;
 		case 'e': opt.enumerate_only = true; break;
 		case 'h': usage(argv[0]); exit(EXIT_SUCCESS);
 		default: usage(argv[0]); exit(EXIT_FAILURE);
@@ -183,6 +228,12 @@ static struct options parse_options(int argc, char **argv)
 		fprintf(stderr, "buffers must be >= 2, frames and timeout must be > 0\n");
 		exit(EXIT_FAILURE);
 	}
+#ifndef HAVE_X11
+	if (opt.preview) {
+		fprintf(stderr, "this binary was built without X11 preview support\n");
+		exit(EXIT_FAILURE);
+	}
+#endif
 	return opt;
 }
 
@@ -325,12 +376,172 @@ static int configure_format(struct capture *cap, const struct options *opt)
 	}
 	print_format("S_FMT", &fmt, cap->multiplanar);
 	cap->num_planes = cap->multiplanar ? fmt.fmt.pix_mp.num_planes : 1;
+	if (cap->multiplanar) {
+		cap->width = fmt.fmt.pix_mp.width;
+		cap->height = fmt.fmt.pix_mp.height;
+		cap->pixfmt = fmt.fmt.pix_mp.pixelformat;
+		cap->bytesperline = fmt.fmt.pix_mp.plane_fmt[0].bytesperline;
+	} else {
+		cap->width = fmt.fmt.pix.width;
+		cap->height = fmt.fmt.pix.height;
+		cap->pixfmt = fmt.fmt.pix.pixelformat;
+		cap->bytesperline = fmt.fmt.pix.bytesperline;
+	}
 	if (!cap->num_planes || cap->num_planes > MAX_PLANES) {
 		fprintf(stderr, "invalid plane count %u\n", cap->num_planes);
 		return -1;
 	}
 	return 0;
 }
+
+#ifdef HAVE_X11
+static uint8_t clamp_u8(int value)
+{
+	if (value < 0)
+		return 0;
+	if (value > 255)
+		return 255;
+	return value;
+}
+
+static int preview_init(struct capture *cap, const struct options *opt)
+{
+	struct preview *preview = &cap->preview;
+	int screen;
+	Visual *visual;
+	int depth;
+
+	if (!opt->preview)
+		return 0;
+	if (cap->pixfmt != V4L2_PIX_FMT_NV12 || cap->num_planes != 1) {
+		fprintf(stderr, "X11 preview currently requires one-plane NV12\n");
+		return -1;
+	}
+	preview->display = XOpenDisplay(NULL);
+	if (!preview->display) {
+		fprintf(stderr, "XOpenDisplay failed; check DISPLAY and Xauthority\n");
+		return -1;
+	}
+	preview->width = opt->preview_width;
+	preview->height = opt->preview_height;
+	screen = DefaultScreen(preview->display);
+	visual = DefaultVisual(preview->display, screen);
+	depth = DefaultDepth(preview->display, screen);
+	preview->window = XCreateSimpleWindow(preview->display,
+		RootWindow(preview->display, screen), 20, 20, preview->width,
+		preview->height, 1, BlackPixel(preview->display, screen),
+		BlackPixel(preview->display, screen));
+	XSelectInput(preview->display, preview->window,
+		ExposureMask | KeyPressMask | StructureNotifyMask);
+	preview->wm_delete = XInternAtom(preview->display, "WM_DELETE_WINDOW", False);
+	XSetWMProtocols(preview->display, preview->window, &preview->wm_delete, 1);
+	XStoreName(preview->display, preview->window, "OV5695 V4L2 Preview");
+	XMapRaised(preview->display, preview->window);
+	preview->gc = XCreateGC(preview->display, preview->window, 0, NULL);
+	preview->pixels = calloc((size_t)preview->width * preview->height, 4);
+	if (!preview->pixels) {
+		perror("calloc preview pixels");
+		return -1;
+	}
+	preview->image = XCreateImage(preview->display, visual, depth, ZPixmap, 0,
+		(char *)preview->pixels, preview->width, preview->height, 32, 0);
+	if (!preview->image) {
+		fprintf(stderr, "XCreateImage failed\n");
+		return -1;
+	}
+	XSync(preview->display, False);
+	printf("PREVIEW X11 window=%ux%u source=%ux%u stride=%u\n",
+	       preview->width, preview->height, cap->width, cap->height,
+	       cap->bytesperline);
+	return 0;
+}
+
+static bool preview_events(struct preview *preview)
+{
+	while (XPending(preview->display)) {
+		XEvent event;
+		XNextEvent(preview->display, &event);
+		if (event.type == ClientMessage &&
+		    (Atom)event.xclient.data.l[0] == preview->wm_delete)
+			return false;
+		if (event.type == KeyPress) {
+			char text[8] = { 0 };
+			KeySym key;
+			XLookupString(&event.xkey, text, sizeof(text), &key, NULL);
+			if (key == XK_Escape || text[0] == 'q' || text[0] == 'Q')
+				return false;
+		}
+	}
+	return true;
+}
+
+static int preview_frame(struct capture *cap, const uint8_t *nv12,
+			 size_t bytesused, uint64_t frames, uint32_t sequence,
+			 uint64_t forward_missing, uint64_t duplicates,
+			 uint64_t regressions)
+{
+	struct preview *preview = &cap->preview;
+	size_t y_size = (size_t)cap->bytesperline * cap->height;
+	const uint8_t *uv;
+	unsigned int x, y;
+	struct timespec now;
+	uint64_t now_ns;
+
+	if (!preview->display)
+		return 0;
+	if (!preview_events(preview)) {
+		stop_requested = 1;
+		return 0;
+	}
+	if (bytesused < y_size + (size_t)cap->bytesperline * cap->height / 2) {
+		fprintf(stderr, "preview payload too small: %zu\n", bytesused);
+		return -1;
+	}
+	uv = nv12 + y_size;
+	for (y = 0; y < preview->height; y++) {
+		unsigned int sy = (uint64_t)y * cap->height / preview->height;
+		const uint8_t *y_row = nv12 + (size_t)sy * cap->bytesperline;
+		const uint8_t *uv_row = uv + (size_t)(sy / 2) * cap->bytesperline;
+		uint32_t *dst = (uint32_t *)preview->pixels +
+			(size_t)y * preview->width;
+		for (x = 0; x < preview->width; x++) {
+			unsigned int sx = (uint64_t)x * cap->width / preview->width;
+			int yy = y_row[sx];
+			int u = uv_row[sx & ~1U] - 128;
+			int v = uv_row[(sx & ~1U) + 1] - 128;
+			int r = yy + ((359 * v) >> 8);
+			int g = yy - ((88 * u + 183 * v) >> 8);
+			int b = yy + ((454 * u) >> 8);
+			dst[x] = (uint32_t)clamp_u8(b) |
+				 ((uint32_t)clamp_u8(g) << 8) |
+				 ((uint32_t)clamp_u8(r) << 16);
+		}
+	}
+	XPutImage(preview->display, preview->window, preview->gc, preview->image,
+		  0, 0, 0, 0, preview->width, preview->height);
+	XFlush(preview->display);
+	clock_gettime(CLOCK_MONOTONIC, &now);
+	now_ns = timespec_ns(&now);
+	if (!preview->title_start_ns) {
+		preview->title_start_ns = now_ns;
+		preview->title_frames = frames;
+	} else if (now_ns - preview->title_start_ns >= 1000000000ULL) {
+		char title[256];
+		double fps = (frames - preview->title_frames) * 1000000000.0 /
+			(now_ns - preview->title_start_ns);
+		snprintf(title, sizeof(title),
+			 "OV5695 %ux%u NV12 | FPS %.2f | frame %llu seq %u | F/D/R %llu/%llu/%llu",
+			 cap->width, cap->height, fps, (unsigned long long)frames,
+			 sequence, (unsigned long long)forward_missing,
+			 (unsigned long long)duplicates,
+			 (unsigned long long)regressions);
+		XStoreName(preview->display, preview->window, title);
+		preview->title_start_ns = now_ns;
+		preview->title_frames = frames;
+	}
+	return 0;
+}
+#endif
 
 static void configure_frame_rate(struct capture *cap, const struct options *opt)
 {
@@ -579,6 +790,22 @@ static int run_capture(struct capture *cap, const struct options *opt)
 			bytesused += cap->multiplanar ? planes[p].bytesused : buf.bytesused;
 		if (write_payload(cap, &buf, planes, &total_bytes) < 0)
 			return -1;
+#ifdef HAVE_X11
+		if (cap->preview.display) {
+			const uint8_t *preview_data =
+				cap->buffers[buf.index].planes[0].addr;
+			size_t preview_offset = cap->multiplanar ?
+				planes[0].data_offset : 0;
+			size_t preview_used = cap->multiplanar ?
+				planes[0].bytesused : buf.bytesused;
+			if (preview_used < preview_offset ||
+			    preview_frame(cap, preview_data + preview_offset,
+				preview_used - preview_offset, frame_no + 1,
+				buf.sequence, forward_missing, duplicates,
+				regressions) < 0)
+				return -1;
+		}
+#endif
 		if (cap->csv)
 			fprintf(cap->csv, "%llu,%u,%u,%llu,%llu,%llu,%.3f,%llu,%u,%u,0x%x\n",
 				(unsigned long long)frame_no, buf.sequence, buf.index,
@@ -649,6 +876,23 @@ static void cleanup(struct capture *cap)
 		}
 	}
 	free(cap->buffers);
+#ifdef HAVE_X11
+	if (cap->preview.image) {
+		XDestroyImage(cap->preview.image);
+		cap->preview.image = NULL;
+		cap->preview.pixels = NULL;
+	} else {
+		free(cap->preview.pixels);
+	}
+	if (cap->preview.display) {
+		if (cap->preview.gc)
+			XFreeGC(cap->preview.display, cap->preview.gc);
+		if (cap->preview.window)
+			XDestroyWindow(cap->preview.display, cap->preview.window);
+		XCloseDisplay(cap->preview.display);
+		cap->preview.display = NULL;
+	}
+#endif
 	if (cap->output && fclose(cap->output) != 0)
 		perror("fclose output");
 	if (cap->csv && fclose(cap->csv) != 0)
@@ -681,6 +925,10 @@ int main(int argc, char **argv)
 	}
 	if (configure_format(&cap, &opt) < 0)
 		goto out;
+#ifdef HAVE_X11
+	if (preview_init(&cap, &opt) < 0)
+		goto out;
+#endif
 	configure_frame_rate(&cap, &opt);
 	if (opt.output) {
 		cap.output = fopen(opt.output, "wb");
