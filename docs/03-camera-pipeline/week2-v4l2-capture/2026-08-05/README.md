@@ -1,9 +1,13 @@
 # 第二周：OV5695 V4L2 采集、videobuf2 与 NV12 正确性测试报告
 
-测试日期：2026-08-05  
-测试平台：TOPEET RK3568 EVB1 DDR4 V10，Linux 5.10.160  
-Sensor：OV5695，I²C2 地址 0x36，2-lane MIPI CSI-2  
-采集节点：`/dev/video0`，`rkisp_mainpath`  
+测试日期：2026-08-05
+
+测试平台：TOPEET RK3568 EVB1 DDR4 V10，Linux 5.10.160
+
+Sensor：OV5695，I²C2 地址 0x36，2-lane MIPI CSI-2
+
+采集节点：`/dev/video0`，`rkisp_mainpath`
+
 测试工具：自研 `v4l2_capture`、v4l2-ctl、FFmpeg（仅离线转换）
 
 ## 1. 总体结论
@@ -300,4 +304,3 @@ b8e1c29b69158bb2794d6a9ab34cd4441080dd7cdaddfc7866fb41d9190e1263
 2. 在 RKISP 驱动中定位 `vb.sequence` 或等价字段的赋值点，对异常附近的 ISR、frame id、vb2 buffer done 做 ftrace。
 3. 同时记录 ISP frame-end IRQ 与用户态 DQBUF，判断 34～37 ms 长间隔后 30～32 ms 短间隔是否为硬件节奏补偿。
 4. 下一阶段开始 DMA-BUF 前，保留当前 MMAP 工具作为真值基线和 A/B 对照组。
-
