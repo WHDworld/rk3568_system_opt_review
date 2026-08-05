@@ -1,0 +1,11 @@
+frames=54000
+first_sequence=0
+last_sequence=53999
+forward_missing=9
+duplicates=9
+regressions=0
+min_interval_ms=30.191
+max_interval_ms=36.848
+avg_interval_ms=33.283565
+driver_elapsed_s=1797.279235
+driver_fps=30.044858

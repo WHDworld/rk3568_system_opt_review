@@ -1,0 +1,109 @@
+QUERYCAP driver=rkisp_v5 card=rkisp_mainpath bus=platform:rkisp-vir0 version=2.2.1 caps=0x04201000
+API type=multi-planar
+=== VIDIOC_ENUM_FMT / FRAMESIZES / FRAMEINTERVALS ===
+format[0]=UYVY description=UYVY 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[1]=422P description=Planar YUV 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[2]=NV16 description=Y/CbCr 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[3]=NV61 description=Y/CrCb 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[4]=YM16 description=Planar YUV 4:2:2 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[5]=NV21 description=Y/CrCb 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[6]=NV12 description=Y/CbCr 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[7]=NM21 description=Y/CrCb 4:2:0 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[8]=NM12 description=Y/CbCr 4:2:0 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[9]=YU12 description=Planar YUV 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[10]=YM24 description=Planar YUV 4:4:4 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+G_FMT actual=1920x1080 fourcc=NV12 field=1 planes=1 colorspace=0 ycbcr_enc=0 quantization=1 xfer_func=0
+  plane[0] bytesperline=1920 sizeimage=3110400
+S_FMT actual=1920x1080 fourcc=NV12 field=1 planes=1 colorspace=0 ycbcr_enc=0 quantization=1 xfer_func=0
+  plane[0] bytesperline=1920 sizeimage=3110400
+G_PARM unsupported by this node
+REQBUFS requested=4 actual=4
+MMAP buffer=0 plane=0 length=3133440 offset=0
+MMAP buffer=1 plane=0 length=3133440 offset=3133440
+MMAP buffer=2 plane=0 length=3133440 offset=6266880
+MMAP buffer=3 plane=0 length=3133440 offset=9400320
+STREAMON success target_frames=54000 timeout_ms=2000
+FRAME number=0 sequence=0 index=0 driver_ts_ns=8277967925000 dq_mono_ns=8277968418517 bytesused=3110400 interval_ms=0.000 gap=0 flags=0x2001
+FRAME number=899 sequence=899 index=3 driver_ts_ns=8307889845000 dq_mono_ns=8307890584190 bytesused=3110400 interval_ms=33.287 gap=0 flags=0x2001
+FRAME number=988 sequence=989 index=0 driver_ts_ns=8310853748000 dq_mono_ns=8310854175946 bytesused=3110400 interval_ms=34.623 gap=1 flags=0x2001
+FRAME number=1799 sequence=1799 index=3 driver_ts_ns=8337845046000 dq_mono_ns=8337845752825 bytesused=3110400 interval_ms=32.954 gap=0 flags=0x2001
+FRAME number=2699 sequence=2699 index=3 driver_ts_ns=8367800254000 dq_mono_ns=8367800980085 bytesused=3110400 interval_ms=33.284 gap=0 flags=0x2001
+FRAME number=3599 sequence=3599 index=3 driver_ts_ns=8397755790000 dq_mono_ns=8397756156595 bytesused=3110400 interval_ms=33.290 gap=0 flags=0x2001
+FRAME number=4499 sequence=4499 index=3 driver_ts_ns=8427710658000 dq_mono_ns=8427711358480 bytesused=3110400 interval_ms=32.948 gap=0 flags=0x2001
+FRAME number=5399 sequence=5399 index=3 driver_ts_ns=8457665861000 dq_mono_ns=8457666596239 bytesused=3110400 interval_ms=33.284 gap=0 flags=0x2001
+FRAME number=6299 sequence=6299 index=3 driver_ts_ns=8487621385000 dq_mono_ns=8487621754374 bytesused=3110400 interval_ms=33.593 gap=0 flags=0x2001
+FRAME number=7199 sequence=7199 index=3 driver_ts_ns=8517576598000 dq_mono_ns=8517576965592 bytesused=3110400 interval_ms=33.619 gap=0 flags=0x2001
+FRAME number=8099 sequence=8099 index=3 driver_ts_ns=8547531467000 dq_mono_ns=8547532184394 bytesused=3110400 interval_ms=32.957 gap=0 flags=0x2001
+FRAME number=8999 sequence=8999 index=3 driver_ts_ns=8577487007000 dq_mono_ns=8577487373737 bytesused=3110400 interval_ms=33.282 gap=0 flags=0x2001
+FRAME number=9899 sequence=9899 index=3 driver_ts_ns=8607442205000 dq_mono_ns=8607442607705 bytesused=3110400 interval_ms=33.613 gap=0 flags=0x2001
+FRAME number=10799 sequence=10799 index=3 driver_ts_ns=8637397402000 dq_mono_ns=8637397786549 bytesused=3110400 interval_ms=33.277 gap=0 flags=0x2001
+FRAME number=11699 sequence=11699 index=3 driver_ts_ns=8667352614000 dq_mono_ns=8667353004475 bytesused=3110400 interval_ms=33.615 gap=0 flags=0x2001
+FRAME number=12599 sequence=12599 index=3 driver_ts_ns=8697307484000 dq_mono_ns=8697308227943 bytesused=3110400 interval_ms=33.280 gap=0 flags=0x2001
+FRAME number=13499 sequence=13499 index=3 driver_ts_ns=8727262688000 dq_mono_ns=8727263404162 bytesused=3110400 interval_ms=32.959 gap=0 flags=0x2001
+FRAME number=13818 sequence=13819 index=2 driver_ts_ns=8737883746000 dq_mono_ns=8737884452729 bytesused=3110400 interval_ms=36.554 gap=1 flags=0x2001
+FRAME number=14399 sequence=14399 index=3 driver_ts_ns=8757218225000 dq_mono_ns=8757218623255 bytesused=3110400 interval_ms=33.618 gap=0 flags=0x2001
+FRAME number=15299 sequence=15299 index=3 driver_ts_ns=8787173425000 dq_mono_ns=8787173819890 bytesused=3110400 interval_ms=33.617 gap=0 flags=0x2001
+FRAME number=16199 sequence=16199 index=3 driver_ts_ns=8817128628000 dq_mono_ns=8817128992608 bytesused=3110400 interval_ms=33.277 gap=0 flags=0x2001
+FRAME number=17099 sequence=17099 index=3 driver_ts_ns=8847083831000 dq_mono_ns=8847084226868 bytesused=3110400 interval_ms=33.284 gap=0 flags=0x2001
+FRAME number=17245 sequence=17246 index=1 driver_ts_ns=8851946464000 dq_mono_ns=8851947101106 bytesused=3110400 interval_ms=36.848 gap=1 flags=0x2001
+FRAME number=17999 sequence=17999 index=3 driver_ts_ns=8877038703000 dq_mono_ns=8877039416794 bytesused=3110400 interval_ms=32.961 gap=0 flags=0x2001
+FRAME number=18899 sequence=18899 index=3 driver_ts_ns=8906993902000 dq_mono_ns=8906994632096 bytesused=3110400 interval_ms=33.283 gap=0 flags=0x2001
+FRAME number=19799 sequence=19799 index=3 driver_ts_ns=8936949111000 dq_mono_ns=8936949832522 bytesused=3110400 interval_ms=33.288 gap=0 flags=0x2001
+FRAME number=20699 sequence=20699 index=3 driver_ts_ns=8966904640000 dq_mono_ns=8966905022741 bytesused=3110400 interval_ms=33.612 gap=0 flags=0x2001
+FRAME number=21599 sequence=21599 index=3 driver_ts_ns=8996859516000 dq_mono_ns=8996860228709 bytesused=3110400 interval_ms=32.958 gap=0 flags=0x2001
+FRAME number=22499 sequence=22499 index=3 driver_ts_ns=9026815043000 dq_mono_ns=9026815412510 bytesused=3110400 interval_ms=33.278 gap=0 flags=0x2001
+FRAME number=22745 sequence=22746 index=1 driver_ts_ns=9035005563000 dq_mono_ns=9035006304083 bytesused=3110400 interval_ms=36.370 gap=1 flags=0x2001
+FRAME number=23399 sequence=23399 index=3 driver_ts_ns=9056769921000 dq_mono_ns=9056770640645 bytesused=3110400 interval_ms=32.950 gap=0 flags=0x2001
+FRAME number=24299 sequence=24299 index=3 driver_ts_ns=9086725457000 dq_mono_ns=9086725843697 bytesused=3110400 interval_ms=33.617 gap=0 flags=0x2001
+FRAME number=24576 sequence=24577 index=0 driver_ts_ns=9095947053000 dq_mono_ns=9095947436373 bytesused=3110400 interval_ms=35.668 gap=1 flags=0x2001
+FRAME number=25199 sequence=25199 index=3 driver_ts_ns=9116680661000 dq_mono_ns=9116681062790 bytesused=3110400 interval_ms=33.619 gap=0 flags=0x2001
+FRAME number=26099 sequence=26099 index=3 driver_ts_ns=9146635530000 dq_mono_ns=9146636258258 bytesused=3110400 interval_ms=33.286 gap=0 flags=0x2001
+FRAME number=26405 sequence=26406 index=1 driver_ts_ns=9156821980000 dq_mono_ns=9156822682323 bytesused=3110400 interval_ms=34.629 gap=1 flags=0x2001
+FRAME number=26999 sequence=26999 index=3 driver_ts_ns=9176590733000 dq_mono_ns=9176591450810 bytesused=3110400 interval_ms=32.955 gap=0 flags=0x2001
+FRAME number=27899 sequence=27899 index=3 driver_ts_ns=9206546265000 dq_mono_ns=9206546655611 bytesused=3110400 interval_ms=33.610 gap=0 flags=0x2001
+FRAME number=28239 sequence=28240 index=3 driver_ts_ns=9217863657000 dq_mono_ns=9217864192290 bytesused=3110400 interval_ms=34.264 gap=1 flags=0x2001
+FRAME number=28799 sequence=28799 index=3 driver_ts_ns=9236501471000 dq_mono_ns=9236501853705 bytesused=3110400 interval_ms=33.278 gap=0 flags=0x2001
+FRAME number=29699 sequence=29699 index=3 driver_ts_ns=9266456341000 dq_mono_ns=9266457045381 bytesused=3110400 interval_ms=33.281 gap=0 flags=0x2001
+FRAME number=30599 sequence=30599 index=3 driver_ts_ns=9296411878000 dq_mono_ns=9296412284599 bytesused=3110400 interval_ms=33.282 gap=0 flags=0x2001
+FRAME number=31499 sequence=31499 index=3 driver_ts_ns=9326367079000 dq_mono_ns=9326367480943 bytesused=3110400 interval_ms=33.616 gap=0 flags=0x2001
+FRAME number=32399 sequence=32399 index=3 driver_ts_ns=9356322285000 dq_mono_ns=9356322670577 bytesused=3110400 interval_ms=33.282 gap=0 flags=0x2001
+FRAME number=33299 sequence=33299 index=3 driver_ts_ns=9386277152000 dq_mono_ns=9386277880337 bytesused=3110400 interval_ms=32.948 gap=0 flags=0x2001
+FRAME number=34199 sequence=34199 index=3 driver_ts_ns=9416232688000 dq_mono_ns=9416233091264 bytesused=3110400 interval_ms=33.275 gap=0 flags=0x2001
+FRAME number=35099 sequence=35099 index=3 driver_ts_ns=9446187558000 dq_mono_ns=9446188280607 bytesused=3110400 interval_ms=33.282 gap=0 flags=0x2001
+FRAME number=35571 sequence=35572 index=3 driver_ts_ns=9461900306000 dq_mono_ns=9461900694811 bytesused=3110400 interval_ms=35.866 gap=1 flags=0x2001
+FRAME number=35999 sequence=35999 index=3 driver_ts_ns=9476143091000 dq_mono_ns=9476143490367 bytesused=3110400 interval_ms=33.612 gap=0 flags=0x2001
+FRAME number=36899 sequence=36899 index=3 driver_ts_ns=9506098302000 dq_mono_ns=9506098690210 bytesused=3110400 interval_ms=33.288 gap=0 flags=0x2001
+FRAME number=37799 sequence=37799 index=3 driver_ts_ns=9536053168000 dq_mono_ns=9536053881303 bytesused=3110400 interval_ms=32.955 gap=0 flags=0x2001
+FRAME number=38699 sequence=38699 index=3 driver_ts_ns=9566008701000 dq_mono_ns=9566009109146 bytesused=3110400 interval_ms=33.283 gap=0 flags=0x2001
+FRAME number=39599 sequence=39599 index=3 driver_ts_ns=9595963573000 dq_mono_ns=9595964287698 bytesused=3110400 interval_ms=32.955 gap=0 flags=0x2001
+FRAME number=40499 sequence=40499 index=3 driver_ts_ns=9625919102000 dq_mono_ns=9625919503875 bytesused=3110400 interval_ms=33.280 gap=0 flags=0x2001
+FRAME number=41311 sequence=41312 index=3 driver_ts_ns=9652946460000 dq_mono_ns=9652946865632 bytesused=3110400 interval_ms=34.389 gap=1 flags=0x2001
+FRAME number=41399 sequence=41399 index=3 driver_ts_ns=9655873980000 dq_mono_ns=9655874701093 bytesused=3110400 interval_ms=32.956 gap=0 flags=0x2001
+FRAME number=42299 sequence=42299 index=3 driver_ts_ns=9685829182000 dq_mono_ns=9685829899186 bytesused=3110400 interval_ms=33.282 gap=0 flags=0x2001
+FRAME number=43199 sequence=43199 index=3 driver_ts_ns=9715784383000 dq_mono_ns=9715785102238 bytesused=3110400 interval_ms=33.280 gap=0 flags=0x2001
+FRAME number=44099 sequence=44099 index=3 driver_ts_ns=9745739921000 dq_mono_ns=9745740310831 bytesused=3110400 interval_ms=33.616 gap=0 flags=0x2001
+FRAME number=44999 sequence=44999 index=3 driver_ts_ns=9775694792000 dq_mono_ns=9775695538674 bytesused=3110400 interval_ms=32.952 gap=0 flags=0x2001
+FRAME number=45899 sequence=45899 index=3 driver_ts_ns=9805650331000 dq_mono_ns=9805650734142 bytesused=3110400 interval_ms=33.284 gap=0 flags=0x2001
+FRAME number=46799 sequence=46799 index=3 driver_ts_ns=9835605199000 dq_mono_ns=9835605911819 bytesused=3110400 interval_ms=33.286 gap=0 flags=0x2001
+FRAME number=47699 sequence=47699 index=3 driver_ts_ns=9865560739000 dq_mono_ns=9865561106704 bytesused=3110400 interval_ms=33.620 gap=0 flags=0x2001
+FRAME number=48599 sequence=48599 index=3 driver_ts_ns=9895515622000 dq_mono_ns=9895516527047 bytesused=3110400 interval_ms=32.973 gap=0 flags=0x2001
+FRAME number=49499 sequence=49499 index=3 driver_ts_ns=9925471140000 dq_mono_ns=9925471548390 bytesused=3110400 interval_ms=33.283 gap=0 flags=0x2001
+FRAME number=50399 sequence=50399 index=3 driver_ts_ns=9955426339000 dq_mono_ns=9955426726358 bytesused=3110400 interval_ms=33.612 gap=0 flags=0x2001
+FRAME number=51299 sequence=51299 index=3 driver_ts_ns=9985381551000 dq_mono_ns=9985381931743 bytesused=3110400 interval_ms=33.622 gap=0 flags=0x2001
+FRAME number=52199 sequence=52199 index=3 driver_ts_ns=10015336750000 dq_mono_ns=10015337127795 bytesused=3110400 interval_ms=33.618 gap=0 flags=0x2001
+FRAME number=53099 sequence=53099 index=3 driver_ts_ns=10045291622000 dq_mono_ns=10045292371680 bytesused=3110400 interval_ms=33.285 gap=0 flags=0x2001
+FRAME number=53999 sequence=53999 index=3 driver_ts_ns=10075247160000 dq_mono_ns=10075247543523 bytesused=3110400 interval_ms=33.285 gap=0 flags=0x2001
+SUMMARY frames=54000 first_sequence=4294967287 last_sequence=53999 sequence_gaps=9 poll_timeouts=0 dq_eagain=0 total_bytes=167961600000 elapsed_s=1797.279125 fps=30.044860 interrupted=0
+STREAMOFF success
+exit_code=0

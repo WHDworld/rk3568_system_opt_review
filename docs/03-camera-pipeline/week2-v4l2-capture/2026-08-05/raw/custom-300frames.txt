@@ -1,0 +1,51 @@
+QUERYCAP driver=rkisp_v5 card=rkisp_mainpath bus=platform:rkisp-vir0 version=2.2.1 caps=0x04201000
+API type=multi-planar
+=== VIDIOC_ENUM_FMT / FRAMESIZES / FRAMEINTERVALS ===
+format[0]=UYVY description=UYVY 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[1]=422P description=Planar YUV 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[2]=NV16 description=Y/CbCr 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[3]=NV61 description=Y/CrCb 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[4]=YM16 description=Planar YUV 4:2:2 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[5]=NV21 description=Y/CrCb 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[6]=NV12 description=Y/CbCr 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[7]=NM21 description=Y/CrCb 4:2:0 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[8]=NM12 description=Y/CbCr 4:2:0 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[9]=YU12 description=Planar YUV 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[10]=YM24 description=Planar YUV 4:4:4 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+G_FMT actual=1920x1080 fourcc=NV12 field=1 planes=1 colorspace=0 ycbcr_enc=0 quantization=1 xfer_func=0
+  plane[0] bytesperline=1920 sizeimage=3110400
+S_FMT actual=1920x1080 fourcc=NV12 field=1 planes=1 colorspace=0 ycbcr_enc=0 quantization=1 xfer_func=0
+  plane[0] bytesperline=1920 sizeimage=3110400
+G_PARM unsupported by this node
+REQBUFS requested=4 actual=4
+MMAP buffer=0 plane=0 length=3133440 offset=0
+MMAP buffer=1 plane=0 length=3133440 offset=3133440
+MMAP buffer=2 plane=0 length=3133440 offset=6266880
+MMAP buffer=3 plane=0 length=3133440 offset=9400320
+STREAMON success target_frames=300 timeout_ms=2000
+FRAME number=0 sequence=0 index=0 driver_ts_ns=8052729373000 dq_mono_ns=8052729886760 bytesused=3110400 interval_ms=0.000 gap=0 flags=0x2001
+FRAME number=29 sequence=29 index=1 driver_ts_ns=8053694923000 dq_mono_ns=8053695305274 bytesused=3110400 interval_ms=33.608 gap=0 flags=0x2001
+FRAME number=59 sequence=59 index=3 driver_ts_ns=8054693104000 dq_mono_ns=8054693812499 bytesused=3110400 interval_ms=32.957 gap=0 flags=0x2001
+FRAME number=89 sequence=89 index=1 driver_ts_ns=8055691610000 dq_mono_ns=8055692320016 bytesused=3110400 interval_ms=32.954 gap=0 flags=0x2001
+FRAME number=119 sequence=119 index=3 driver_ts_ns=8056690117000 dq_mono_ns=8056690827533 bytesused=3110400 interval_ms=32.960 gap=0 flags=0x2001
+FRAME number=149 sequence=149 index=1 driver_ts_ns=8057688948000 dq_mono_ns=8057689332425 bytesused=3110400 interval_ms=33.610 gap=0 flags=0x2001
+FRAME number=179 sequence=179 index=3 driver_ts_ns=8058687130000 dq_mono_ns=8058687831192 bytesused=3110400 interval_ms=32.956 gap=0 flags=0x2001
+FRAME number=209 sequence=209 index=1 driver_ts_ns=8059685963000 dq_mono_ns=8059686344834 bytesused=3110400 interval_ms=33.609 gap=0 flags=0x2001
+FRAME number=239 sequence=239 index=3 driver_ts_ns=8060684142000 dq_mono_ns=8060684846226 bytesused=3110400 interval_ms=32.958 gap=0 flags=0x2001
+FRAME number=269 sequence=269 index=1 driver_ts_ns=8061682977000 dq_mono_ns=8061683361910 bytesused=3110400 interval_ms=33.609 gap=0 flags=0x2001
+FRAME number=299 sequence=299 index=3 driver_ts_ns=8062681479000 dq_mono_ns=8062681820135 bytesused=3110400 interval_ms=33.279 gap=0 flags=0x2001
+SUMMARY frames=300 first_sequence=0 last_sequence=299 sequence_gaps=0 poll_timeouts=0 dq_eagain=0 total_bytes=933120000 elapsed_s=9.951933 fps=30.044413 interrupted=0
+STREAMOFF success
+65f06d1d3ee569113df44e1ce8011ab106f339647801cea6c672a35562b51bcb  /tmp/custom-300.csv
+301 /tmp/custom-300.csv

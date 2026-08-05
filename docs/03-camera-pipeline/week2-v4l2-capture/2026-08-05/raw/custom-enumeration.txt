@@ -1,0 +1,25 @@
+QUERYCAP driver=rkisp_v5 card=rkisp_mainpath bus=platform:rkisp-vir0 version=2.2.1 caps=0x04201000
+API type=multi-planar
+=== VIDIOC_ENUM_FMT / FRAMESIZES / FRAMEINTERVALS ===
+format[0]=UYVY description=UYVY 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[1]=422P description=Planar YUV 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[2]=NV16 description=Y/CbCr 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[3]=NV61 description=Y/CrCb 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[4]=YM16 description=Planar YUV 4:2:2 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[5]=NV21 description=Y/CrCb 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[6]=NV12 description=Y/CbCr 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[7]=NM21 description=Y/CrCb 4:2:0 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[8]=NM12 description=Y/CbCr 4:2:0 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[9]=YU12 description=Planar YUV 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[10]=YM24 description=Planar YUV 4:4:4 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8

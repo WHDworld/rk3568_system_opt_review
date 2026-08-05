@@ -8,7 +8,7 @@
 |---|---|---|
 | M0：构建与回滚 | 能编译、部署、确认版本并恢复 | 进行中：构建/部署已验证，待受控回滚演练 |
 | M1：OV5695 BSP 基线 | probe、chip ID、media topology | 已完成 |
-| M2：V4L2 采集 | NV12 连续采集、统计丢帧 | 进行中：已完成 60 帧短测，待长时间丢帧统计 |
+| M2：V4L2 采集 | NV12 连续采集、统计丢帧 | 已完成：自研 MMAP 工具、模式矩阵和 54,000 帧长测；发现低频 sequence 标记抖动待驱动侧定位 |
 | M3：DRM 独立显示 | test pattern + atomic modeset | 待执行 |
 | M4：DMA-BUF 直显 | PRIME import、正确 buffer 生命周期 | 待执行 |
 | M5：性能与内存 | A/B benchmark、perf/ftrace、CMA | 待执行 |
@@ -21,3 +21,4 @@
 最新基线与验收记录：
 
 - [2026-08-01 RK3568 + OV5695 项目基线](baseline/2026-08-01/README.md)
+- [2026-08-05 第二周 V4L2 采集测试报告](../03-camera-pipeline/week2-v4l2-capture/2026-08-05/README.md)

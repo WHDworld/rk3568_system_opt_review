@@ -1,0 +1,43 @@
+QUERYCAP driver=rkisp_v5 card=rkisp_mainpath bus=platform:rkisp-vir0 version=2.2.1 caps=0x04201000
+API type=multi-planar
+=== VIDIOC_ENUM_FMT / FRAMESIZES / FRAMEINTERVALS ===
+format[0]=UYVY description=UYVY 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[1]=422P description=Planar YUV 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[2]=NV16 description=Y/CbCr 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[3]=NV61 description=Y/CrCb 4:2:2 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[4]=YM16 description=Planar YUV 4:2:2 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[5]=NV21 description=Y/CrCb 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[6]=NV12 description=Y/CbCr 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[7]=NM21 description=Y/CrCb 4:2:0 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[8]=NM12 description=Y/CbCr 4:2:0 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[9]=YU12 description=Planar YUV 4:2:0 flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+format[10]=YM24 description=Planar YUV 4:4:4 (N-C) flags=0x0
+  size=stepwise min=32x32 max=2592x1944 step=8x8
+G_FMT actual=1920x1080 fourcc=NV12 field=1 planes=1 colorspace=0 ycbcr_enc=0 quantization=1 xfer_func=0
+  plane[0] bytesperline=1920 sizeimage=3110400
+S_FMT actual=1920x1080 fourcc=NV12 field=1 planes=1 colorspace=0 ycbcr_enc=0 quantization=1 xfer_func=0
+  plane[0] bytesperline=1920 sizeimage=3110400
+G_PARM unsupported by this node
+REQBUFS requested=4 actual=4
+MMAP buffer=0 plane=0 length=3133440 offset=0
+MMAP buffer=1 plane=0 length=3133440 offset=3133440
+MMAP buffer=2 plane=0 length=3133440 offset=6266880
+MMAP buffer=3 plane=0 length=3133440 offset=9400320
+STREAMON success target_frames=10000 timeout_ms=2000
+FRAME number=0 sequence=0 index=0 driver_ts_ns=8083829223000 dq_mono_ns=8083829774260 bytesused=3110400 interval_ms=0.000 gap=0 flags=0x2001
+FRAME number=29 sequence=29 index=1 driver_ts_ns=8084794677000 dq_mono_ns=8084795059774 bytesused=3110400 interval_ms=33.287 gap=0 flags=0x2001
+FRAME number=59 sequence=59 index=3 driver_ts_ns=8085792862000 dq_mono_ns=8085793585957 bytesused=3110400 interval_ms=33.286 gap=0 flags=0x2001
+SUMMARY frames=87 first_sequence=0 last_sequence=86 sequence_gaps=0 poll_timeouts=0 dq_eagain=0 total_bytes=270604800 elapsed_s=2.862453 fps=30.044166 interrupted=1
+STREAMOFF success
+exit_code=0
+open_fds_after_exit=0

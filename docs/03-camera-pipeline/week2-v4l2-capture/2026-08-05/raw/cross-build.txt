@@ -1,0 +1,4 @@
+make: Entering directory '/home/whd/experiment/rk3568_linux_5.10_20250211/rk3568_linux_5.10/ai_doc/tools/v4l2_capture'
+/home/whd/experiment/rk3568_linux_5.10_20250211/rk3568_linux_5.10/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc -O2 -g -std=c11 -Wall -Wextra -Wpedantic -Werror v4l2_capture.c -o v4l2_capture
+make: Leaving directory '/home/whd/experiment/rk3568_linux_5.10_20250211/rk3568_linux_5.10/ai_doc/tools/v4l2_capture'
+ai_doc/tools/v4l2_capture/v4l2_capture: ELF 64-bit LSB executable, ARM aarch64, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux-aarch64.so.1, for GNU/Linux 3.7.0, with debug_info, not stripped

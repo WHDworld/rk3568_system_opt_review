@@ -1,0 +1,114 @@
+=== v4l2-ctl --list-devices ===
+rkisp-statistics (platform: rkisp):
+	/dev/video7
+	/dev/video8
+
+rkisp_mainpath (platform:rkisp-vir0):
+	/dev/video0
+	/dev/video1
+	/dev/video2
+	/dev/video3
+	/dev/video4
+	/dev/video5
+	/dev/video6
+	/dev/media0
+
+=== v4l2-ctl --all ===
+Driver Info:
+	Driver name      : rkisp_v5
+	Card type        : rkisp_mainpath
+	Bus info         : platform:rkisp-vir0
+	Driver version   : 2.2.1
+	Capabilities     : 0x84201000
+		Video Capture Multiplanar
+		Streaming
+		Extended Pix Format
+		Device Capabilities
+	Device Caps      : 0x04201000
+		Video Capture Multiplanar
+		Streaming
+		Extended Pix Format
+Media Driver Info:
+	Driver name      : rkisp-vir0
+	Model            : rkisp0
+	Serial           : 
+	Bus info         : 
+	Media version    : 5.10.160
+	Hardware revision: 0x00000000 (0)
+	Driver version   : 5.10.160
+Interface Info:
+	ID               : 0x0300000e
+	Type             : V4L Video
+Entity Info:
+	ID               : 0x0000000d (13)
+	Name             : rkisp_mainpath
+	Function         : V4L2 I/O
+	Pad 0x01000010   : 0: Sink
+	  Link 0x02000011: from remote pad 0x1000004 of entity 'rkisp-isp-subdev': Data, Enabled
+Priority: 2
+Format Video Capture Multiplanar:
+	Width/Height      : 2592/1944
+	Pixel Format      : 'NV12' (Y/CbCr 4:2:0)
+	Field             : None
+	Number of planes  : 1
+	Flags             : 
+	Colorspace        : Default
+	Transfer Function : Default
+	YCbCr/HSV Encoding: Default
+	Quantization      : Full Range
+	Plane 0           :
+	   Bytes per Line : 2592
+	   Size Image     : 7558272
+Selection Video Capture: crop, Left 0, Top 0, Width 2592, Height 1944, Flags: 
+Selection Video Capture: crop_bounds, Left 0, Top 0, Width 2592, Height 1944, Flags: 
+Selection Video Output: crop, Left 0, Top 0, Width 2592, Height 1944, Flags: 
+Selection Video Output: crop_bounds, Left 0, Top 0, Width 2592, Height 1944, Flags: 
+
+User Controls
+
+                       exposure 0x00980911 (int)    : min=4 max=2020 step=1 default=1104 value=182
+
+Image Source Controls
+
+              vertical_blanking 0x009e0901 (int)    : min=80 max=30823 step=1 default=80 value=80
+            horizontal_blanking 0x009e0902 (int)    : min=368 max=368 step=1 default=368 value=368 flags=read-only
+                  analogue_gain 0x009e0903 (int)    : min=16 max=248 step=1 default=248 value=16
+
+Image Processing Controls
+
+                 link_frequency 0x009f0901 (intmenu): min=0 max=0 default=0 value=0 flags=read-only
+				0: 420000000 (0x1908b100)
+                     pixel_rate 0x009f0902 (int64)  : min=0 max=180000000 step=1 default=180000000 value=180000000 flags=read-only
+                   test_pattern 0x009f0903 (menu)   : min=0 max=4 default=0 value=0
+				0: Disabled
+				1: Vertical Color Bar Type 1
+				2: Vertical Color Bar Type 2
+				3: Vertical Color Bar Type 3
+				4: Vertical Color Bar Type 4
+                   digital_gain 0x009f0905 (int)    : min=0 max=16383 step=1 default=1024 value=1024
+=== v4l2-ctl --list-formats-ext ===
+ioctl: VIDIOC_ENUM_FMT
+	Type: Video Capture Multiplanar
+
+	[0]: 'UYVY' (UYVY 4:2:2)
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[1]: '422P' (Planar YUV 4:2:2)
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[2]: 'NV16' (Y/CbCr 4:2:2)
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[3]: 'NV61' (Y/CrCb 4:2:2)
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[4]: 'YM16' (Planar YUV 4:2:2 (N-C))
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[5]: 'NV21' (Y/CrCb 4:2:0)
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[6]: 'NV12' (Y/CbCr 4:2:0)
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[7]: 'NM21' (Y/CrCb 4:2:0 (N-C))
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[8]: 'NM12' (Y/CbCr 4:2:0 (N-C))
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[9]: 'YU12' (Planar YUV 4:2:0)
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
+	[10]: 'YM24' (Planar YUV 4:4:4 (N-C))
+		Size: Stepwise 32x32 - 2592x1944 with step 8/8
