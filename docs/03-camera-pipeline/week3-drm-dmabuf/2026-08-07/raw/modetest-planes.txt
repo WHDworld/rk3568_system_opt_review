@@ -1,0 +1,657 @@
+CRTCs:
+id	fb	pos	size
+68	0	(0,0)	(0x0)
+   0 0 0 0 0 0 0 0 0 0 flags: ; type:
+  props:
+	24 VRR_ENABLED:
+		flags: range
+		values: 0 1
+		value: 0
+	38 ACLK:
+		flags: range
+		values: 0 4294967295
+		value: 500000
+	39 BACKGROUND:
+		flags: range
+		values: 0 4294967295
+		value: 0
+	40 LINE_FLAG1:
+		flags: range
+		values: 0 4294967295
+		value: 0
+	43 left margin:
+		flags: range
+		values: 0 100
+		value: 100
+	44 right margin:
+		flags: range
+		values: 0 100
+		value: 100
+	45 top margin:
+		flags: range
+		values: 0 100
+		value: 100
+	46 bottom margin:
+		flags: range
+		values: 0 100
+		value: 100
+	69 PLANE_MASK:
+		flags: immutable bitmask
+		values: Cluster0=0x1 Cluster1=0x2 Esmart0=0x4 Esmart1=0x8 Smart0=0x10 Smart1=0x20 Cluster2=0x40 Cluster3=0x80 Esmart2=0x100 Esmart3=0x200
+		value: 42
+	70 FEATURE:
+		flags: immutable bitmask
+		values: ALPHA_SCALE=0x1 HDR10=0x2 NEXT_HDR=0x4
+		value: 1
+	71 OUTPUT_WIDTH:
+		flags: immutable range
+		values: 0 2048
+		value: 0
+	72 OUTPUT_DCLK:
+		flags: immutable range
+		values: 0 200000000
+		value: 0
+	73 variable refresh rate:
+		flags: range
+		values: 0 144
+		value: 0
+	74 max refresh rate:
+		flags: range
+		values: 0 144
+		value: 0
+	75 min refresh rate:
+		flags: range
+		values: 0 144
+		value: 0
+	28 GAMMA_LUT:
+		flags: blob
+		blobs:
+
+		value:
+	29 GAMMA_LUT_SIZE:
+		flags: immutable range
+		values: 0 4294967295
+		value: 1024
+90	163	(0,0)	(1280x800)
+   60 1280 1412 1452 1540 800 849 869 892 82421 flags: nhsync, nvsync; type:
+  props:
+	24 VRR_ENABLED:
+		flags: range
+		values: 0 1
+		value: 0
+	38 ACLK:
+		flags: range
+		values: 0 4294967295
+		value: 500000
+	39 BACKGROUND:
+		flags: range
+		values: 0 4294967295
+		value: 0
+	40 LINE_FLAG1:
+		flags: range
+		values: 0 4294967295
+		value: 0
+	43 left margin:
+		flags: range
+		values: 0 100
+		value: 100
+	44 right margin:
+		flags: range
+		values: 0 100
+		value: 100
+	45 top margin:
+		flags: range
+		values: 0 100
+		value: 100
+	46 bottom margin:
+		flags: range
+		values: 0 100
+		value: 100
+	91 PLANE_MASK:
+		flags: immutable bitmask
+		values: Cluster0=0x1 Cluster1=0x2 Esmart0=0x4 Esmart1=0x8 Smart0=0x10 Smart1=0x20 Cluster2=0x40 Cluster3=0x80 Esmart2=0x100 Esmart3=0x200
+		value: 21
+	92 FEATURE:
+		flags: immutable bitmask
+		values: ALPHA_SCALE=0x1 HDR10=0x2 NEXT_HDR=0x4
+		value: 1
+	93 OUTPUT_WIDTH:
+		flags: immutable range
+		values: 0 1920
+		value: 0
+	94 OUTPUT_DCLK:
+		flags: immutable range
+		values: 0 148500000
+		value: 0
+	95 variable refresh rate:
+		flags: range
+		values: 0 144
+		value: 0
+	96 max refresh rate:
+		flags: range
+		values: 0 144
+		value: 0
+	97 min refresh rate:
+		flags: range
+		values: 0 144
+		value: 0
+	28 GAMMA_LUT:
+		flags: blob
+		blobs:
+
+		value:
+	29 GAMMA_LUT_SIZE:
+		flags: immutable range
+		values: 0 4294967295
+		value: 1024
+
+Planes:
+id	crtc	fb	CRTC x,y	x,y	gamma size	possible crtcs
+54	0	0	0,0		0,0	0       	0x00000001
+  formats: XR24 AR24 XB24 AB24 RG24 BG24 RG16 BG16
+  props:
+	8 type:
+		flags: immutable enum
+		enums: Overlay=0 Primary=1 Cursor=2
+		value: 1
+	30 IN_FORMATS:
+		flags: immutable blob
+		blobs:
+
+		value:
+			01000000000000000800000018000000
+			01000000380000005852323441523234
+			58423234414232345247323442473234
+			5247313642473136ff00000000000000
+			00000000000000000000000000000000
+		in_formats blob decoded:
+			 XR24:  LINEAR
+			 AR24:  LINEAR
+			 XB24:  LINEAR
+			 AB24:  LINEAR
+			 RG24:  LINEAR
+			 BG24:  LINEAR
+			 RG16:  LINEAR
+			 BG16:  LINEAR
+	56 rotation:
+		flags: bitmask
+		values: rotate-0=0x1 reflect-y=0x20
+		value: 1
+	57 alpha:
+		flags: range
+		values: 0 65535
+		value: 65535
+	58 pixel blend mode:
+		flags: enum
+		enums: None=2 Pre-multiplied=0 Coverage=1
+		value: 0
+	59 zpos:
+		flags: range
+		values: 0 7
+		value: 0
+	60 NAME:
+		flags: immutable bitmask
+		values: Smart1-win0=0x2
+		value: 2
+	61 FEATURE:
+		flags: immutable bitmask
+		values: scale=0x1
+		value: 1
+	62 INPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	63 INPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	64 OUTPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	65 OUTPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	66 SCALE_RATE:
+		flags: immutable range
+		values: 8 8
+		value: 0
+	67 colorkey:
+		flags: range
+		values: 0 2164260863
+		value: 0
+76	90	163	0,0		0,0	0       	0x00000002
+  formats: XR24 AR24 XB24 AB24 RG24 BG24 RG16 BG16
+  props:
+	8 type:
+		flags: immutable enum
+		enums: Overlay=0 Primary=1 Cursor=2
+		value: 1
+	30 IN_FORMATS:
+		flags: immutable blob
+		blobs:
+
+		value:
+			01000000000000000800000018000000
+			01000000380000005852323441523234
+			58423234414232345247323442473234
+			5247313642473136ff00000000000000
+			00000000000000000000000000000000
+		in_formats blob decoded:
+			 XR24:  LINEAR
+			 AR24:  LINEAR
+			 XB24:  LINEAR
+			 AB24:  LINEAR
+			 RG24:  LINEAR
+			 BG24:  LINEAR
+			 RG16:  LINEAR
+			 BG16:  LINEAR
+	78 rotation:
+		flags: bitmask
+		values: rotate-0=0x1 reflect-y=0x20
+		value: 1
+	79 alpha:
+		flags: range
+		values: 0 65535
+		value: 65535
+	80 pixel blend mode:
+		flags: enum
+		enums: None=2 Pre-multiplied=0 Coverage=1
+		value: 0
+	81 zpos:
+		flags: range
+		values: 0 7
+		value: 1
+	82 NAME:
+		flags: immutable bitmask
+		values: Smart0-win0=0x1
+		value: 1
+	83 FEATURE:
+		flags: immutable bitmask
+		values: scale=0x1
+		value: 1
+	84 INPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	85 INPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	86 OUTPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	87 OUTPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	88 SCALE_RATE:
+		flags: immutable range
+		values: 8 8
+		value: 0
+	89 colorkey:
+		flags: range
+		values: 0 2164260863
+		value: 0
+98	0	0	0,0		0,0	0       	0x00000001
+  formats: XR24 AR24 XB24 AB24 RG24 BG24 RG16 BG16 NV12 NV16 NV24 NV15 NV20 NV30 YUYV UYVY
+  props:
+	8 type:
+		flags: immutable enum
+		enums: Overlay=0 Primary=1 Cursor=2
+		value: 0
+	30 IN_FORMATS:
+		flags: immutable blob
+		blobs:
+
+		value:
+			01000000000000001000000018000000
+			01000000580000005852323441523234
+			58423234414232345247323442473234
+			52473136424731364e5631324e563136
+			4e5632344e5631354e5632304e563330
+			5955595655595659ffff000000000000
+			00000000000000000000000000000000
+		in_formats blob decoded:
+			 XR24:  LINEAR
+			 AR24:  LINEAR
+			 XB24:  LINEAR
+			 AB24:  LINEAR
+			 RG24:  LINEAR
+			 BG24:  LINEAR
+			 RG16:  LINEAR
+			 BG16:  LINEAR
+			 NV12:  LINEAR
+			 NV16:  LINEAR
+			 NV24:  LINEAR
+			 NV15:  LINEAR
+			 NV20:  LINEAR
+			 NV30:  LINEAR
+			 YUYV:  LINEAR
+			 UYVY:  LINEAR
+	100 rotation:
+		flags: bitmask
+		values: rotate-0=0x1 reflect-y=0x20
+		value: 1
+	101 alpha:
+		flags: range
+		values: 0 65535
+		value: 65535
+	102 pixel blend mode:
+		flags: enum
+		enums: None=2 Pre-multiplied=0 Coverage=1
+		value: 0
+	103 zpos:
+		flags: range
+		values: 0 7
+		value: 4
+	104 NAME:
+		flags: immutable bitmask
+		values: Esmart1-win0=0x4
+		value: 4
+	105 FEATURE:
+		flags: immutable bitmask
+		values: scale=0x1
+		value: 1
+	106 INPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	107 INPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	108 OUTPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	109 OUTPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	110 SCALE_RATE:
+		flags: immutable range
+		values: 8 8
+		value: 0
+	111 colorkey:
+		flags: range
+		values: 0 2164260863
+		value: 0
+112	0	0	0,0		0,0	0       	0x00000002
+  formats: XR24 AR24 XB24 AB24 RG24 BG24 RG16 BG16 NV12 NV16 NV24 NV15 NV20 NV30 YUYV UYVY
+  props:
+	8 type:
+		flags: immutable enum
+		enums: Overlay=0 Primary=1 Cursor=2
+		value: 0
+	30 IN_FORMATS:
+		flags: immutable blob
+		blobs:
+
+		value:
+			01000000000000001000000018000000
+			01000000580000005852323441523234
+			58423234414232345247323442473234
+			52473136424731364e5631324e563136
+			4e5632344e5631354e5632304e563330
+			5955595655595659ffff000000000000
+			00000000000000000000000000000000
+		in_formats blob decoded:
+			 XR24:  LINEAR
+			 AR24:  LINEAR
+			 XB24:  LINEAR
+			 AB24:  LINEAR
+			 RG24:  LINEAR
+			 BG24:  LINEAR
+			 RG16:  LINEAR
+			 BG16:  LINEAR
+			 NV12:  LINEAR
+			 NV16:  LINEAR
+			 NV24:  LINEAR
+			 NV15:  LINEAR
+			 NV20:  LINEAR
+			 NV30:  LINEAR
+			 YUYV:  LINEAR
+			 UYVY:  LINEAR
+	114 rotation:
+		flags: bitmask
+		values: rotate-0=0x1 reflect-y=0x20
+		value: 1
+	115 alpha:
+		flags: range
+		values: 0 65535
+		value: 65535
+	116 pixel blend mode:
+		flags: enum
+		enums: None=2 Pre-multiplied=0 Coverage=1
+		value: 0
+	117 zpos:
+		flags: range
+		values: 0 7
+		value: 5
+	118 NAME:
+		flags: immutable bitmask
+		values: Esmart0-win0=0x8
+		value: 8
+	119 FEATURE:
+		flags: immutable bitmask
+		values: scale=0x1
+		value: 1
+	120 INPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	121 INPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	122 OUTPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	123 OUTPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	124 SCALE_RATE:
+		flags: immutable range
+		values: 8 8
+		value: 0
+	125 colorkey:
+		flags: range
+		values: 0 2164260863
+		value: 0
+126	0	0	0,0		0,0	0       	0x00000002
+  formats: XR30 AR30 XB30 AB30 XR24 AR24 XB24 AB24 RG24 BG24 RG16 BG16 YU08 YU10 YUYV Y210
+  props:
+	8 type:
+		flags: immutable enum
+		enums: Overlay=0 Primary=1 Cursor=2
+		value: 0
+	30 IN_FORMATS:
+		flags: immutable blob
+		blobs:
+
+		value:
+			01000000000000001000000018000000
+			09000000580000005852333041523330
+			58423330414233305852323441523234
+			58423234414232345247323442473234
+			52473136424731365955303859553130
+			5955595659323130ffff000000000000
+			00000000000000000100000000000008
+			ffff0000000000000000000000000000
+			4100000000000008ffff000000000000
+			00000000000000001100000000000008
+			ffff0000000000000000000000000000
+			8100000000000008ffff000000000000
+			00000000000000005100000000000008
+			ffff0000000000000000000000000000
+			c100000000000008ffff000000000000
+			00000000000000009100000000000008
+			ffff0000000000000000000000000000
+			d100000000000008ffff000000000000
+			00000000000000007100000000000008
+		in_formats blob decoded:
+			 XR30:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 AR30:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 XB30:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 AB30:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 XR24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 AR24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 XB24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 AB24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 RG24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 BG24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 RG16:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 BG16:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 YU08:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 YU10:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 YUYV:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 Y210:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+	128 rotation:
+		flags: bitmask
+		values: rotate-0=0x1 rotate-90=0x2 rotate-270=0x8 reflect-x=0x10 reflect-y=0x20
+		value: 1
+	129 alpha:
+		flags: range
+		values: 0 65535
+		value: 65535
+	130 pixel blend mode:
+		flags: enum
+		enums: None=2 Pre-multiplied=0 Coverage=1
+		value: 0
+	131 zpos:
+		flags: range
+		values: 0 7
+		value: 6
+	132 NAME:
+		flags: immutable bitmask
+		values: Cluster0-win0=0x10
+		value: 16
+	133 FEATURE:
+		flags: immutable bitmask
+		values: scale=0x1 afbdc=0x10
+		value: 17
+	134 INPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	135 INPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	136 OUTPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	137 OUTPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	138 SCALE_RATE:
+		flags: immutable range
+		values: 4 4
+		value: 0
+	139 colorkey:
+		flags: range
+		values: 0 2164260863
+		value: 0
+140	0	0	0,0		0,0	0       	0x00000001
+  formats: XR30 AR30 XB30 AB30 XR24 AR24 XB24 AB24 RG24 BG24 RG16 BG16 YU08 YU10 YUYV Y210
+  props:
+	8 type:
+		flags: immutable enum
+		enums: Overlay=0 Primary=1 Cursor=2
+		value: 0
+	30 IN_FORMATS:
+		flags: immutable blob
+		blobs:
+
+		value:
+			01000000000000001000000018000000
+			09000000580000005852333041523330
+			58423330414233305852323441523234
+			58423234414232345247323442473234
+			52473136424731365955303859553130
+			5955595659323130ffff000000000000
+			00000000000000000100000000000008
+			ffff0000000000000000000000000000
+			4100000000000008ffff000000000000
+			00000000000000001100000000000008
+			ffff0000000000000000000000000000
+			8100000000000008ffff000000000000
+			00000000000000005100000000000008
+			ffff0000000000000000000000000000
+			c100000000000008ffff000000000000
+			00000000000000009100000000000008
+			ffff0000000000000000000000000000
+			d100000000000008ffff000000000000
+			00000000000000007100000000000008
+		in_formats blob decoded:
+			 XR30:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 AR30:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 XB30:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 AB30:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 XR24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 AR24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 XB24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 AB24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 RG24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 BG24:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 RG16:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 BG16:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 YU08:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 YU10:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 YUYV:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+			 Y210:  (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER) (UNKNOWN MODIFIER)
+	142 rotation:
+		flags: bitmask
+		values: rotate-0=0x1 rotate-90=0x2 rotate-270=0x8 reflect-x=0x10 reflect-y=0x20
+		value: 1
+	143 alpha:
+		flags: range
+		values: 0 65535
+		value: 65535
+	144 pixel blend mode:
+		flags: enum
+		enums: None=2 Pre-multiplied=0 Coverage=1
+		value: 0
+	145 zpos:
+		flags: range
+		values: 0 7
+		value: 8
+	146 NAME:
+		flags: immutable bitmask
+		values: Cluster1-win0=0x40
+		value: 64
+	147 FEATURE:
+		flags: immutable bitmask
+		values: scale=0x1 afbdc=0x10
+		value: 17
+	148 INPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	149 INPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	150 OUTPUT_WIDTH:
+		flags: immutable range
+		values: 0 4096
+		value: 0
+	151 OUTPUT_HEIGHT:
+		flags: immutable range
+		values: 0 2304
+		value: 0
+	152 SCALE_RATE:
+		flags: immutable range
+		values: 4 4
+		value: 0
+	153 colorkey:
+		flags: range
+		values: 0 2164260863
+		value: 0

@@ -1,0 +1,24 @@
+sample=1
+timestamp=2026-08-08T00:50:39+08:00
+pid=5884 elapsed_s=166 rss_kb=5272 vsz_kb=11500
+fd_count=9
+MemAvailable=7551528 kB
+CmaTotal=16384 kB
+CmaFree=13264 kB
+drm-v4l2-longtest=active
+lightdm=inactive (expected while direct KMS owns DRM master)
+
+sample=2 (last external sample before normal exit)
+timestamp=2026-08-08T01:20:40+08:00
+pid=5884 elapsed_s=1967 rss_kb=5272
+fd_count=9
+drm-v4l2-longtest=active
+
+final
+program_elapsed_s=1997.029513
+frames=60000
+steady_fds_start=9
+steady_fds_end=9
+fd_growth=0
+service_exit=0
+lightdm=active

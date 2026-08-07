@@ -1,0 +1,93 @@
+[    1.603506]   DMA      [mem 0x0000000000200000-0x00000000ffffffff]
+[    1.610286]   DMA32    empty
+[    1.657150]   DMA zone: 15288 pages used for memmap
+[    1.657153]   DMA zone: 0 pages reserved
+[    1.657155]   DMA zone: 978432 pages, LIFO batch:63
+[    2.565716] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[    2.573772] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    3.788208] iommu: Default domain type: Translated
+[    3.791588] SCSI subsystem initialized
+[    4.273994] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+[    4.274666] rockchip-csi2-dphy-hw fe870000.csi2-dphy-hw: csi2 dphy hw probe successfully!
+[    4.275343] rockchip-csi2-dphy csi2-dphy0: csi2 dphy0 probe successfully!
+[    4.289984] mpp_vdpu2 fdea0400.vdpu: Adding to iommu group 1
+[    4.291148] mpp_vepu2 fdee0000.vepu: Adding to iommu group 3
+[    4.292403] mpp-iep2 fdef0000.iep: Adding to iommu group 4
+[    4.293601] mpp_jpgdec fded0000.jpegd: Adding to iommu group 2
+[    4.300100] dma-pl330 fe530000.dmac: Loaded driver for PL330 DMAC-241330
+[    4.300124] dma-pl330 fe530000.dmac: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    4.301816] dma-pl330 fe550000.dmac: Loaded driver for PL330 DMAC-241330
+[    4.301829] dma-pl330 fe550000.dmac: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    4.309245] rockchip-vop2 fe040000.vop: Adding to iommu group 8
+[    4.315560] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp0 assign plane mask: 0x0, primary plane phy id: -1
+[    4.315580] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp1 assign plane mask: 0x2a, primary plane phy id: 5
+[    4.315592] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp2 assign plane mask: 0x15, primary plane phy id: 4
+[    4.315848] [drm] failed to init overlay plane Cluster0-win1
+[    4.315895] [drm] failed to init overlay plane Cluster1-win1
+[    4.316023] rockchip-drm display-subsystem: bound fe040000.vop (ops 0xffffffc0095ae288)
+[    4.336768] rk_gmac-dwmac fe010000.ethernet: DMA HW capability register supported
+[    4.336878] rk_gmac-dwmac fe010000.ethernet: Using 32 bits DMA width
+[    4.473017] rk_gmac-dwmac fe2a0000.ethernet: DMA HW capability register supported
+[    4.473150] rk_gmac-dwmac fe2a0000.ethernet: Using 32 bits DMA width
+[    6.159217] rkisp_hw fdff0000.rkisp: Adding to iommu group 7
+[    6.159432] rkisp_hw fdff0000.rkisp: is_thunderboot: 0
+[    6.159445] rkisp_hw fdff0000.rkisp: max input:0x0@0fps
+[    6.159475] rkisp_hw fdff0000.rkisp: can't request region for resource [mem 0xfdff0000-0xfdffffff]
+[    6.159673] rkisp_hw fdff0000.rkisp: no find phandle sram
+[    6.160215] rkisp rkisp-vir0: rkisp driver version: v02.02.01
+[    6.160361] rkisp rkisp-vir0: No memory-region-thunderboot specified
+[    6.160551] rkisp rkisp-vir0: Entity type for entity rkisp-isp-subdev was not initialized!
+[    6.160573] rkisp rkisp-vir0: Entity type for entity rkisp-csi-subdev was not initialized!
+[    6.168588] dwmmc_rockchip fe2b0000.dwmmc: IDMAC supports 32-bit address mode.
+[    6.168627] dwmmc_rockchip fe2b0000.dwmmc: Using internal DMA controller.
+[    6.180384] rk817-codec rk817-codec: DMA mask not set
+[    6.199173] mmc0: SDHCI controller on fe310000.sdhci [fe310000.sdhci] using ADMA
+[    6.200764] ov5695 2-0036: driver version: 00.01.04
+[    6.200887] ov5695 2-0036: supply avdd not found, using dummy regulator
+[    6.201044] ov5695 2-0036: supply dovdd not found, using dummy regulator
+[    6.201092] ov5695 2-0036: supply dvdd not found, using dummy regulator
+[    6.203547] ov5695 2-0036: Detected OV005695 sensor
+[    6.203603] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov5695 2-0036:bus type 5
+[    6.208603] rga_iommu: IOMMU binding successfully, default mapping core[0x4]
+[    6.232146] mpp_rkvenc fdf40000.rkvenc: Adding to iommu group 5
+[    6.234371] mpp_rkvdec2 fdf80200.rkvdec: Adding to iommu group 6
+[    6.244092] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp0 assign plane mask: 0x0, primary plane phy id: -1
+[    6.244120] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp1 assign plane mask: 0x2a, primary plane phy id: 5
+[    6.244131] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp2 assign plane mask: 0x15, primary plane phy id: 4
+[    6.244394] [drm] failed to init overlay plane Cluster0-win1
+[    6.244444] [drm] failed to init overlay plane Cluster1-win1
+[    6.244576] rockchip-drm display-subsystem: bound fe040000.vop (ops 0xffffffc0095ae288)
+[    6.244798] rockchip-drm display-subsystem: bound fdc60000.syscon:lvds (ops 0xffffffc0095c0330)
+[    6.255114] rockchip-drm display-subsystem: [drm] fb0: rockchipdrmfb frame buffer device
+[    6.255805] [drm] Initialized rockchip 3.0.0 20140818 for display-subsystem on minor 0
+[    6.259820] RKNPU fde40000.npu: Adding to iommu group 0
+[    6.260343] RKNPU fde40000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+[    6.261132] [drm] Initialized rknpu 0.9.6 20240322 for fde40000.npu on minor 1
+[    6.287566] rkisp rkisp-vir0: clear unready subdev num: 1
+[    6.288155] rkisp-vir0: Async subdev notifier completed
+[    7.881077] rkisp rkisp-vir0: first params buf queue
+[   17.428604] Freeing drm_logo memory: 736K
+[  690.424774] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  690.426402] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  690.426441] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  723.779106] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  723.779119] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  723.790660] rkisp rkisp-vir0: first params buf queue
+[  747.187892] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  747.189528] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  747.189611] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  780.568334] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  780.568346] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  780.580292] rkisp rkisp-vir0: first params buf queue
+[  833.969132] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  833.970756] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  833.970797] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  839.958752] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  839.958765] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  839.970073] rkisp rkisp-vir0: first params buf queue
+[  889.850303] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  889.851935] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  889.851980] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  895.838387] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  895.838401] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  895.849775] rkisp rkisp-vir0: first params buf queue

@@ -1,0 +1,48 @@
+DRM_CAP universal_planes=1 atomic=1
+DRM_PLANE id=76 type=1 possible_crtcs=0x2 nv12=0
+DRM_PLANE id=112 type=0 possible_crtcs=0x2 nv12=1
+DRM_PLANE id=126 type=0 possible_crtcs=0x2 nv12=0
+DRM_SELECT connector=161 mode=1280x800 1280x800 crtc=90 crtc_index=1 primary=76 overlay_nv12=112
+PATTERN displayed fb=163 handle=1 pitch=5120 size=4096000
+V4L2_FORMAT width=1280 height=720 format=NV12 physical_planes=1 drm_image_planes=2 stride=1280 sizeimage=1382400 uv_offset=921600
+DMABUF_INIT index=0 exp_fd=5 gem_handle=2 fb=162 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=1 exp_fd=6 gem_handle=3 fb=166 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=2 exp_fd=7 gem_handle=4 fb=167 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=3 exp_fd=8 gem_handle=5 fb=168 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+STREAMON backend=dmabuf buffers=4 target_frames=60000 steady_fds=9 pid=5884
+FRAME count=1 sequence=0 index=0 bytesused=1382400 flip_events=1 F/D/R=0/0/0
+FRAME count=1805 sequence=1805 index=0 bytesused=1382400 flip_events=1805 F/D/R=1/0/0
+FRAME count=3610 sequence=3610 index=1 bytesused=1382400 flip_events=3610 F/D/R=2/1/0
+FRAME count=5415 sequence=5415 index=2 bytesused=1382400 flip_events=5415 F/D/R=2/1/0
+FRAME count=7220 sequence=7220 index=3 bytesused=1382400 flip_events=7220 F/D/R=2/1/0
+FRAME count=9025 sequence=9025 index=0 bytesused=1382400 flip_events=9025 F/D/R=2/1/0
+FRAME count=10830 sequence=10830 index=1 bytesused=1382400 flip_events=10830 F/D/R=2/1/0
+FRAME count=12635 sequence=12635 index=2 bytesused=1382400 flip_events=12635 F/D/R=2/1/0
+FRAME count=14440 sequence=14440 index=3 bytesused=1382400 flip_events=14440 F/D/R=2/1/0
+FRAME count=16245 sequence=16245 index=0 bytesused=1382400 flip_events=16245 F/D/R=2/1/0
+FRAME count=18050 sequence=18050 index=1 bytesused=1382400 flip_events=18050 F/D/R=2/1/0
+FRAME count=19855 sequence=19855 index=2 bytesused=1382400 flip_events=19855 F/D/R=2/1/0
+FRAME count=21660 sequence=21660 index=3 bytesused=1382400 flip_events=21660 F/D/R=2/1/0
+FRAME count=23465 sequence=23465 index=0 bytesused=1382400 flip_events=23465 F/D/R=2/1/0
+FRAME count=25270 sequence=25270 index=1 bytesused=1382400 flip_events=25270 F/D/R=2/1/0
+FRAME count=27075 sequence=27075 index=2 bytesused=1382400 flip_events=27075 F/D/R=2/1/0
+FRAME count=28880 sequence=28880 index=3 bytesused=1382400 flip_events=28880 F/D/R=2/1/0
+FRAME count=30685 sequence=30685 index=0 bytesused=1382400 flip_events=30685 F/D/R=2/1/0
+FRAME count=32490 sequence=32490 index=1 bytesused=1382400 flip_events=32490 F/D/R=2/1/0
+FRAME count=34295 sequence=34295 index=2 bytesused=1382400 flip_events=34295 F/D/R=2/1/0
+FRAME count=36100 sequence=36100 index=3 bytesused=1382400 flip_events=36100 F/D/R=2/1/0
+FRAME count=37905 sequence=37905 index=0 bytesused=1382400 flip_events=37905 F/D/R=2/1/0
+FRAME count=39710 sequence=39710 index=1 bytesused=1382400 flip_events=39710 F/D/R=2/1/0
+FRAME count=41515 sequence=41515 index=2 bytesused=1382400 flip_events=41515 F/D/R=2/1/0
+FRAME count=43320 sequence=43320 index=3 bytesused=1382400 flip_events=43320 F/D/R=2/1/0
+FRAME count=45125 sequence=45125 index=0 bytesused=1382400 flip_events=45125 F/D/R=2/1/0
+FRAME count=46930 sequence=46930 index=1 bytesused=1382400 flip_events=46930 F/D/R=2/1/0
+FRAME count=48735 sequence=48735 index=2 bytesused=1382400 flip_events=48735 F/D/R=2/1/0
+FRAME count=50540 sequence=50540 index=3 bytesused=1382400 flip_events=50540 F/D/R=2/1/0
+FRAME count=52345 sequence=52345 index=0 bytesused=1382400 flip_events=52345 F/D/R=2/1/0
+FRAME count=54150 sequence=54150 index=1 bytesused=1382400 flip_events=54150 F/D/R=2/1/0
+FRAME count=55955 sequence=55955 index=2 bytesused=1382400 flip_events=55955 F/D/R=3/2/0
+FRAME count=57760 sequence=57760 index=3 bytesused=1382400 flip_events=57760 F/D/R=4/3/0
+FRAME count=59565 sequence=59565 index=0 bytesused=1382400 flip_events=59565 F/D/R=4/3/0
+SUMMARY backend=dmabuf frames=60000 first_sequence=0 last_sequence=60000 forward=4 duplicate=3 regression=0 flip_events=60000 elapsed_s=1997.029513 fps=30.044123 copy_total_ms=0.000 copy_avg_us=0.000 steady_fds_start=9 steady_fds_end=9 fd_growth=0 interrupted=0
+STREAMOFF success

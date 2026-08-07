@@ -1,0 +1,4 @@
+Encoders:
+id	crtc	type	possible crtcs	possible clones
+158	0	Virtual	0x00000003	0x00000001
+160	90	LVDS	0x00000002	0x00000002

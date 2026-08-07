@@ -1,0 +1,2 @@
+rm -f drm_v4l2_pipeline
+cc -O2 -g -std=c11 -Wall -Wextra -Wpedantic -Werror drm_v4l2_pipeline.c -o drm_v4l2_pipeline -I/usr/include/libdrm -ldrm

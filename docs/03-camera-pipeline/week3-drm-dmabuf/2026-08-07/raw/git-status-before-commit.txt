@@ -1,0 +1,21 @@
+captured_at=2026-08-08T01:22+08:00
+
+BSP repository
+branch=feature/ov5695-v4l2-dmabuf
+tracking=origin/feature/ov5695-v4l2-dmabuf
+HEAD=2bb09ab7f19f12f5e9c2b438229dd6a4604a86a9
+worktree=clean (ai_doc is ignored by parent repository)
+
+ai_doc repository
+branch=main
+tracking=origin/main
+HEAD_before_commit=d591fe50b39058c6bd1f33a039cb6c45420c3e41
+worktree=docs/00-roadmap modified; week3 report/raw evidence and drm_v4l2_pipeline tool untracked
+remote=ssh://git@ssh.github.com:443/WHDworld/rk3568_system_opt_review.git
+
+validation
+git_diff_check=pass
+board_native_build_with_Werror=pass
+board_final_v3_100_frames=pass
+lightdm=active
+drm-v4l2-longtest=inactive (normal completion)

@@ -1,0 +1,13 @@
+DRM_CAP universal_planes=1 atomic=1
+DRM_PLANE id=76 type=1 possible_crtcs=0x2 nv12=0
+DRM_PLANE id=112 type=0 possible_crtcs=0x2 nv12=1
+DRM_PLANE id=126 type=0 possible_crtcs=0x2 nv12=0
+DRM_SELECT connector=161 mode=1280x800 1280x800 crtc=90 crtc_index=1 primary=76 overlay_nv12=112
+PATTERN displayed fb=163 handle=1 pitch=5120 size=4096000
+SUMMARY backend=pattern seconds=8 interrupted=0
+pattern_exit=0
+lightdm_active=active
+root        2265     771  0 00:15 pts/0    00:00:00 /bin/sh -l -c  set +e systemctl stop lightdm sleep 2 /tmp/drm_v4l2_pipeline/drm_v4l2_pipeline --backend pattern --seconds 8 pattern_rc=$? systemctl start lightdm sleep 5 echo pattern_exit=$pattern_rc echo lightdm_active=$(systemctl is-active lightdm) ps -ef | grep -E "[X]org|[l]ightdm" exit $pattern_rc
+root        2303       1  2 00:15 ?        00:00:00 /usr/sbin/lightdm
+root        2311    2303 25 00:15 tty7     00:00:01 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+root        2325    2303  1 00:15 ?        00:00:00 lightdm --session-child 12 15

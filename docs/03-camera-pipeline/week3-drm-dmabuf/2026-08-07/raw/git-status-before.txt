@@ -1,0 +1,7 @@
+=== BSP ===
+## feature/ov5695-v4l2-dmabuf...origin/feature/ov5695-v4l2-dmabuf
+2bb09ab7f (HEAD -> feature/ov5695-v4l2-dmabuf, origin/main, origin/feature/ov5695-v4l2-dmabuf, main) chore: move private ai_doc into standalone repository
+=== AI_DOC ===
+## main...origin/main
+?? docs/03-camera-pipeline/week3-drm-dmabuf/
+d591fe5 (HEAD -> main, origin/main) feat: add X11 live camera preview on board display

@@ -1,0 +1,119 @@
+===/dev/dri/card0===
+trying to open device 'i915'...failed
+trying to open device 'amdgpu'...failed
+trying to open device 'radeon'...failed
+trying to open device 'nouveau'...failed
+trying to open device 'vmwgfx'...failed
+trying to open device 'omapdrm'...failed
+trying to open device 'exynos'...failed
+trying to open device 'tilcdc'...failed
+trying to open device 'msm'...failed
+trying to open device 'sti'...failed
+trying to open device 'tegra'...failed
+trying to open device 'imx-drm'...failed
+trying to open device 'rockchip'...done
+Connectors:
+id	encoder	status		name		size (mm)	modes	encoders
+161	160	connected	LVDS-1         	217x136		1	160
+  modes:
+	name refresh (Hz) hdisp hss hse htot vdisp vss vse vtot)
+  1280x800 60 1280 1412 1452 1540 800 849 869 892 82421 flags: nhsync, nvsync; type: preferred, driver
+  props:
+	1 EDID:
+		flags: immutable blob
+		blobs:
+
+		value:
+	2 DPMS:
+		flags: enum
+		enums: On=0 Standby=1 Suspend=2 Off=3
+		value: 0
+	5 link-status:
+		flags: enum
+		enums: Good=0 Bad=1
+		value: 0
+	6 non-desktop:
+		flags: immutable range
+		values: 0 1
+		value: 0
+	4 TILE:
+		flags: immutable blob
+		blobs:
+
+		value:
+	48 brightness:
+		flags: range
+		values: 0 100
+		value: 50
+	49 contrast:
+		flags: range
+		values: 0 100
+		value: 50
+	52 saturation:
+		flags: range
+		values: 0 100
+		value: 50
+	53 hue:
+		flags: range
+		values: 0 100
+		value: 50
+
+===/dev/dri/card1===
+trying to open device 'i915'...failed
+trying to open device 'amdgpu'...failed
+trying to open device 'radeon'...failed
+trying to open device 'nouveau'...failed
+trying to open device 'vmwgfx'...failed
+trying to open device 'omapdrm'...failed
+trying to open device 'exynos'...failed
+trying to open device 'tilcdc'...failed
+trying to open device 'msm'...failed
+trying to open device 'sti'...failed
+trying to open device 'tegra'...failed
+trying to open device 'imx-drm'...failed
+trying to open device 'rockchip'...done
+Connectors:
+id	encoder	status		name		size (mm)	modes	encoders
+161	160	connected	LVDS-1         	217x136		1	160
+  modes:
+	name refresh (Hz) hdisp hss hse htot vdisp vss vse vtot)
+  1280x800 60 1280 1412 1452 1540 800 849 869 892 82421 flags: nhsync, nvsync; type: preferred, driver
+  props:
+	1 EDID:
+		flags: immutable blob
+		blobs:
+
+		value:
+	2 DPMS:
+		flags: enum
+		enums: On=0 Standby=1 Suspend=2 Off=3
+		value: 0
+	5 link-status:
+		flags: enum
+		enums: Good=0 Bad=1
+		value: 0
+	6 non-desktop:
+		flags: immutable range
+		values: 0 1
+		value: 0
+	4 TILE:
+		flags: immutable blob
+		blobs:
+
+		value:
+	48 brightness:
+		flags: range
+		values: 0 100
+		value: 50
+	49 contrast:
+		flags: range
+		values: 0 100
+		value: 50
+	52 saturation:
+		flags: range
+		values: 0 100
+		value: 50
+	53 hue:
+		flags: range
+		values: 0 100
+		value: 50

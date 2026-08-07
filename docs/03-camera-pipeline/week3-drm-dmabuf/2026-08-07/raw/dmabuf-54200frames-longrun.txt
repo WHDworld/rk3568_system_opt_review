@@ -1,0 +1,39 @@
+DRM_CAP universal_planes=1 atomic=1
+DRM_PLANE id=76 type=1 possible_crtcs=0x2 nv12=0
+DRM_PLANE id=112 type=0 possible_crtcs=0x2 nv12=1
+DRM_PLANE id=126 type=0 possible_crtcs=0x2 nv12=0
+DRM_SELECT connector=161 mode=1280x800 1280x800 crtc=90 crtc_index=1 primary=76 overlay_nv12=112
+PATTERN displayed fb=163 handle=1 pitch=5120 size=4096000
+V4L2_FORMAT width=1280 height=720 format=NV12 physical_planes=1 drm_image_planes=2 stride=1280 sizeimage=1382400 uv_offset=921600
+DMABUF_INIT index=0 exp_fd=5 gem_handle=2 fb=162 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=1 exp_fd=6 gem_handle=3 fb=166 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=2 exp_fd=7 gem_handle=4 fb=167 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=3 exp_fd=8 gem_handle=5 fb=168 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+STREAMON backend=dmabuf buffers=4 target_frames=54200 steady_fds=9 pid=4703
+FRAME count=1 sequence=0 index=0 bytesused=1382400 flip_events=1 F/D/R=0/0/0
+FRAME count=1800 sequence=1799 index=3 bytesused=1382400 flip_events=1800 F/D/R=0/0/0
+FRAME count=3600 sequence=3599 index=3 bytesused=1382400 flip_events=3600 F/D/R=0/0/0
+FRAME count=5400 sequence=5399 index=3 bytesused=1382400 flip_events=5400 F/D/R=0/0/0
+FRAME count=7200 sequence=7199 index=3 bytesused=1382400 flip_events=7200 F/D/R=0/0/0
+FRAME count=9000 sequence=8999 index=3 bytesused=1382400 flip_events=9000 F/D/R=0/0/0
+FRAME count=10800 sequence=10799 index=3 bytesused=1382400 flip_events=10800 F/D/R=0/0/0
+FRAME count=12600 sequence=12599 index=3 bytesused=1382400 flip_events=12600 F/D/R=0/0/0
+FRAME count=14400 sequence=14399 index=3 bytesused=1382400 flip_events=14400 F/D/R=0/0/0
+FRAME count=16200 sequence=16199 index=3 bytesused=1382400 flip_events=16200 F/D/R=0/0/0
+FRAME count=18000 sequence=17999 index=3 bytesused=1382400 flip_events=18000 F/D/R=1/1/0
+FRAME count=19800 sequence=19799 index=3 bytesused=1382400 flip_events=19800 F/D/R=1/1/0
+FRAME count=21600 sequence=21599 index=3 bytesused=1382400 flip_events=21600 F/D/R=1/1/0
+FRAME count=23400 sequence=23399 index=3 bytesused=1382400 flip_events=23400 F/D/R=1/1/0
+FRAME count=25200 sequence=25199 index=3 bytesused=1382400 flip_events=25200 F/D/R=1/1/0
+FRAME count=27000 sequence=26999 index=3 bytesused=1382400 flip_events=27000 F/D/R=1/1/0
+FRAME count=28800 sequence=28799 index=3 bytesused=1382400 flip_events=28800 F/D/R=1/1/0
+FRAME count=30600 sequence=30599 index=3 bytesused=1382400 flip_events=30600 F/D/R=1/1/0
+FRAME count=32400 sequence=32399 index=3 bytesused=1382400 flip_events=32400 F/D/R=1/1/0
+FRAME count=34200 sequence=34199 index=3 bytesused=1382400 flip_events=34200 F/D/R=1/1/0
+FRAME count=36000 sequence=35999 index=3 bytesused=1382400 flip_events=36000 F/D/R=1/1/0
+FRAME count=37800 sequence=37799 index=3 bytesused=1382400 flip_events=37800 F/D/R=1/1/0
+FRAME count=39600 sequence=39599 index=3 bytesused=1382400 flip_events=39600 F/D/R=1/1/0
+FRAME count=41400 sequence=41399 index=3 bytesused=1382400 flip_events=41400 F/D/R=1/1/0
+FRAME count=43200 sequence=43199 index=3 bytesused=1382400 flip_events=43200 F/D/R=1/1/0
+FRAME count=45000 sequence=44999 index=3 bytesused=1382400 flip_events=45000 F/D/R=1/1/0
+FRAME count=46800 sequence=46799 index=3 bytesused=1382400 flip_events=46800 F/D/R=2/2/0

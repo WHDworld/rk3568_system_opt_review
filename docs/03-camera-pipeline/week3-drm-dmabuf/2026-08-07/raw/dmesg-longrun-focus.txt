@@ -1,0 +1,13 @@
+[ 2608.506285] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[ 2608.508660] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[ 2608.508703] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[ 3822.719803] dwc3 fcc00000.dwc3: device reset
+[ 3822.844815] android_work: sent uevent USB_STATE=CONFIGURED
+[ 3822.847207] android_work: sent uevent USB_STATE=DISCONNECTED
+[ 3823.644571] android_work: sent uevent USB_STATE=CONNECTED
+[ 3823.645323] android_work: sent uevent USB_STATE=CONFIGURED
+[ 4605.657818] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[ 4605.657832] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[ 4605.669178] rkisp rkisp-vir0: first params buf queue
+
+结论：长测期间发生一次 USB gadget reset/ADB 重连，但 systemd 托管的预览进程未退出；摄像头链路继续运行到 60000 帧。该区间没有新增 CSI/ISP error、timeout 或 IOMMU fault，结束时 DPHY 正常 stream-off。
