@@ -1,0 +1,22 @@
+DRM_CAP universal_planes=1 atomic=1
+DRM_PLANE id=76 type=1 possible_crtcs=0x2 nv12=0
+DRM_PLANE id=112 type=0 possible_crtcs=0x2 nv12=1
+DRM_PLANE id=126 type=0 possible_crtcs=0x2 nv12=0
+DRM_SELECT connector=161 mode=1280x800 1280x800 crtc=90 crtc_index=1 primary=76 overlay_nv12=112
+PATTERN displayed fb=162 handle=1 pitch=5120 size=4096000
+V4L2_FORMAT width=1280 height=720 format=NV12 physical_planes=1 drm_image_planes=2 stride=1280 sizeimage=1382400 uv_offset=921600
+DMABUF_INIT index=0 exp_fd=5 gem_handle=2 fb=163 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=1 exp_fd=6 gem_handle=3 fb=166 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=2 exp_fd=7 gem_handle=4 fb=167 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=3 exp_fd=8 gem_handle=5 fb=168 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=4 exp_fd=9 gem_handle=6 fb=169 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=5 exp_fd=10 gem_handle=7 fb=170 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+STREAMON backend=dmabuf buffers=6 target_frames=120 steady_fds=11 pid=27576
+FRAME count=1 sequence=0 index=0 bytesused=1382400 flip_events=1 F/D/R=0/0/0
+FRAME count=120 sequence=119 index=5 bytesused=1382400 flip_events=120 F/D/R=0/0/0
+SUMMARY backend=dmabuf frames=120 first_sequence=0 last_sequence=119 forward=0 duplicate=0 regression=0 flip_events=120 elapsed_s=3.962676 fps=30.030213 copy_total_ms=0.000 copy_avg_us=0.000 steady_fds_start=11 steady_fds_end=11 fd_growth=0 interrupted=0
+LATENCY name=driver_to_dq unit=us samples=120 mean=384.248 p50=495.401 p95=554.512 p99=560.002 min=210.493 max=777.176
+LATENCY name=dq_to_commit_return unit=us samples=120 mean=129.182 p50=126.875 p95=146.416 p99=152.834 min=118.708 max=166.834
+LATENCY name=dq_to_page_flip unit=us samples=120 mean=11731.535 p50=12973.334 p95=16643.960 p99=16939.127 min=414.167 max=17075.043
+LATENCY name=atomic_commit_call unit=us samples=120 mean=115.048 p50=112.875 p95=134.459 p99=139.125 min=105.000 max=152.542
+STREAMOFF success

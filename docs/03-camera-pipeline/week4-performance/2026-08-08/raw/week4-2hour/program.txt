@@ -1,0 +1,31 @@
+DRM_CAP universal_planes=1 atomic=1
+DRM_PLANE id=76 type=1 possible_crtcs=0x2 nv12=0
+DRM_PLANE id=112 type=0 possible_crtcs=0x2 nv12=1
+DRM_PLANE id=126 type=0 possible_crtcs=0x2 nv12=0
+DRM_SELECT connector=161 mode=1280x800 1280x800 crtc=90 crtc_index=1 primary=76 overlay_nv12=112
+PATTERN displayed fb=163 handle=1 pitch=5120 size=4096000
+V4L2_FORMAT width=1280 height=720 format=NV12 physical_planes=1 drm_image_planes=2 stride=1280 sizeimage=1382400 uv_offset=921600
+DMABUF_INIT index=0 exp_fd=5 gem_handle=2 fb=162 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=1 exp_fd=6 gem_handle=3 fb=166 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=2 exp_fd=7 gem_handle=4 fb=167 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+DMABUF_INIT index=3 exp_fd=8 gem_handle=5 fb=168 pitches=1280/1280 offsets=0/921600 modifier=LINEAR
+STREAMON backend=dmabuf buffers=4 target_frames=217000 steady_fds=9 pid=30406
+FRAME count=1 sequence=0 index=0 bytesused=1382400 flip_events=1 F/D/R=0/0/0
+FRAME count=18000 sequence=17999 index=3 bytesused=1382400 flip_events=18000 F/D/R=4/4/0
+FRAME count=36000 sequence=35999 index=3 bytesused=1382400 flip_events=36000 F/D/R=4/4/0
+FRAME count=54000 sequence=53999 index=3 bytesused=1382400 flip_events=54000 F/D/R=4/4/0
+FRAME count=72000 sequence=71999 index=3 bytesused=1382400 flip_events=72000 F/D/R=4/4/0
+FRAME count=90000 sequence=89999 index=3 bytesused=1382400 flip_events=90000 F/D/R=10/10/0
+FRAME count=108000 sequence=107999 index=3 bytesused=1382400 flip_events=108000 F/D/R=12/12/0
+FRAME count=126000 sequence=125999 index=3 bytesused=1382400 flip_events=126000 F/D/R=14/14/0
+FRAME count=144000 sequence=143999 index=3 bytesused=1382400 flip_events=144000 F/D/R=18/18/0
+FRAME count=162000 sequence=161999 index=3 bytesused=1382400 flip_events=162000 F/D/R=20/20/0
+FRAME count=180000 sequence=179999 index=3 bytesused=1382400 flip_events=180000 F/D/R=20/20/0
+FRAME count=198000 sequence=197999 index=3 bytesused=1382400 flip_events=198000 F/D/R=20/20/0
+FRAME count=216000 sequence=215999 index=3 bytesused=1382400 flip_events=216000 F/D/R=20/20/0
+SUMMARY backend=dmabuf frames=217000 first_sequence=0 last_sequence=216999 forward=20 duplicate=20 regression=0 flip_events=217000 elapsed_s=7222.509007 fps=30.044822 copy_total_ms=0.000 copy_avg_us=0.000 steady_fds_start=9 steady_fds_end=9 fd_growth=0 interrupted=0
+LATENCY name=driver_to_dq unit=us samples=217000 mean=381.935 p50=297.031 p95=573.855 p99=599.969 min=168.972 max=3248.554
+LATENCY name=dq_to_commit_return unit=us samples=217000 mean=173.220 p50=142.916 p95=292.833 p99=330.750 min=121.625 max=1394.459
+LATENCY name=dq_to_page_flip unit=us samples=217000 mean=8764.641 p50=8763.710 p95=16258.377 p99=16939.419 min=305.666 max=26810.878
+LATENCY name=atomic_commit_call unit=us samples=217000 mean=156.715 p50=126.875 p95=276.792 p99=313.834 min=107.041 max=1377.542
+STREAMOFF success

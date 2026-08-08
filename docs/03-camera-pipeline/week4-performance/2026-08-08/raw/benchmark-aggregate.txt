@@ -1,0 +1,43 @@
+Controlled setup:
+  sensor/RKISP output: /dev/video0, 1280x720 NV12, 30 fps
+  capture buffers: 4
+  display: /dev/dri/card0, LVDS-1, CRTC 90, overlay plane 112
+  compositor: LightDM/Xorg stopped
+  warm-up: 900 frames (about 30 seconds) per backend
+  measured: 5 runs x 1800 frames (about 60 seconds) per backend
+  CPU frequency/governor: not exposed by this BSP
+
+copy:
+  fps mean=30.036902 p50=30.036795 min=30.036663 max=30.037281 stdev=0.000241
+  copy_avg_us mean=922.500 p50=914.262 min=895.833 max=967.750 stdev=27.068
+  process_cpu_percent mean=4.203 min=4.117 max=4.333 stdev=0.081
+  system_busy_percent mean=5.166
+  rss_kB mean=13452.8 max=13624
+  pss_kB mean=12238.1 max=12403
+  temperature_mC min=56666 max=60555
+  CmaFree_kB min=13264 max=13264
+  dq_to_commit_return_us: mean=1348.542 p50=1322.300 p95=1620.558 p99=1767.325
+  dq_to_page_flip_us: mean=10041.884 p50=10231.493 p95=17358.660 p99=18068.052
+
+dmabuf:
+  fps mean=30.042593 p50=30.044008 min=30.036935 max=30.044041 stdev=0.003163
+  copy_avg_us mean=0 p50=0 min=0 max=0 stdev=0
+  process_cpu_percent mean=1.372 min=1.344 max=1.400 stdev=0.021
+  system_busy_percent mean=3.702
+  rss_kB mean=7409.5 max=10756
+  pss_kB mean=9578.9 max=9703
+  temperature_mC min=60000 max=61666
+  CmaFree_kB min=13264 max=13264
+  dq_to_commit_return_us: mean=154.131 p50=137.842 p95=254.217 p99=288.633
+  dq_to_page_flip_us: mean=8958.827 p50=9109.801 p95=16291.627 p99=16945.485
+
+relative reduction from copy to dmabuf:
+  process CPU: 67.36%
+  dq_to_commit_return mean: 88.57%
+  dq_to_page_flip mean: 10.79%
+  mean RSS sample: 44.92%
+
+All ten measured runs:
+  frames=1800 and page_flip_events=1800 per run
+  forward=0 duplicate=0 regression=0
+  fd_growth=0

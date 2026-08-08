@@ -1,0 +1,19 @@
+DRM_CAP universal_planes=1 atomic=1
+DRM_PLANE id=76 type=1 possible_crtcs=0x2 nv12=0
+DRM_PLANE id=112 type=0 possible_crtcs=0x2 nv12=1
+DRM_PLANE id=126 type=0 possible_crtcs=0x2 nv12=0
+DRM_SELECT connector=161 mode=1280x800 1280x800 crtc=90 crtc_index=1 primary=76 overlay_nv12=112
+PATTERN displayed fb=162 handle=1 pitch=5120 size=4096000
+V4L2_FORMAT width=1280 height=720 format=NV12 physical_planes=1 drm_image_planes=2 stride=1280 sizeimage=1382400 uv_offset=921600
+COPY_INIT fb=165 handle=2 pitch=1280 uv_offset=921600 size=1382400
+COPY_INIT fb=166 handle=3 pitch=1280 uv_offset=921600 size=1382400
+STREAMON backend=copy buffers=4 target_frames=1800 steady_fds=5 pid=18982
+FRAME count=1 sequence=0 index=0 bytesused=1382400 flip_events=1 F/D/R=0/0/0
+FRAME count=1800 sequence=1799 index=3 bytesused=1382400 flip_events=1800 F/D/R=0/0/0
+SUMMARY backend=copy frames=1800 first_sequence=0 last_sequence=1799 forward=0 duplicate=0 regression=0 flip_events=1800 elapsed_s=59.893208 fps=30.036795 copy_total_ms=1612.499 copy_avg_us=895.833 steady_fds_start=5 steady_fds_end=5 fd_growth=0 interrupted=0
+LATENCY name=driver_to_dq unit=us samples=1800 mean=388.328 p50=291.195 p95=588.095 p99=624.448 min=181.330 max=1770.770
+LATENCY name=dq_to_commit_return unit=us samples=1800 mean=1315.205 p50=1265.541 p95=1608.250 p99=1715.001 min=1026.375 max=2368.625
+LATENCY name=dq_to_page_flip unit=us samples=1800 mean=10016.399 p50=10224.668 p95=17310.126 p99=18009.252 min=1318.333 max=18421.961
+LATENCY name=atomic_commit_call unit=us samples=1800 mean=226.183 p50=144.667 p95=493.500 p99=546.875 min=119.584 max=629.709
+STREAMOFF success
+BENCH_META backend=copy run=3 wall_s=61 start_ticks=3813136

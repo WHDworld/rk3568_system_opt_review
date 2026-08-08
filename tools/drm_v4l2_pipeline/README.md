@@ -42,6 +42,17 @@ FREE -> CAPTURE_QUEUED -> CAPTURE_DONE -> DISPLAY_PENDING
 
 程序在 QBUF 前检查状态，禁止把 DISPLAY_PENDING/DISPLAYED buffer 提前交回 ISP。
 
+摄像头后端会输出以下逐帧延迟的 mean、P50、P95、P99、min 和 max：
+
+```text
+driver_to_dq
+dq_to_commit_return
+dq_to_page_flip
+atomic_commit_call
+```
+
+前三项使用 V4L2 driver timestamp 和 `CLOCK_MONOTONIC` 用户态时间。`dq_to_page_flip` 是软件显示调度延迟，不是 sensor→屏幕的光子端到端延迟。
+
 30 分钟板端验收使用 `systemd-run` 托管，避免 USB/ADB 瞬断连带杀死预览进程：
 
 ```bash
@@ -52,3 +63,16 @@ adb shell 'systemctl status drm-v4l2-longtest --no-pager -l'
 ```
 
 脚本会在测试前停止 LightDM，结束后重新启动；结果分别写入 `/tmp/dmabuf-longrun-detached.txt` 与 `/tmp/dmabuf-longrun-detached.exit`。
+
+第四周的可重复实验脚本包括：
+
+```text
+run-week4-benchmark-board.sh  copy/dmabuf 各预热 30 秒并执行 5×60 秒
+run-week4-perf-board.sh       perf stat 硬件计数器对照
+run-week4-ftrace-board.sh     tracefs function tracer
+run-week4-cma-board.sh        3/4/6 buffer 与 2 GiB 内存压力矩阵
+run-week4-restart-board.sh    DMA-BUF 100 次启动/退出
+run-week4-2hour-board.sh      217000 帧、超过 2 小时长稳
+```
+
+这些脚本都通过 trap 恢复 LightDM。直接运行前仍应确认板端二进制路径和显示设备与本机一致。

@@ -1,0 +1,29 @@
+# tracer: nop
+#
+# entries-in-buffer/entries-written: 18/18   #P:4
+#
+#                                _-----=> irqs-off
+#                               / _----=> need-resched
+#                              | / _---=> hardirq/softirq
+#                              || / _--=> preempt-depth
+#                              ||| /     delay
+#           TASK-PID     CPU#  ||||   TIMESTAMP  FUNCTION
+#              | |         |   ||||      |         |
+ run-week4-cma-b-27405   [003] .... 39030.890035: tracing_mark_write: cold-copy-b3-BEGIN
+ run-week4-cma-b-27405   [003] .... 39036.104350: tracing_mark_write: cold-copy-b3-END
+ run-week4-cma-b-27405   [003] .... 39036.104453: tracing_mark_write: cold-dmabuf-b3-BEGIN
+ run-week4-cma-b-27405   [001] .... 39042.240758: tracing_mark_write: cold-dmabuf-b3-END
+ run-week4-cma-b-27405   [001] .... 39042.240853: tracing_mark_write: cold-copy-b4-BEGIN
+ run-week4-cma-b-27405   [001] .... 39046.410019: tracing_mark_write: cold-copy-b4-END
+ run-week4-cma-b-27405   [001] .... 39046.410109: tracing_mark_write: cold-dmabuf-b4-BEGIN
+ run-week4-cma-b-27405   [001] .... 39050.578801: tracing_mark_write: cold-dmabuf-b4-END
+ run-week4-cma-b-27405   [001] .... 39050.578894: tracing_mark_write: cold-copy-b6-BEGIN
+ run-week4-cma-b-27405   [001] .... 39054.781085: tracing_mark_write: cold-copy-b6-END
+ run-week4-cma-b-27405   [001] .... 39054.781175: tracing_mark_write: cold-dmabuf-b6-BEGIN
+ run-week4-cma-b-27405   [001] .... 39058.950168: tracing_mark_write: cold-dmabuf-b6-END
+ run-week4-cma-b-27405   [001] .... 39062.937232: tracing_mark_write: pressure-dmabuf-b3-BEGIN
+ run-week4-cma-b-27405   [002] .... 39069.067674: tracing_mark_write: pressure-dmabuf-b3-END
+ run-week4-cma-b-27405   [002] .... 39069.067760: tracing_mark_write: pressure-dmabuf-b4-BEGIN
+ run-week4-cma-b-27405   [001] .... 39073.236665: tracing_mark_write: pressure-dmabuf-b4-END
+ run-week4-cma-b-27405   [001] .... 39073.236754: tracing_mark_write: pressure-dmabuf-b6-BEGIN
+ run-week4-cma-b-27405   [002] .... 39077.405678: tracing_mark_write: pressure-dmabuf-b6-END

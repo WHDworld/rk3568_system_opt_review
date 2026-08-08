@@ -1,0 +1,11 @@
+
+ Performance counter stats for process id '26138':
+
+     3,586,060,020      cycles
+       684,542,247      instructions              #    0.19  insn per cycle
+       353,164,508      cache-references
+         2,995,019      cache-misses              #    0.848 % of all cache refs
+             5,332      context-switches
+                 0      page-faults
+
+      60.003497946 seconds time elapsed

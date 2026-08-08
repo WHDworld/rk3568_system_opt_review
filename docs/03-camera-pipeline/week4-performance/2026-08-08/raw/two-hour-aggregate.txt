@@ -1,0 +1,41 @@
+service=week4-2hour.service
+exit=0
+lightdm_after=active
+backend=dmabuf
+resolution=1280x720
+format=NV12
+buffers=4
+frames=217000
+page_flip_events=217000
+elapsed_s=7222.509007
+elapsed_minutes=120.375
+fps=30.044822
+forward=20
+duplicate=20
+regression=0
+copy_total_ms=0
+steady_fds_start=9
+steady_fds_end=9
+fd_growth=0
+process_cpu_percent_from_proc=1.354
+soc_temp_mC_min=57777
+soc_temp_mC_max=63888
+soc_temp_mC_mean=61280.5
+CmaFree_kB_first=13264
+CmaFree_kB_last=13264
+CmaFree_kB_min=13264
+CmaFree_kB_max=13264
+RSS_kB_first_before_latency_pages_resident=5240
+RSS_kB_last=17424
+RSS_kB_max=17424
+latency_sample_array_bytes=6944000
+
+latency_us:
+  driver_to_dq mean=381.935 p50=297.031 p95=573.855 p99=599.969 max=3248.554
+  dq_to_commit_return mean=173.220 p50=142.916 p95=292.833 p99=330.750 max=1394.459
+  dq_to_page_flip mean=8764.641 p50=8763.710 p95=16258.377 p99=16939.419 max=26810.878
+  atomic_commit_call mean=156.715 p50=126.875 p95=276.792 p99=313.834 max=1377.542
+
+dmesg delta:
+  normal RKISP clock setup and DPHY stream on/off only
+  no new CSI/ISP error, timeout, IOMMU fault, or DRM error

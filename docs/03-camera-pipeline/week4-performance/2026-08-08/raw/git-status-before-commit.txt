@@ -1,0 +1,21 @@
+captured_at=2026-08-08 after all week4 tests
+
+BSP repository:
+  branch=feature/ov5695-v4l2-dmabuf
+  HEAD=2bb09ab7f19f12f5e9c2b438229dd6a4604a86a9
+  tracking=origin/feature/ov5695-v4l2-dmabuf
+  worktree=clean (nested ai_doc ignored)
+
+ai_doc repository:
+  branch=main
+  HEAD_before_commit=0fb5226cdda0299cfa2b25390cffc293aa8b792c
+  tracking=origin/main
+  modified=roadmap, drm_v4l2_pipeline source/README
+  added=week4 report/raw data and six reproducible board scripts
+
+board final state:
+  adb=device
+  lightdm=active
+  week4-2hour=inactive (normal completion)
+  final_native_build_Werror=pass
+  final_100_frame_regression=pass

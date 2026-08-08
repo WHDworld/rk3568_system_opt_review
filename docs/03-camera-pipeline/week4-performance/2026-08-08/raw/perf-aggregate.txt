@@ -1,0 +1,33 @@
+perf version: 5.10.160, cross-compiled from this BSP kernel/tools/perf
+attachment duration: 60 seconds per backend
+events: cycles,instructions,cache-references,cache-misses,context-switches,page-faults
+
+copy:
+  cycles=3586060020
+  instructions=684542247
+  IPC=0.19
+  cache_references=353164508
+  cache_misses=2995019
+  cache_miss_ratio=0.848%
+  context_switches=5332
+  page_faults=0
+
+dmabuf:
+  cycles=1019546022
+  instructions=227799646
+  IPC=0.22
+  cache_references=22367522
+  cache_misses=1863838
+  cache_miss_ratio=8.333%
+  context_switches=3619
+  page_faults=0
+
+absolute-count reduction from copy to dmabuf:
+  cycles=71.57%
+  instructions=66.72%
+  cache_references=93.67%
+  cache_misses=37.77%
+  context_switches=32.13%
+
+Note: DMA-BUF has a higher cache-miss ratio because its cache-reference denominator is much
+smaller, but its absolute cache-miss count is still lower. Do not compare percentages alone.

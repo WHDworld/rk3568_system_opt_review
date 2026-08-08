@@ -120,6 +120,19 @@ struct app {
 	uint64_t flip_events;
 };
 
+struct latency_sample {
+	uint64_t driver_to_dq_ns;
+	uint64_t dq_to_commit_return_ns;
+	uint64_t dq_to_flip_ns;
+	uint64_t commit_call_ns;
+};
+
+struct commit_timing {
+	uint64_t begin_ns;
+	uint64_t return_ns;
+	uint64_t flip_ns;
+};
+
 static volatile sig_atomic_t stop_requested;
 
 static void signal_handler(int signo)
@@ -507,7 +520,8 @@ static void page_flip_handler(int fd, unsigned int frame, unsigned int sec,
 	app->flip_events++;
 }
 
-static int commit_overlay(struct app *app, uint32_t fb_id)
+static int commit_overlay(struct app *app, uint32_t fb_id,
+			  struct commit_timing *timing)
 {
 	drmModeAtomicReq *req = drmModeAtomicAlloc();
 	drmEventContext event = {
@@ -524,8 +538,10 @@ static int commit_overlay(struct app *app, uint32_t fb_id)
 		app->drm.mode.hdisplay, app->drm.mode.vdisplay)) {
 		drmModeAtomicFree(req); return -1;
 	}
+	timing->begin_ns = monotonic_ns();
 	ret = drmModeAtomicCommit(app->drm.fd, req,
 		DRM_MODE_ATOMIC_NONBLOCK | DRM_MODE_PAGE_FLIP_EVENT, app);
+	timing->return_ns = monotonic_ns();
 	drmModeAtomicFree(req);
 	if (ret) { perror("drmModeAtomicCommit overlay"); return -1; }
 	/* Once submitted, always consume the completion event before releasing FBs. */
@@ -537,7 +553,43 @@ static int commit_overlay(struct app *app, uint32_t fb_id)
 			perror("drmHandleEvent"); return -1;
 		}
 	}
+	timing->flip_ns = monotonic_ns();
 	return stop_requested ? 1 : 0;
+}
+
+static int compare_u64(const void *left, const void *right)
+{
+	const uint64_t a = *(const uint64_t *)left;
+	const uint64_t b = *(const uint64_t *)right;
+	return (a > b) - (a < b);
+}
+
+static void print_latency_stats(const char *name, const uint64_t *values,
+				uint64_t count)
+{
+	uint64_t *sorted;
+	long double sum = 0.0;
+	uint64_t i;
+
+	if (!count)
+		return;
+	sorted = malloc((size_t)count * sizeof(*sorted));
+	if (!sorted) {
+		fprintf(stderr, "latency stats allocation failed\n");
+		return;
+	}
+	memcpy(sorted, values, (size_t)count * sizeof(*sorted));
+	qsort(sorted, (size_t)count, sizeof(*sorted), compare_u64);
+	for (i = 0; i < count; i++)
+		sum += sorted[i];
+	printf("LATENCY name=%s unit=us samples=%llu mean=%.3Lf "
+	       "p50=%.3f p95=%.3f p99=%.3f min=%.3f max=%.3f\n",
+	       name, (unsigned long long)count, sum / count / 1000.0L,
+	       sorted[(count - 1) * 50 / 100] / 1000.0,
+	       sorted[(count - 1) * 95 / 100] / 1000.0,
+	       sorted[(count - 1) * 99 / 100] / 1000.0,
+	       sorted[0] / 1000.0, sorted[count - 1] / 1000.0);
+	free(sorted);
 }
 
 static int disable_overlay(struct drm_context *drm)
@@ -699,6 +751,16 @@ static int run_camera(struct app *app)
 	uint32_t first_seq = 0, last_seq = 0;
 	unsigned int i, copy_index = 0;
 	int steady_fds_start, steady_fds_end;
+	struct latency_sample *latency;
+	uint64_t *metric;
+
+	latency = calloc((size_t)app->opt.frames, sizeof(*latency));
+	metric = malloc((size_t)app->opt.frames * sizeof(*metric));
+	if (!latency || !metric) {
+		free(latency); free(metric);
+		fprintf(stderr, "latency sample allocation failed\n");
+		return -1;
+	}
 
 	if (app->opt.backend == BACKEND_COPY) {
 		if (create_nv12_dumb(app, &app->copies[0]) ||
@@ -721,6 +783,8 @@ static int run_camera(struct app *app)
 		struct pollfd pfd = { .fd = video->fd, .events = POLLIN };
 		struct v4l2_buffer buf = { 0 };
 		struct v4l2_plane plane = { 0 };
+		struct commit_timing timing = { 0 };
+		uint64_t dq_ns, driver_ns;
 		int ret;
 		ret = poll(&pfd, 1, 2000);
 		if (ret < 0 && errno == EINTR) continue;
@@ -731,6 +795,9 @@ static int run_camera(struct app *app)
 			if (errno == EAGAIN) continue;
 			perror("DQBUF"); return -1;
 		}
+		dq_ns = monotonic_ns();
+		driver_ns = (uint64_t)buf.timestamp.tv_sec * 1000000000ULL +
+			    (uint64_t)buf.timestamp.tv_usec * 1000ULL;
 		video->buffers[buf.index].state = BUF_CAPTURE_DONE;
 		if (!frames) { first_seq = buf.sequence; start_ns = monotonic_ns(); }
 		else if (buf.sequence == last_seq) duplicate++;
@@ -743,7 +810,8 @@ static int run_camera(struct app *app)
 			copy_nv12(app, buf.index, &app->copies[copy_index]);
 			copy_ns += monotonic_ns() - before;
 			if (queue_capture(video, buf.index)) return -1;
-			commit_ret = commit_overlay(app, app->copies[copy_index].dumb.fb_id);
+			commit_ret = commit_overlay(app, app->copies[copy_index].dumb.fb_id,
+						    &timing);
 			if (commit_ret < 0) return -1;
 			copy_index ^= 1U;
 			if (commit_ret > 0) break;
@@ -751,7 +819,8 @@ static int run_camera(struct app *app)
 			int old = displayed_capture;
 			int commit_ret;
 			video->buffers[buf.index].state = BUF_DISPLAY_PENDING;
-			commit_ret = commit_overlay(app, video->buffers[buf.index].fb_id);
+			commit_ret = commit_overlay(app, video->buffers[buf.index].fb_id,
+						    &timing);
 			if (commit_ret < 0) return -1;
 			video->buffers[buf.index].state = BUF_DISPLAYED;
 			displayed_capture = buf.index;
@@ -766,6 +835,10 @@ static int run_camera(struct app *app)
 				break;
 			}
 		}
+		latency[frames].driver_to_dq_ns = dq_ns >= driver_ns ? dq_ns-driver_ns : 0;
+		latency[frames].dq_to_commit_return_ns = timing.return_ns-dq_ns;
+		latency[frames].dq_to_flip_ns = timing.flip_ns-dq_ns;
+		latency[frames].commit_call_ns = timing.return_ns-timing.begin_ns;
 		last_seq = buf.sequence;
 		frames++;
 		end_ns = monotonic_ns();
@@ -795,6 +868,16 @@ static int run_camera(struct app *app)
 	       steady_fds_start, steady_fds_end,
 	       steady_fds_end - steady_fds_start,
 	       stop_requested ? 1U : 0U);
+	for (i = 0; i < frames; i++) metric[i] = latency[i].driver_to_dq_ns;
+	print_latency_stats("driver_to_dq", metric, frames);
+	for (i = 0; i < frames; i++) metric[i] = latency[i].dq_to_commit_return_ns;
+	print_latency_stats("dq_to_commit_return", metric, frames);
+	for (i = 0; i < frames; i++) metric[i] = latency[i].dq_to_flip_ns;
+	print_latency_stats("dq_to_page_flip", metric, frames);
+	for (i = 0; i < frames; i++) metric[i] = latency[i].commit_call_ns;
+	print_latency_stats("atomic_commit_call", metric, frames);
+	free(metric);
+	free(latency);
 	return 0;
 }
 

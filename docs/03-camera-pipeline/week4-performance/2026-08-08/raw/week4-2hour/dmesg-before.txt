@@ -1,0 +1,2392 @@
+[    1.391085] [1;32m
+                 _______                    _
+                |__   __|                  | |
+                   | | ___  _ __   ___  ___| |_
+                   | |/ _ \| '_ \ / _ \/ _ \ __|
+                   | | (_) | |_) |  __/  __/ |_
+                   |_|\___/| .__/ \___|\___|\__|
+                           | |
+                           |_|
+               TOPEET BOARD:iTOP-RK3568
+               http://www.topeetboard.com
+               [0m
+[    1.391109] Linux version 5.10.160-g4a31dcd15b09-dirty (whd@whd) (aarch64-none-linux-gnu-gcc (GNU Toolchain for the A-profile Architecture 10.3-2021.07 (arm-10.29)) 10.3.1 20210621, GNU ld (GNU Toolchain for the A-profile Architecture 10.3-2021.07 (arm-10.29)) 2.36.1.20210621) #4 SMP Sun Jul 26 17:08:38 CST 2026
+[    1.394921] Machine model: TOPEET RK3568 EVB1 DDR4 V10 Board
+[    1.394991] earlycon: uart8250 at MMIO32 0x00000000fe660000 (options '')
+[    1.489296] printk: bootconsole [uart8250] enabled
+[    1.495399] efi: UEFI not found.
+[    1.600722] Zone ranges:
+[    1.603506]   DMA      [mem 0x0000000000200000-0x00000000ffffffff]
+[    1.610286]   DMA32    empty
+[    1.613438]   Normal   [mem 0x0000000100000000-0x00000001ffffffff]
+[    1.620212] Movable zone start for each node
+[    1.624888] Early memory node ranges
+[    1.628802]   node   0: [mem 0x0000000000200000-0x00000000083fffff]
+[    1.635672]   node   0: [mem 0x0000000009400000-0x00000000efffffff]
+[    1.642544]   node   0: [mem 0x0000000100000000-0x00000001ffffffff]
+[    1.649418] Initmem setup node 0 [mem 0x0000000000200000-0x00000001ffffffff]
+[    1.657146] On node 0 totalpages: 2027008
+[    1.657150]   DMA zone: 15288 pages used for memmap
+[    1.657153]   DMA zone: 0 pages reserved
+[    1.657155]   DMA zone: 978432 pages, LIFO batch:63
+[    1.657159]   Normal zone: 16384 pages used for memmap
+[    1.657161]   Normal zone: 1048576 pages, LIFO batch:63
+[    1.692035] cma: Reserved 16 MiB at 0x00000000eec00000
+[    1.697753] psci: probing for conduit method from DT.
+[    1.703297] psci: PSCIv1.1 detected in firmware.
+[    1.708356] psci: Using standard PSCI v0.2 function IDs
+[    1.714085] psci: Trusted OS migration not required
+[    1.719432] psci: SMC Calling Convention v1.2
+[    1.724547] percpu: Embedded 31 pages/cpu s87960 r8192 d30824 u126976
+[    1.731636] pcpu-alloc: s87960 r8192 d30824 u126976 alloc=31*4096
+[    1.731643] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3
+[    1.731723] Detected VIPT I-cache on CPU0
+[    1.736143] CPU features: detected: GIC system register CPU interface
+[    1.743203] CPU features: detected: Virtualization Host Extensions
+[    1.749981] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    1.757623] alternatives: patching kernel code
+[    1.764517] Built 1 zonelists, mobility grouping on.  Total pages: 1995336
+[    1.772062] Kernel command line: storagemedia=emmc androidboot.storagemedia=emmc androidboot.mode=normal  root=/dev/mmcblk0p6 androidboot.verifiedbootstate=orange rw rootwait earlycon=uart8250,mmio32,0xfe660000 console=ttyFIQ0
+[    1.796259] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    1.806012] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    1.814599] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    1.837267] software IO TLB: mapped [mem 0x00000000e9f00000-0x00000000edf00000] (64MB)
+[    1.933235] Memory: 7829612K/8108032K available (20992K kernel code, 3566K rwdata, 6508K rodata, 7232K init, 558K bss, 262036K reserved, 16384K cma-reserved)
+[    1.948812] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    1.956000] ftrace: allocating 62137 entries in 243 pages
+[    2.043798] ftrace: allocated 243 pages with 6 groups
+[    2.049634] rcu: Hierarchical RCU implementation.
+[    2.054793] rcu: 	RCU event tracing is enabled.
+[    2.059757] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    2.066913] 	Rude variant of Tasks RCU enabled.
+[    2.071874] 	Tracing variant of Tasks RCU enabled.
+[    2.077124] rcu: RCU calculated value of scheduler-enlistment delay is 30 jiffies.
+[    2.085422] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    2.097480] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    2.104590] GICv3: GIC: Using split EOI/Deactivate mode
+[    2.110324] GICv3: 320 SPIs implemented
+[    2.114526] GICv3: 0 Extended SPIs implemented
+[    2.119427] GICv3: Distributor has no Range Selector support
+[    2.125637] GICv3: 16 PPIs implemented
+[    2.129777] GICv3: CPU0: found redistributor 0 region 0:0x00000000fd460000
+[    2.137425] ITS [mem 0xfd440000-0xfd45ffff]
+[    2.142077] ITS@0x00000000fd440000: allocated 8192 Devices @2c10000 (indirect, esz 8, psz 64K, shr 0)
+[    2.152219] ITS@0x00000000fd440000: allocated 32768 Interrupt Collections @2c20000 (flat, esz 2, psz 64K, shr 0)
+[    2.163384] ITS: using cache flushing for cmd queue
+[    2.168981] GICv3: using LPI property table @0x0000000002c30000
+[    2.175576] GIC: using cache flushing for LPI property table
+[    2.181781] GICv3: CPU0: using allocated LPI pending table @0x0000000002c40000
+[    2.218108] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    2.224802] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    2.236635] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    2.246179] Console: colour dummy device 80x25
+[    2.251089] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=80000)
+[    2.262364] pid_max: default: 32768 minimum: 301
+[    2.267576] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    2.275922] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    2.286267] rcu: Hierarchical SRCU implementation.
+[    2.292296] Platform MSI: interrupt-controller@fd440000 domain created
+[    2.299807] PCI/MSI: /interrupt-controller@fd400000/interrupt-controller@fd440000 domain created
+[    2.309687] EFI services will not be available.
+[    2.314985] smp: Bringing up secondary CPUs ...
+[    2.328292] Detected VIPT I-cache on CPU1
+[    2.328325] GICv3: CPU1: found redistributor 100 region 0:0x00000000fd480000
+[    2.328344] GICv3: CPU1: using allocated LPI pending table @0x0000000002c50000
+[    2.328395] CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+[    2.336779] Detected VIPT I-cache on CPU2
+[    2.336804] GICv3: CPU2: found redistributor 200 region 0:0x00000000fd4a0000
+[    2.336819] GICv3: CPU2: using allocated LPI pending table @0x0000000002c60000
+[    2.336856] CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+[    2.345180] Detected VIPT I-cache on CPU3
+[    2.345201] GICv3: CPU3: found redistributor 300 region 0:0x00000000fd4c0000
+[    2.345216] GICv3: CPU3: using allocated LPI pending table @0x0000000002c70000
+[    2.345247] CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+[    2.345337] smp: Brought up 1 node, 4 CPUs
+[    2.431442] SMP: Total of 4 processors activated.
+[    2.436603] CPU features: detected: Privileged Access Never
+[    2.442716] CPU features: detected: User Access Override
+[    2.448544] CPU features: detected: 32-bit EL0 Support
+[    2.454180] CPU features: detected: Common not Private translations
+[    2.461055] CPU features: detected: RAS Extension Support
+[    2.466977] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    2.476428] CPU features: detected: CRC32 instructions
+[    2.482064] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    2.489703] CPU features: detected: RCpc load-acquire (LDAPR)
+[    2.496070] CPU: All CPU(s) started at EL2
+[    2.502162] devtmpfs: initialized
+[    2.519097] Registered cp15_barrier emulation handler
+[    2.524678] Registered setend emulation handler
+[    2.529811] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370867519511994 ns
+[    2.540520] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    2.548540] pinctrl core: initialized pinctrl subsystem
+[    2.554801] DMI not present or invalid.
+[    2.559422] NET: Registered protocol family 16
+[    2.565716] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[    2.573772] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    2.583967] Registered FIQ tty driver
+[    2.588317] thermal_sys: Registered thermal governor 'fair_share'
+[    2.588322] thermal_sys: Registered thermal governor 'step_wise'
+[    2.595013] thermal_sys: Registered thermal governor 'user_space'
+[    2.601605] thermal_sys: Registered thermal governor 'power_allocator'
+[    2.608649] thermal thermal_zone1: power_allocator: sustainable_power will be estimated
+[    2.624667] cpuidle: using governor menu
+[    2.629220] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    2.636787] ASID allocator initialised with 65536 entries
+[    2.644625] ramoops: dmesg-0	0x20000@0x0000000000110000
+[    2.650400] ramoops: console	0x80000@0x0000000000130000
+[    2.656150] ramoops: pmsg	0x50000@0x00000000001b0000
+[    2.661937] printk: console [ramoops-1] enabled
+[    2.666910] pstore: Registered ramoops as persistent store backend
+[    2.673695] ramoops: using 0xf0000@0x110000, ecc: 0
+[    2.710801] rockchip-gpio fdd60000.gpio0: probed /pinctrl/gpio0@fdd60000
+[    2.718643] rockchip-gpio fe740000.gpio1: probed /pinctrl/gpio1@fe740000
+[    2.726475] rockchip-gpio fe750000.gpio2: probed /pinctrl/gpio2@fe750000
+[    2.734397] rockchip-gpio fe760000.gpio3: probed /pinctrl/gpio3@fe760000
+[    2.742176] rockchip-gpio fe770000.gpio4: probed /pinctrl/gpio4@fe770000
+[    2.749606] rockchip-pinctrl pinctrl: probed pinctrl
+[    2.828057] raid6: neonx8   gen()  2519 MB/s
+[    2.888124] raid6: neonx8   xor()  2022 MB/s
+[    2.948210] raid6: neonx4   gen()  2571 MB/s
+[    3.008282] raid6: neonx4   xor()  2005 MB/s
+[    3.068359] raid6: neonx2   gen()  2316 MB/s
+[    3.128436] raid6: neonx2   xor()  1835 MB/s
+[    3.188522] raid6: neonx1   gen()  1861 MB/s
+[    3.248592] raid6: neonx1   xor()  1477 MB/s
+[    3.308673] raid6: int64x8  gen()  1733 MB/s
+[    3.368755] raid6: int64x8  xor()   938 MB/s
+[    3.428829] raid6: int64x4  gen()  1874 MB/s
+[    3.488902] raid6: int64x4  xor()  1011 MB/s
+[    3.548993] raid6: int64x2  gen()  1663 MB/s
+[    3.609064] raid6: int64x2  xor()   900 MB/s
+[    3.669156] raid6: int64x1  gen()  1150 MB/s
+[    3.729214] raid6: int64x1  xor()   616 MB/s
+[    3.733900] raid6: using algorithm neonx4 gen() 2571 MB/s
+[    3.739824] raid6: .... xor() 2005 MB/s, rmw enabled
+[    3.745270] raid6: using neon recovery algorithm
+[    3.751487] fiq_debugger fiq_debugger.0: IRQ fiq not found
+[    3.757534] fiq_debugger fiq_debugger.0: IRQ wakeup not found
+[    3.763849] fiq_debugger_probe: could not install nmi irq handler
+[    3.770619] printk: console [ttyFIQ0] enabled
+[    3.779753] printk: bootconsole [uart8250] disabled
+[    3.785283] Registered fiq debugger ttyFIQ0
+[    3.786658] vcc3v3_vga: supplied by vcc3v3_sys
+[    3.788208] iommu: Default domain type: Translated
+[    3.791588] SCSI subsystem initialized
+[    3.791644] libata version 3.00 loaded.
+[    3.791840] usbcore: registered new interface driver usbfs
+[    3.791890] usbcore: registered new interface driver hub
+[    3.791928] usbcore: registered new device driver usb
+[    3.792018] mc: Linux media interface: v0.10
+[    3.792048] videodev: Linux video capture interface: v2.00
+[    3.792115] pps_core: LinuxPPS API ver. 1 registered
+[    3.792124] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    3.792140] PTP clock support registered
+[    3.792799] arm-scmi firmware:scmi: SCMI Notifications - Core Enabled.
+[    3.792865] arm-scmi firmware:scmi: SCMI Protocol v2.0 'rockchip:' Firmware version 0x0
+[    3.794664] Advanced Linux Sound Architecture Driver Initialized.
+[    3.795067] Bluetooth: Core ver 2.22
+[    3.795108] NET: Registered protocol family 31
+[    3.795116] Bluetooth: HCI device and connection manager initialized
+[    3.795129] Bluetooth: HCI socket layer initialized
+[    3.795140] Bluetooth: L2CAP socket layer initialized
+[    3.795198] Bluetooth: SCO socket layer initialized
+[    3.795648] rockchip-cpuinfo cpuinfo: SoC		: 35682000
+[    3.795661] rockchip-cpuinfo cpuinfo: Serial		: 0c265e7b71750cfd
+[    3.796390] clocksource: Switched to clocksource arch_sys_counter
+[    4.214618] NET: Registered protocol family 2
+[    4.215007] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    4.218003] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    4.218080] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    4.218375] TCP bind hash table entries: 65536 (order: 8, 1048576 bytes, linear)
+[    4.219158] TCP: Hash tables configured (established 65536 bind 65536)
+[    4.219282] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    4.219375] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    4.219602] NET: Registered protocol family 1
+[    4.220135] RPC: Registered named UNIX socket transport module.
+[    4.220147] RPC: Registered udp transport module.
+[    4.220153] RPC: Registered tcp transport module.
+[    4.220159] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    4.221068] PCI: CLS 0 bytes, default 64
+[    4.223241] rockchip-thermal fe710000.tsadc: tsadc is probed successfully!
+[    4.224153] hw perfevents: enabled with armv8_cortex_a55 PMU driver, 7 counters available
+[    4.228155] Initialise system trusted keyrings
+[    4.228323] workingset: timestamp_bits=46 max_order=21 bucket_order=0
+[    4.232266] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    4.232894] NFS: Registering the id_resolver key type
+[    4.232929] Key type id_resolver registered
+[    4.232937] Key type id_legacy registered
+[    4.232966] ntfs: driver 2.1.32 [Flags: R/O].
+[    4.233140] jffs2: version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+[    4.233381] fuse: init (API version 7.32)
+[    4.233723] SGI XFS with security attributes, no debug enabled
+[    4.264364] NET: Registered protocol family 38
+[    4.264384] xor: measuring software checksum speed
+[    4.267875]    8regs           :  2856 MB/sec
+[    4.270722]    32regs          :  3482 MB/sec
+[    4.273921]    arm64_neon      :  3094 MB/sec
+[    4.273928] xor: using function: 32regs (3482 MB/sec)
+[    4.273944] Key type asymmetric registered
+[    4.273952] Asymmetric key parser 'x509' registered
+[    4.273994] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+[    4.274005] io scheduler mq-deadline registered
+[    4.274012] io scheduler kyber registered
+[    4.274666] rockchip-csi2-dphy-hw fe870000.csi2-dphy-hw: csi2 dphy hw probe successfully!
+[    4.275343] rockchip-csi2-dphy csi2-dphy0: csi2 dphy0 probe successfully!
+[    4.283763] rockchip-snps-pcie3-phy fe8c0000.phy: failed to find rockchip,pipe_grf regmap
+[    4.286220] rk-pcie 3c0000000.pcie: invalid prsnt-gpios property in node
+[    4.286609] rk-pcie 3c0800000.pcie: invalid prsnt-gpios property in node
+[    4.287039] pwm-backlight backlight: supply power not found, using dummy regulator
+[    4.287471] pwm-backlight backlight1: supply power not found, using dummy regulator
+[    4.287562] of_pwm_get(): can't parse "pwms" property
+[    4.287574] pwm-backlight backlight1: unable to request PWM
+[    4.287742] pwm-backlight: probe of backlight1 failed with error -2
+[    4.288035] iep: Module initialized.
+[    4.288096] mpp_service mpp-srv: 4a31dcd15 author: WHDworld 2026-07-26 Initial RK3568 SDK source import
+[    4.288105] mpp_service mpp-srv: probe start
+[    4.289984] mpp_vdpu2 fdea0400.vdpu: Adding to iommu group 1
+[    4.290191] mpp_vdpu2 fdea0400.vdpu: probe device
+[    4.290664] mpp_vdpu2 fdea0400.vdpu: probing finish
+[    4.291148] mpp_vepu2 fdee0000.vepu: Adding to iommu group 3
+[    4.291331] mpp_vepu2 fdee0000.vepu: probing start
+[    4.291806] mpp_vepu2 fdee0000.vepu: probing finish
+[    4.292002] rk-pcie 3c0000000.pcie: IRQ msi not found
+[    4.292015] rk-pcie 3c0000000.pcie: use outband MSI support
+[    4.292024] rk-pcie 3c0000000.pcie: Missing *config* reg space
+[    4.292045] rk-pcie 3c0000000.pcie: host bridge /pcie@fe260000 ranges:
+[    4.292082] rk-pcie 3c0000000.pcie:      err 0x00f4000000..0x00f40fffff -> 0x00f4000000
+[    4.292105] rk-pcie 3c0000000.pcie:       IO 0x00f4100000..0x00f41fffff -> 0x00f4100000
+[    4.292128] rk-pcie 3c0000000.pcie:      MEM 0x00f4200000..0x00f5ffffff -> 0x00f4200000
+[    4.292144] rk-pcie 3c0000000.pcie:      MEM 0x0300000000..0x033fffffff -> 0x0300000000
+[    4.292183] rk-pcie 3c0000000.pcie: Missing *config* reg space
+[    4.292222] rk-pcie 3c0000000.pcie: invalid resource
+[    4.292403] mpp-iep2 fdef0000.iep: Adding to iommu group 4
+[    4.292622] mpp-iep2 fdef0000.iep: probe device
+[    4.292878] mpp-iep2 fdef0000.iep: allocate roi buffer failed
+[    4.293114] mpp-iep2 fdef0000.iep: probing finish
+[    4.293601] mpp_jpgdec fded0000.jpegd: Adding to iommu group 2
+[    4.293782] mpp_jpgdec fded0000.jpegd: probe device
+[    4.294192] mpp_jpgdec fded0000.jpegd: probing finish
+[    4.295644] mpp_service mpp-srv: probe success
+[    4.300100] dma-pl330 fe530000.dmac: Loaded driver for PL330 DMAC-241330
+[    4.300124] dma-pl330 fe530000.dmac: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    4.300672] snps pcie3phy FW update! size 8192
+[    4.301816] dma-pl330 fe550000.dmac: Loaded driver for PL330 DMAC-241330
+[    4.301829] dma-pl330 fe550000.dmac: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    4.302621] rockchip-pvtm fde00000.pvtm: pvtm@0 probed
+[    4.302756] rockchip-pvtm fde80000.pvtm: pvtm@1 probed
+[    4.302864] rockchip-pvtm fde90000.pvtm: pvtm@2 probed
+[    4.303538] rockchip-system-monitor rockchip-system-monitor: system monitor probe
+[    4.304326] arm-scmi firmware:scmi: Failed. SCMI protocol 22 not active.
+[    4.304577] Serial: 8250/16550 driver, 10 ports, IRQ sharing disabled
+[    4.305279] fe680000.serial: ttyS4 at MMIO 0xfe680000 (irq = 79, base_baud = 1500000) is a 16550A
+[    4.305798] fe6b0000.serial: ttyS7 at MMIO 0xfe6b0000 (irq = 80, base_baud = 1500000) is a 16550A
+[    4.306434] fe6d0000.serial: ttyS9 at MMIO 0xfe6d0000 (irq = 81, base_baud = 1500000) is a 16550A
+[    4.308686] random: crng init done
+[    4.309245] rockchip-vop2 fe040000.vop: Adding to iommu group 8
+[    4.314763] rk-pcie 3c0800000.pcie: IRQ msi not found
+[    4.314786] rk-pcie 3c0800000.pcie: use outband MSI support
+[    4.314795] rk-pcie 3c0800000.pcie: Missing *config* reg space
+[    4.314819] rk-pcie 3c0800000.pcie: host bridge /pcie@fe280000 ranges:
+[    4.314865] rk-pcie 3c0800000.pcie:      err 0x00f0000000..0x00f00fffff -> 0x00f0000000
+[    4.314904] rk-pcie 3c0800000.pcie:       IO 0x00f0100000..0x00f01fffff -> 0x00f0100000
+[    4.314934] rk-pcie 3c0800000.pcie:      MEM 0x00f0200000..0x00f1ffffff -> 0x00f0200000
+[    4.314956] rk-pcie 3c0800000.pcie:      MEM 0x0380000000..0x03bfffffff -> 0x0380000000
+[    4.314997] rk-pcie 3c0800000.pcie: Missing *config* reg space
+[    4.315039] rk-pcie 3c0800000.pcie: invalid resource
+[    4.315560] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp0 assign plane mask: 0x0, primary plane phy id: -1
+[    4.315580] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp1 assign plane mask: 0x2a, primary plane phy id: 5
+[    4.315592] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp2 assign plane mask: 0x15, primary plane phy id: 4
+[    4.315848] [drm] failed to init overlay plane Cluster0-win1
+[    4.315895] [drm] failed to init overlay plane Cluster1-win1
+[    4.316023] rockchip-drm display-subsystem: bound fe040000.vop (ops 0xffffffc0095ae288)
+[    4.321475] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    4.322110] brd: module loaded
+[    4.326691] loop: module loaded
+[    4.327026] zram: Added device: zram0
+[    4.327241] lkdtm: No crash points registered, enable through debugfs
+[    4.327745] [debug] rs485_ctl_probe
+[    4.328163] system_heap: orders[0] = 6
+[    4.328178] system_heap: orders[1] = 4
+[    4.328184] system_heap: orders[2] = 0
+[    4.332030] spi-nand spi4.0: unknown raw ID 00000000
+[    4.332066] spi-nand: probe of spi4.0 failed with error -524
+[    4.333344] tun: Universal TUN/TAP device driver, 1.6
+[    4.333528] CAN device driver interface
+[    4.334933] igb: Intel(R) Gigabit Ethernet Network Driver
+[    4.334952] igb: Copyright (c) 2007-2014 Intel Corporation.
+[    4.336013] rk_gmac-dwmac fe010000.ethernet: IRQ eth_lpi not found
+[    4.336215] rk_gmac-dwmac fe010000.ethernet: no regulator found
+[    4.336228] rk_gmac-dwmac fe010000.ethernet: clock input or output? (input).
+[    4.336237] rk_gmac-dwmac fe010000.ethernet: TX delay(0x4f).
+[    4.336245] rk_gmac-dwmac fe010000.ethernet: RX delay(0x26).
+[    4.336258] rk_gmac-dwmac fe010000.ethernet: integrated PHY? (no).
+[    4.336295] rk_gmac-dwmac fe010000.ethernet: clock input from PHY
+[    4.336525] rk_gmac-dwmac fe010000.ethernet: init for RGMII
+[    4.336744] rk_gmac-dwmac fe010000.ethernet: User ID: 0x30, Synopsys ID: 0x51
+[    4.336758] rk_gmac-dwmac fe010000.ethernet: 	DWMAC4/5
+[    4.336768] rk_gmac-dwmac fe010000.ethernet: DMA HW capability register supported
+[    4.336776] rk_gmac-dwmac fe010000.ethernet: RX Checksum Offload Engine supported
+[    4.336783] rk_gmac-dwmac fe010000.ethernet: TX Checksum insertion supported
+[    4.336789] rk_gmac-dwmac fe010000.ethernet: Wake-Up On Lan supported
+[    4.336853] rk_gmac-dwmac fe010000.ethernet: TSO supported
+[    4.336862] rk_gmac-dwmac fe010000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    4.336869] rk_gmac-dwmac fe010000.ethernet: TSO feature enabled
+[    4.336878] rk_gmac-dwmac fe010000.ethernet: Using 32 bits DMA width
+[    4.472216] rk_gmac-dwmac fe2a0000.ethernet: IRQ eth_lpi not found
+[    4.472455] rk_gmac-dwmac fe2a0000.ethernet: no regulator found
+[    4.472468] rk_gmac-dwmac fe2a0000.ethernet: clock input or output? (input).
+[    4.472477] rk_gmac-dwmac fe2a0000.ethernet: TX delay(0x3c).
+[    4.472486] rk_gmac-dwmac fe2a0000.ethernet: RX delay(0x2f).
+[    4.472499] rk_gmac-dwmac fe2a0000.ethernet: integrated PHY? (no).
+[    4.472534] rk_gmac-dwmac fe2a0000.ethernet: clock input from PHY
+[    4.472775] rk_gmac-dwmac fe2a0000.ethernet: init for RGMII
+[    4.472993] rk_gmac-dwmac fe2a0000.ethernet: User ID: 0x30, Synopsys ID: 0x51
+[    4.473007] rk_gmac-dwmac fe2a0000.ethernet: 	DWMAC4/5
+[    4.473017] rk_gmac-dwmac fe2a0000.ethernet: DMA HW capability register supported
+[    4.473026] rk_gmac-dwmac fe2a0000.ethernet: RX Checksum Offload Engine supported
+[    4.473032] rk_gmac-dwmac fe2a0000.ethernet: TX Checksum insertion supported
+[    4.473058] rk_gmac-dwmac fe2a0000.ethernet: Wake-Up On Lan supported
+[    4.473124] rk_gmac-dwmac fe2a0000.ethernet: TSO supported
+[    4.473133] rk_gmac-dwmac fe2a0000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    4.473141] rk_gmac-dwmac fe2a0000.ethernet: TSO feature enabled
+[    4.473150] rk_gmac-dwmac fe2a0000.ethernet: Using 32 bits DMA width
+[    4.497528] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    4.520861] rk-pcie 3c0800000.pcie: PCIe Linking... LTSSM is 0x1
+[    4.523063] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    4.546404] rk-pcie 3c0800000.pcie: PCIe Linking... LTSSM is 0x0
+[    4.549732] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    4.573071] rk-pcie 3c0800000.pcie: PCIe Linking... LTSSM is 0x0
+[    4.576394] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    4.599738] rk-pcie 3c0800000.pcie: PCIe Linking... LTSSM is 0x0
+[    4.603063] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    4.607015] terry in : phy_rtl8211f_led_fixup
+[    4.609543] PPP generic driver version 2.4.2
+[    4.609734] PPP BSD Compression module registered
+[    4.609745] PPP Deflate Compression module registered
+[    4.609770] PPP MPPE Compression module registered
+[    4.609779] NET: Registered protocol family 24
+[    4.609864] usbcore: registered new interface driver rndis_wlan
+[    4.609918] usbcore: registered new interface driver rtl8150
+[    4.609954] usbcore: registered new interface driver r8152
+[    4.609993] usbcore: registered new interface driver asix
+[    4.610029] usbcore: registered new interface driver ax88179_178a
+[    4.610065] usbcore: registered new interface driver cdc_ether
+[    4.610099] usbcore: registered new interface driver net1080
+[    4.610133] usbcore: registered new interface driver rndis_host
+[    4.610172] usbcore: registered new interface driver cdc_subset
+[    4.610208] usbcore: registered new interface driver zaurus
+[    4.610251] usbcore: registered new interface driver cdc_ncm
+[    4.610287] usbcore: registered new interface driver qmi_wwan
+[    4.610323] usbcore: registered new interface driver cdc_mbim
+[    4.620047] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    4.620080] ehci-pci: EHCI PCI platform driver
+[    4.620157] ehci-platform: EHCI generic platform driver
+[    4.620612] phy phy-fe8b0000.usb2-phy.4: illegal mode
+[    4.622663] ehci-platform fd800000.usb: EHCI Host Controller
+[    4.622828] ehci-platform fd800000.usb: new USB bus registered, assigned bus number 1
+[    4.622974] ehci-platform fd800000.usb: irq 19, io mem 0xfd800000
+[    4.626419] rk-pcie 3c0800000.pcie: PCIe Linking... LTSSM is 0x0
+[    4.633063] ehci-platform fd800000.usb: USB 2.0 started, EHCI 1.00
+[    4.633251] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    4.633263] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.633271] usb usb1: Product: EHCI Host Controller
+[    4.633278] usb usb1: Manufacturer: Linux 5.10.160-g4a31dcd15b09-dirty ehci_hcd
+[    4.633285] usb usb1: SerialNumber: fd800000.usb
+[    4.633698] hub 1-0:1.0: USB hub found
+[    4.633736] hub 1-0:1.0: 1 port detected
+[    4.636423] ehci-platform fd880000.usb: EHCI Host Controller
+[    4.636589] ehci-platform fd880000.usb: new USB bus registered, assigned bus number 2
+[    4.636713] ehci-platform fd880000.usb: irq 21, io mem 0xfd880000
+[    4.649743] ehci-platform fd880000.usb: USB 2.0 started, EHCI 1.00
+[    4.649921] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    4.649933] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.649941] usb usb2: Product: EHCI Host Controller
+[    4.649947] usb usb2: Manufacturer: Linux 5.10.160-g4a31dcd15b09-dirty ehci_hcd
+[    4.649955] usb usb2: SerialNumber: fd880000.usb
+[    4.650316] hub 2-0:1.0: USB hub found
+[    4.650353] hub 2-0:1.0: 1 port detected
+[    4.651022] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    4.651047] ohci-platform: OHCI generic platform driver
+[    4.651351] phy phy-fe8b0000.usb2-phy.4: illegal mode
+[    4.651369] ohci-platform fd840000.usb: Generic Platform OHCI controller
+[    4.651521] ohci-platform fd840000.usb: new USB bus registered, assigned bus number 3
+[    4.651625] ohci-platform fd840000.usb: irq 20, io mem 0xfd840000
+[    4.710555] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.10
+[    4.710569] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.710577] usb usb3: Product: Generic Platform OHCI controller
+[    4.710584] usb usb3: Manufacturer: Linux 5.10.160-g4a31dcd15b09-dirty ohci_hcd
+[    4.710591] usb usb3: SerialNumber: fd840000.usb
+[    4.710985] hub 3-0:1.0: USB hub found
+[    4.711023] hub 3-0:1.0: 1 port detected
+[    4.711540] ohci-platform fd8c0000.usb: Generic Platform OHCI controller
+[    4.711730] ohci-platform fd8c0000.usb: new USB bus registered, assigned bus number 4
+[    4.711854] ohci-platform fd8c0000.usb: irq 22, io mem 0xfd8c0000
+[    4.770534] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.10
+[    4.770547] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.770555] usb usb4: Product: Generic Platform OHCI controller
+[    4.770562] usb usb4: Manufacturer: Linux 5.10.160-g4a31dcd15b09-dirty ohci_hcd
+[    4.770569] usb usb4: SerialNumber: fd8c0000.usb
+[    4.770960] hub 4-0:1.0: USB hub found
+[    4.770996] hub 4-0:1.0: 1 port detected
+[    4.772256] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    4.772459] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 5
+[    4.772591] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0000200002010010
+[    4.772666] xhci-hcd xhci-hcd.0.auto: irq 95, io mem 0xfd000000
+[    4.772922] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    4.772934] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.772942] usb usb5: Product: xHCI Host Controller
+[    4.772948] usb usb5: Manufacturer: Linux 5.10.160-g4a31dcd15b09-dirty xhci-hcd
+[    4.772956] usb usb5: SerialNumber: xhci-hcd.0.auto
+[    4.773383] hub 5-0:1.0: USB hub found
+[    4.773421] hub 5-0:1.0: 1 port detected
+[    4.773697] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    4.773833] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 6
+[    4.773853] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0 SuperSpeed
+[    4.773915] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[    4.774015] usb usb6: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.10
+[    4.774027] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.774035] usb usb6: Product: xHCI Host Controller
+[    4.774043] usb usb6: Manufacturer: Linux 5.10.160-g4a31dcd15b09-dirty xhci-hcd
+[    4.774050] usb usb6: SerialNumber: xhci-hcd.0.auto
+[    4.774395] hub 6-0:1.0: USB hub found
+[    4.774432] hub 6-0:1.0: 1 port detected
+[    4.774835] usbcore: registered new interface driver cdc_acm
+[    4.774844] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    4.774891] usbcore: registered new interface driver cdc_wdm
+[    4.775119] usbcore: registered new interface driver uas
+[    4.775207] usbcore: registered new interface driver usb-storage
+[    4.775291] usbcore: registered new interface driver usbserial_generic
+[    4.775316] usbserial: USB Serial support registered for generic
+[    4.775358] usbcore: registered new interface driver ch341
+[    4.775379] usbserial: USB Serial support registered for ch341-uart
+[    4.775421] usbcore: registered new interface driver cp210x
+[    4.775444] usbserial: USB Serial support registered for cp210x
+[    4.775499] usbcore: registered new interface driver ftdi_sio
+[    4.775528] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    4.775642] usbcore: registered new interface driver keyspan
+[    4.775665] usbserial: USB Serial support registered for Keyspan - (without firmware)
+[    4.775686] usbserial: USB Serial support registered for Keyspan 1 port adapter
+[    4.775706] usbserial: USB Serial support registered for Keyspan 2 port adapter
+[    4.775726] usbserial: USB Serial support registered for Keyspan 4 port adapter
+[    4.775769] usbcore: registered new interface driver option
+[    4.775791] usbserial: USB Serial support registered for GSM modem (1-port)
+[    4.775938] usbcore: registered new interface driver oti6858
+[    4.775960] usbserial: USB Serial support registered for oti6858
+[    4.776008] usbcore: registered new interface driver pl2303
+[    4.776031] usbserial: USB Serial support registered for pl2303
+[    4.776078] usbcore: registered new interface driver qcserial
+[    4.776100] usbserial: USB Serial support registered for Qualcomm USB modem
+[    4.776150] usbcore: registered new interface driver sierra
+[    4.776173] usbserial: USB Serial support registered for Sierra USB modem
+[    4.777519] usbcore: registered new interface driver usbtouchscreen
+[    4.778059] i2c /dev entries driver
+[    4.780033] fan53555-regulator 0-001c: FAN53555 Option[12] Rev[15] Detected!
+[    4.782697] vdd_cpu: supplied by vcc5v0_sys
+[    4.789177] rk808 0-0020: chip id: 0x8090
+[    4.789237] rk808 0-0020: No cache defaults, reading back from HW
+[    4.812906] rk808 0-0020: source: on=0x40, off=0x00
+[    4.812922] rk808 0-0020: support dcdc3 fb mode:-22, 1
+[    4.812933] rk808 0-0020: support pmic reset mode:0,0
+[    4.818216] rk808-regulator rk808-regulator: there is no dvs0 gpio
+[    4.818251] rk808-regulator rk808-regulator: there is no dvs1 gpio
+[    4.818676] vdd_logic: supplied by vcc3v3_sys
+[    4.819664] vdd_gpu: supplied by vcc3v3_sys
+[    4.820285] vcc_ddr: supplied by vcc3v3_sys
+[    4.820867] vdd_npu: supplied by vcc3v3_sys
+[    4.821812] vcc_1v8: supplied by vcc3v3_sys
+[    4.822379] vdda0v9_image: supplied by vcc3v3_sys
+[    4.823798] vdda_0v9: supplied by vcc3v3_sys
+[    4.824866] vdda0v9_pmu: supplied by vcc3v3_sys
+[    4.825946] vccio_acodec: supplied by vcc3v3_sys
+[    4.827357] vccio_sd: supplied by vcc3v3_sys
+[    4.828442] vcc3v3_pmu: supplied by vcc3v3_sys
+[    4.829869] vcca_1v8: supplied by vcc3v3_sys
+[    4.830946] vcca1v8_pmu: supplied by vcc3v3_sys
+[    4.832036] vcca1v8_image: supplied by vcc3v3_sys
+[    4.833495] vcc_3v3: supplied by vcc3v3_sys
+[    4.834378] vcc3v3_sd: supplied by vcc3v3_sys
+[    4.834937] rk817-battery: Failed to locate of_node [id: -1]
+[    4.835075] rk817-battery rk817-battery: Failed to find matching dt id
+[    4.835195] rk817-charger: Failed to locate of_node [id: -1]
+[    4.835294] rk817-charger rk817-charger: Failed to find matching dt id
+[    4.838305] input: rk805 pwrkey as /devices/platform/fdd40000.i2c/i2c-0/0-0020/rk805-pwrkey/input/input0
+[    4.841982] goodix_ts_probe() start
+[    4.842043] Goodix-TS 2-005d: supply tp not found, using dummy regulator
+[    4.866447] abs_x_max is 1280,abs_y_max is 800
+[    4.883076] usb 1-1: new high-speed USB device number 2 using ehci-platform
+[    4.991044] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.023074] usb 5-1: new high-speed USB device number 2 using xhci-hcd
+[    5.030643] usb 1-1: New USB device found, idVendor=0bda, idProduct=d723, bcdDevice= 2.00
+[    5.030656] usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    5.030664] usb 1-1: Product: 802.11n WLAN Adapter
+[    5.030671] usb 1-1: Manufacturer: Realtek
+[    5.030678] usb 1-1: SerialNumber: 00e04c000001
+[    5.087724] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.163541] usb 5-1: New USB device found, idVendor=1782, idProduct=4d00, bcdDevice=24.30
+[    5.163555] usb 5-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    5.163564] usb 5-1: Product: Gadget Serial
+[    5.163571] usb 5-1: Manufacturer: spreadtrum with dwc3-gadget
+[    5.184398] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.281039] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.377702] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.474367] <<-GTP-ERROR->> I2C Read: 0x8000, 10 bytes failed, errcode: -6! Process reset.
+[    5.569735] <<-GTP-ERROR->> I2C read 0x8000, 10 bytes, double check failed!
+[    5.569745] <<-GTP-ERROR->> Failed to get chip-type, set chip type default: GOODIX_GT9
+[    5.571053] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    5.666400] <<-GTP-ERROR->> GTP i2c test failed time 1.
+[    5.684357] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    5.779760] <<-GTP-ERROR->> GTP i2c test failed time 2.
+[    5.797703] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    5.893068] <<-GTP-ERROR->> GTP i2c test failed time 3.
+[    5.911032] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    6.006401] <<-GTP-ERROR->> GTP i2c test failed time 4.
+[    6.024369] <<-GTP-ERROR->> I2C Read: 0x8047, 1 bytes failed, errcode: -6! Process reset.
+[    6.119734] <<-GTP-ERROR->> GTP i2c test failed time 5.
+[    6.136402] <goodix_ts_probe>_2804    I2C communication ERROR!
+[    6.136411]    <goodix_ts_probe>_2879  prob error !!!!!!!!!!!!!!!
+[    6.136468] ------------[ cut here ]------------
+[    6.136487] WARNING: CPU: 0 PID: 1 at drivers/regulator/core.c:2160 _regulator_put.part.0+0x15c/0x164
+[    6.136493] Modules linked in:
+[    6.136508] CPU: 0 PID: 1 Comm: swapper/0 Not tainted 5.10.160-g4a31dcd15b09-dirty #4
+[    6.136514] Hardware name: TOPEET RK3568 EVB1 DDR4 V10 Board (DT)
+[    6.136522] pstate: 80c00009 (Nzcv daif +PAN +UAO -TCO BTYPE=--)
+[    6.136530] pc : _regulator_put.part.0+0x15c/0x164
+[    6.136538] lr : regulator_put+0x40/0x5c
+[    6.136544] sp : ffffffc00a64b650
+[    6.136549] x29: ffffffc00a64b650 x28: 0000000000000000
+[    6.136559] x27: ffffffc00a428f20 x26: ffffff81ff05cd48
+[    6.136569] x25: ffffffc0098a3da0 x24: ffffffc00a5f9488
+[    6.136577] x23: ffffff8102038420 x22: 0000000000000003
+[    6.136586] x21: ffffffc00a64b718 x20: ffffffc00a411338
+[    6.136594] x19: ffffff8101f04700 x18: 0000000000000030
+[    6.136603] x17: 000000000001b6ff x16: 000000000000fa75
+[    6.136612] x15: ffffffffffffffff x14: 2121212121212121
+[    6.136621] x13: 21212120726f7272 x12: 0000000000000040
+[    6.136630] x11: ffffff81004cbb50 x10: ffffff81004cbb52
+[    6.136638] x9 : ffffffc0088723f4 x8 : ffffffc008a9bf80
+[    6.136647] x7 : ffffffc008a9bcc0 x6 : ffffff81020386c8
+[    6.136656] x5 : ffffff8101f04400 x4 : ffffff8101f04600
+[    6.136664] x3 : 0000000000000000 x2 : 0000000000000000
+[    6.136672] x1 : 0000000000000000 x0 : 0000000000000001
+[    6.136682] Call trace:
+[    6.136691]  _regulator_put.part.0+0x15c/0x164
+[    6.136697]  regulator_put+0x40/0x5c
+[    6.136706]  devm_regulator_release+0x1c/0x30
+[    6.136718]  release_nodes+0x1e8/0x280
+[    6.136727]  devres_release_all+0x40/0xbc
+[    6.136734]  really_probe+0x21c/0x514
+[    6.136741]  driver_probe_device+0x78/0x164
+[    6.136748]  __device_attach_driver+0xd8/0x14c
+[    6.136755]  bus_for_each_drv+0x80/0xe0
+[    6.136761]  __device_attach+0xb0/0x1ec
+[    6.136768]  device_initial_probe+0x1c/0x30
+[    6.136775]  bus_probe_device+0xa4/0xb0
+[    6.136781]  device_add+0x350/0x7d4
+[    6.136787]  device_register+0x28/0x3c
+[    6.136797]  i2c_new_client_device+0x148/0x340
+[    6.136806]  of_i2c_register_devices+0x104/0x1d0
+[    6.136814]  i2c_register_adapter+0x1e8/0x68c
+[    6.136821]  __i2c_add_numbered_adapter+0x64/0xb4
+[    6.136828]  i2c_add_numbered_adapter+0x24/0x40
+[    6.136836]  rk3x_i2c_probe+0x2f8/0x4ac
+[    6.136844]  platform_drv_probe+0x5c/0xb0
+[    6.136851]  really_probe+0x110/0x514
+[    6.136858]  driver_probe_device+0x78/0x164
+[    6.136864]  device_driver_attach+0xc8/0xd0
+[    6.136871]  __driver_attach+0x124/0x1a0
+[    6.136878]  bus_for_each_dev+0x78/0xdc
+[    6.136884]  driver_attach+0x2c/0x3c
+[    6.136891]  bus_add_driver+0x12c/0x244
+[    6.136897]  driver_register+0x80/0x13c
+[    6.136904]  __platform_driver_register+0x50/0x5c
+[    6.136915]  rk3x_i2c_driver_init+0x24/0x30
+[    6.136924]  do_one_initcall+0x64/0x290
+[    6.136933]  kernel_init_freeable+0x274/0x2e8
+[    6.136941]  kernel_init+0x1c/0x11c
+[    6.136948]  ret_from_fork+0x10/0x34
+[    6.136955]
+               PC: 0xffffffc00887231c:
+[    6.136959] 211c  eb00003f 54000460 aa1603e0 94302236 d2800001 aa1703e0 943026e3 2a0003f7
+[    6.136981] 213c  b9004fe0 aa1603e0 94302427 31008eff 54fffa81 910de280 9430222b f9421a60
+[    6.137001] 215c  b5fffb20 f9400260 f9402000 f9403401 b40000a1 aa1303e0 d63f0020 7100001f
+[    6.137021] 217c  54fffaad b0008600 91384000 17ffffd5 f0008500 913cc000 d2800134 f9400001
+[    6.137040] 219c  f90002a1 79401000 790012a0 17ffffd2 b940b260 11000400 b900b260 17ffffbe
+[    6.137060] 21bc  d503201f aa1e03e9 d503201f d503233f a9bc7bfd 910003fd a90153f3 aa0003f3
+[    6.137078] 21dc  a9025bf5 a90363f7 b9402000 350009a0 a9478274 97f3ad14 91030296 f9400260
+[    6.137097] 21fc  b40000c0 39406261 37100861 f9402a61 aa1603e0 97ea9c94 f000dcf5 910ce2b5
+[    6.137117] 221c  910de2b7 91020298 aa1703e0 943023ee aa1803e0 94302179 34000480 b940b280
+[    6.137137] 223c  d5384101 11000400 f9005681 b900b280 910de2a0 943021ec a9408662 f9000441
+[    6.137154] 225c  d2802004 d2802443 f2fbd5a4 f2fbd5a3 aa1403e0 f9000022 a9008e64 b9401281
+[    6.137173] 227c  b9000a9f 51000421 b9001281 97fff5b7 f9402a60 97e6691c aa1303e0 97e7995b
+[    6.137191] 229c  f9405e80 97e2aee0 aa1603e0 94087113 a94153f3 a9425bf5 a94363f7 a8c47bfd
+[    6.137209] 22bc  d50323bf d65f03c0 f9405681 d5384100 eb00003f 54000180 aa1703e0 943021ca
+[    6.137228] 22dc  d2800001 aa1803e0 94302677 2a0003f8 aa1703e0 943023bc 31008f1f 54fffaa0
+[    6.137246] 22fc  17ffffcf b940b280 11000400 b900b280 17ffffd0 aa1603e1 94087648 17ffffbc
+[    6.137264] 231c* d4210000 17ffffb3 aa1e03e9 d503201f 7100001f 5400040d d503233f a9bd7bfd
+[    6.137283] 233c  51000400 910003fd a9025bf5 91008036 52800302 f000dcf5 910ce2b5 9ba25816
+[    6.137301] 235c  910b42b5 a90153f3 91002033 aa1503e0 f9400274 9430239c aa1403e0 b4000094
+[    6.137321] 237c  b140069f 54000048 97ffff8f aa1503e0 9430219d f801867f eb16027f 54fffe81
+[    6.137342] 239c  a94153f3 a9425bf5 a8c37bfd d50323bf d65f03c0 d65f03c0 aa1e03e9 d503201f
+[    6.137360] 23bc  d503233f a9be7bfd 910003fd a90153f3 f000dcf4 910ce294 aa0003f3 910b4280
+[    6.137378] 23dc  94302381 b40000b3 b140067f 54000068 aa1303e0 97ffff74 910b4280 94302182
+[    6.137397] 23fc  a94153f3 a8c27bfd d50323bf d65f03c0 d503201f aa1e03e9 d503201f d503233f
+[    6.137414] 241c  a9bb7bfd 910003fd a90153f3 a9025bf5 f9403c15 f94216a0 97f3ac83 f000dce0
+[    6.137433] 243c  910ce000 91108016 f9421013 f9400274 eb16027f 54000500 a90363f7 d2802458
+[    6.137451] 245c  910b4017 a9046bf9 d2802019 f2fbd5b9 f2fbd5b8 14000005 aa1403f3 f9400294
+[    6.137470] 247c  eb16027f 54000340 f9400a60 f9403c01 eb0102bf 54ffff21 f900401f aa1703e0
+[    6.137489] 249c  a9400662 f9000441 f9000022 a9006279 f9400a7a 9430234c b40000ba b140075f
+[    6.137508] 24bc  54000068 aa1a03e0 97ffff3f aa1703e0 9430214d aa1303e0 aa1403f3 97e798cb
+[    6.137527] 24dc  f9400294 eb16027f 54fffd01 a94363f7 a9446bf9 f941d6a0 97e798c4 aa1503e0
+[    6.137546] 24fc  97e798c2 a94153f3 a9425bf5 a8c57bfd d50323bf d65f03c0 d503233f a9b87bfd
+[    6.137566]
+               LR: 0xffffffc0088723f4:
+[    6.137571] 21f4  91030296 f9400260 b40000c0 39406261 37100861 f9402a61 aa1603e0 97ea9c94
+[    6.137589] 2214  f000dcf5 910ce2b5 910de2b7 91020298 aa1703e0 943023ee aa1803e0 94302179
+[    6.137608] 2234  34000480 b940b280 d5384101 11000400 f9005681 b900b280 910de2a0 943021ec
+[    6.137627] 2254  a9408662 f9000441 d2802004 d2802443 f2fbd5a4 f2fbd5a3 aa1403e0 f9000022
+[    6.137645] 2274  a9008e64 b9401281 b9000a9f 51000421 b9001281 97fff5b7 f9402a60 97e6691c
+[    6.137664] 2294  aa1303e0 97e7995b f9405e80 97e2aee0 aa1603e0 94087113 a94153f3 a9425bf5
+[    6.137683] 22b4  a94363f7 a8c47bfd d50323bf d65f03c0 f9405681 d5384100 eb00003f 54000180
+[    6.137702] 22d4  aa1703e0 943021ca d2800001 aa1803e0 94302677 2a0003f8 aa1703e0 943023bc
+[    6.137723] 22f4  31008f1f 54fffaa0 17ffffcf b940b280 11000400 b900b280 17ffffd0 aa1603e1
+[    6.137743] 2314  94087648 17ffffbc d4210000 17ffffb3 aa1e03e9 d503201f 7100001f 5400040d
+[    6.137762] 2334  d503233f a9bd7bfd 51000400 910003fd a9025bf5 91008036 52800302 f000dcf5
+[    6.137780] 2354  910ce2b5 9ba25816 910b42b5 a90153f3 91002033 aa1503e0 f9400274 9430239c
+[    6.137798] 2374  aa1403e0 b4000094 b140069f 54000048 97ffff8f aa1503e0 9430219d f801867f
+[    6.137817] 2394  eb16027f 54fffe81 a94153f3 a9425bf5 a8c37bfd d50323bf d65f03c0 d65f03c0
+[    6.137836] 23b4  aa1e03e9 d503201f d503233f a9be7bfd 910003fd a90153f3 f000dcf4 910ce294
+[    6.137855] 23d4  aa0003f3 910b4280 94302381 b40000b3 b140067f 54000068 aa1303e0 97ffff74
+[    6.137873] 23f4* 910b4280 94302182 a94153f3 a8c27bfd d50323bf d65f03c0 d503201f aa1e03e9
+[    6.137892] 2414  d503201f d503233f a9bb7bfd 910003fd a90153f3 a9025bf5 f9403c15 f94216a0
+[    6.137911] 2434  97f3ac83 f000dce0 910ce000 91108016 f9421013 f9400274 eb16027f 54000500
+[    6.137930] 2454  a90363f7 d2802458 910b4017 a9046bf9 d2802019 f2fbd5b9 f2fbd5b8 14000005
+[    6.137949] 2474  aa1403f3 f9400294 eb16027f 54000340 f9400a60 f9403c01 eb0102bf 54ffff21
+[    6.137968] 2494  f900401f aa1703e0 a9400662 f9000441 f9000022 a9006279 f9400a7a 9430234c
+[    6.137986] 24b4  b40000ba b140075f 54000068 aa1a03e0 97ffff3f aa1703e0 9430214d aa1303e0
+[    6.138005] 24d4  aa1403f3 97e798cb f9400294 eb16027f 54fffd01 a94363f7 a9446bf9 f941d6a0
+[    6.138022] 24f4  97e798c4 aa1503e0 97e798c2 a94153f3 a9425bf5 a8c57bfd d50323bf d65f03c0
+[    6.138040] 2514  d503233f a9b87bfd d5384104 910003fd a9025bf5 2a0203f6 2a0303f5 a90363f7
+[    6.138060] 2534  aa1e03f7 a9046bf9 f9002bfb aa0003fb f9429085 f9003fa5 d2800005 b40008c1
+[    6.138079] 2554  aa0103fa aa0103e0 97fb5959 11000418 52800281 2a184038 f9404363 d53cd041
+[    6.138098] 2574  f9403f62 8b010059 b4000703 a90153b3 11008013 121d7273 51001273 9101b3a2
+[    6.138117] 2594  9101c3a1 2a1303e0 97e3f9aa aa0003f4 b40006e0 b000e8c2 92800001 aa1703fe
+[    6.138135] 25b4  d50320ff f9400842 f9403ba0 9ac22021 b7b8049e 9240d821 8a2103de 910003e2
+[    6.138153] 25d4  d28000a1 f900741d a90ff802 f9008401 aa1a03e1 b9000a98 91005280 97fb987c
+[    6.138172]
+               SP: 0xffffffc00a64b650:
+[    6.138177] b450  0a64b470 ffffffc0 08038b28 ffffffc0 0a64b500 ffffffc0 094755e8 ffffffc0
+[    6.138196] b470  0a64b4c0 ffffffc0 09475744 ffffffc0 0a64b500 ffffffc0 f2000800 00000000
+[    6.138214] b490  5bfdaff7 1f1aeeff 0887231c ffffffc0 80c00009 00000000 0a5f9488 ffffffc0
+[    6.138232] b4b0  0a64b4c0 ffffffc0 09475734 ffffffc0 0a64b4f0 ffffffc0 09475e0c ffffffc0
+[    6.138250] b4d0  01f04700 ffffff81 ffffffff 0000007f 0a64b650 ffffffc0 096684f8 ffffffc0
+[    6.138268] b4f0  0a64b630 ffffffc0 08012408 ffffffc0 00000001 00000000 00000000 00000000
+[    6.138287] b510  00000000 00000000 00000000 00000000 01f04600 ffffff81 01f04400 ffffff81
+[    6.138304] b530  020386c8 ffffff81 08a9bcc0 ffffffc0 08a9bf80 ffffffc0 088723f4 ffffffc0
+[    6.138323] b550  004cbb52 ffffff81 004cbb50 ffffff81 00000040 00000000 726f7272 21212120
+[    6.138341] b570  21212121 21212121 ffffffff ffffffff 0000fa75 00000000 0001b6ff 00000000
+[    6.138359] b590  00000030 00000000 01f04700 ffffff81 0a411338 ffffffc0 0a64b718 ffffffc0
+[    6.138376] b5b0  00000003 00000000 02038420 ffffff81 0a5f9488 ffffffc0 098a3da0 ffffffc0
+[    6.138394] b5d0  ff05cd48 ffffff81 0a428f20 ffffffc0 00000000 00000000 0a64b650 ffffffc0
+[    6.138414] b5f0  088723f4 ffffffc0 0a64b650 ffffffc0 0887231c ffffffc0 80c00009 00000000
+[    6.138432] b610  0a64b630 ffffffc0 0807edd8 ffffffc0 ffffffff ffffffff 02038420 ffffff81
+[    6.138450] b630  0a64b650 ffffffc0 0887231c ffffffc0 00000000 00000000 fffffffa 00000000
+[    6.138469] b650* 0a64b690 ffffffc0 088723f4 ffffffc0 01f04700 ffffff81 0a411338 ffffffc0
+[    6.138489] b670  0a64b718 ffffffc0 00000003 00000000 02038420 ffffff81 0a5f9488 ffffffc0
+[    6.138506] b690  0a64b6b0 ffffffc0 0887bc0c ffffffc0 01f04600 ffffff81 01f04400 ffffff81
+[    6.138525] b6b0  0a64b6c0 ffffffc0 08a9c3b8 ffffffc0 0a64b730 ffffffc0 08a9d954 ffffffc0
+[    6.138544] b6d0  02038420 ffffff81 0a5f9340 ffffffc0 fffffffa 00000000 00000000 00000000
+[    6.138562] b6f0  0a453760 ffffffc0 0a528bd8 ffffffc0 00000000 00000000 08a90ee4 ffffffc0
+[    6.138581] b710  0a64b730 ffffffc0 01f04300 ffffff81 01f04600 ffffff81 8fd11b00 54dae1af
+[    6.138599] b730  0a64b750 ffffffc0 08a968dc ffffffc0 02038420 ffffff81 0a5f9340 ffffffc0
+[    6.138616] b750  0a64b7b0 ffffffc0 08a97098 ffffffc0 02038420 ffffff81 0a453760 ffffffc0
+[    6.138638] b770  0a528bd8 ffffffc0 02038420 ffffff81 ff05cd68 ffffff81 ff05cd70 ffffff81
+[    6.138657] b790  ff05cd48 ffffff81 ff05cd48 ffffff81 0a428f20 ffffffc0 02038420 ffffff81
+[    6.138674] b7b0  0a64b7e0 ffffffc0 08a973fc ffffffc0 00000001 00000000 0a453760 ffffffc0
+[    6.138693] b7d0  0a64b898 ffffffc0 02038420 ffffff81 0a64b810 ffffffc0 08a93e20 ffffffc0
+[    6.138712] b7f0  00000000 00000000 0a64b898 ffffffc0 08a97324 ffffffc0 00000001 00000000
+[    6.138730] b810  0a64b860 ffffffc0 08a96c84 ffffffc0 02038420 ffffff81 02038420 ffffff81
+[    6.138749] b830  020384a0 ffffff81 08a96c6c ffffffc0 02038420 ffffff81 00a7bec8 ffffff81
+[    6.138771]
+               X4: 0xffffff8101f04600:
+[    6.138777] 4400  01f04600 ffffff81 01f04300 ffffff81 087939a0 ffffffc0 0990dd50 ffffffc0
+[    6.138797] 4420  00000008 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.138816] 4440  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.138835] 4460  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.138853] 4480  01f02900 ffffff81 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.138872] 44a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.138889] 44c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.138907] 44e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.138925] 4500  01f02a80 ffffff81 fe710a78 fffffffe 00000002 00000000 00b77c00 ffffff81
+[    6.138944] 4520  ff081d50 ffffff81 ff081b60 ffffff81 00000000 00000000 01f02b00 ffffff81
+[    6.138962] 4540  fe710a78 fffffffe 00000003 00000000 00b77c00 ffffff81 00b9ae80 ffffff81
+[    6.138981] 4560  00bb2680 ffffff81 00000001 00000000 01f02b80 ffffff81 fe710a78 fffffffe
+[    6.138999] 4580  00000003 00000000 00b77c00 ffffff81 00b98300 ffffff81 00bb2700 ffffff81
+[    6.139018] 45a0  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139035] 45c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139052] 45e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139069] 4600* 0a64b718 ffffffc0 01f04400 ffffff81 0887bbf0 ffffffc0 09937290 ffffffc0
+[    6.139087] 4620  00000008 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139105] 4640  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139124] 4660  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139142] 4680  01f04700 ffffff81 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139160] 46a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139178] 46c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139195] 46e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139213] 4700  02038420 ffffff81 01bf4d08 ffffff81 003a1028 ffffff81 00000005 00000000
+[    6.139232] 4720  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139250] 4740  00000000 00000000 00000000 00000000 00b5b880 ffffff81 00000000 00000000
+[    6.139268] 4760  00000000 00000000 00000000 00000000 00000000 00000000 003a1000 ffffff81
+[    6.139286] 4780  0040a000 ffffff81 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139304] 47a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139321] 47c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139339] 47e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139358]
+               X5: 0xffffff8101f04400:
+[    6.139362] 4200  00000000 00000000 01f04208 ffffff81 01f04208 ffffff81 08a8e6c4 ffffffc0
+[    6.139381] 4220  08a8e870 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139400] 4240  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139419] 4260  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139437] 4280  00000000 00000000 00a7b6a0 ffffff81 01f04890 ffffff81 01f04190 ffffff81
+[    6.139456] 42a0  00000001 00000000 01f042a8 ffffff81 01f042a8 ffffff81 00000000 00000000
+[    6.139475] 42c0  00000000 00000000 02039030 ffffff81 00000000 00000000 00000000 00000000
+[    6.139493] 42e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139511] 4300  01f04400 ffffff81 0a64b718 ffffffc0 08a9c020 ffffffc0 09988ec0 ffffffc0
+[    6.139530] 4320  00000028 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139548] 4340  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139566] 4360  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139584] 4380  01f02900 ffffff81 01f02d00 ffffff81 ffffffed ffffffff ffffffed ffffffff
+[    6.139603] 43a0  ffffffed ffffffff 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139620] 43c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139639] 43e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139657] 4400* 01f04600 ffffff81 01f04300 ffffff81 087939a0 ffffffc0 0990dd50 ffffffc0
+[    6.139676] 4420  00000008 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139695] 4440  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139713] 4460  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139731] 4480  01f02900 ffffff81 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139750] 44a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139768] 44c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139786] 44e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139804] 4500  01f02a80 ffffff81 fe710a78 fffffffe 00000002 00000000 00b77c00 ffffff81
+[    6.139824] 4520  ff081d50 ffffff81 ff081b60 ffffff81 00000000 00000000 01f02b00 ffffff81
+[    6.139841] 4540  fe710a78 fffffffe 00000003 00000000 00b77c00 ffffff81 00b9ae80 ffffff81
+[    6.139860] 4560  00bb2680 ffffff81 00000001 00000000 01f02b80 ffffff81 fe710a78 fffffffe
+[    6.139878] 4580  00000003 00000000 00b77c00 ffffff81 00b98300 ffffff81 00bb2700 ffffff81
+[    6.139896] 45a0  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139913] 45c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139930] 45e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.139948]
+               X6: 0xffffff81020386c8:
+[    6.139953] 84c8  02039420 ffffff81 020384d0 ffffff81 020384d0 ffffff81 020384e0 ffffff81
+[    6.139972] 84e8  020384e0 ffffff81 00000000 00000000 00000000 00000104 00000000 00000000
+[    6.139992] 8508  01f89188 ffffff81 02038100 ffffff81 ffffffff 00000000 00000000 00000000
+[    6.140011] 8528  02038528 ffffff81 02038528 ffffff81 00000000 00000000 00000004 00000000
+[    6.140030] 8548  02038548 ffffff81 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140047] 8568  00000000 00000000 08aab174 ffffffc0 fef7b180 ffffff81 00000000 00000000
+[    6.140066] 8588  00000000 00000000 ffffffe0 0000000f 02038598 ffffff81 02038598 ffffff81
+[    6.140084] 85a8  08aab280 ffffffc0 00000000 00000000 020385b8 ffffff81 020385b8 ffffff81
+[    6.140104] 85c8  00000000 00000000 00000000 00000000 00000081 00000000 00000000 00000002
+[    6.140121] 85e8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140140] 8608  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140159] 8628  00000000 00000000 00000000 00000000 00000000 00000000 01f04380 ffffff81
+[    6.140178] 8648  02038648 ffffff81 02038648 ffffff81 00000000 00000000 00000000 00000000
+[    6.140197] 8668  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140216] 8688  02038688 ffffff81 02038688 ffffff81 00000000 00000000 00000000 00000000
+[    6.140234] 86a8  ff05cd30 ffffff81 ff05cd48 ffffff81 00000000 00000000 00000000 00000000
+[    6.140254] 86c8* 020386c8 ffffff81 020386c8 ffffff81 00000000 00000000 00000000 00000000
+[    6.140272] 86e8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140290] 8708  00000000 00000079 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140307] 8728  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140324] 8748  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140343] 8768  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140361] 8788  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140378] 87a8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140396] 87c8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140413] 87e8  00000000 00000000 00000000 00000000 00000000 00000000 00bd3c10 ffffff81
+[    6.140431] 8808  00bd3cc0 ffffff81 01fdf808 ffffff81 02038420 ffffff81 02038c20 ffffff81
+[    6.140450] 8828  020384c0 ffffff81 01f02280 ffffff81 02038c38 ffffff81 02038020 ffffff81
+[    6.140468] 8848  00828a80 ffffff81 0037e900 ffffff81 0a428a80 ffffffc0 01f03800 ffffff81
+[    6.140486] 8868  00000002 00000007 00000000 00000000 01f04000 ffffff81 00000000 00000000
+[    6.140504] 8888  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.140523] 88a8  00000000 00000000 00000000 00000000 00000000 00000000 020388c0 ffffff81
+[    6.140542]
+               X7: 0xffffffc008a9bcc0:
+[    6.140547] bac0  52901023 910003fd a90363f7 2a0103f7 72b01003 53147ee1 a9025bf5 aa0003f6
+[    6.140564] bae0  a9046bf9 aa0203f8 9ba37c20 92800015 a90153f3 aa1703f4 d367fc00 a90573fb
+[    6.140582] bb00  53185c19 4b000320 4b000039 14000023 f9400a64 d1000484 8b234083 eb17007f
+[    6.140601] bb20  540004a3 eb15009f 540004a2 f9400e60 97da0988 72001c1f 540003e0 b9400a61
+[    6.140619] bb40  2a1403e0 a9416a75 4b010281 f940127b f9401a7c b9000301 d10006b5 f9401663
+[    6.140639] bb60  aa1c03e1 b4000063 d63f0060 37f80400 f943fec0 94277ba3 aa1c03e2 aa1803e1
+[    6.140657] bb80  2a1403e0 d63f0360 aa0003f3 aa1a03e0 97da08a4 b50001b3 f943fec0 94277d91
+[    6.140676] bba0  f8797ad3 b40000d3 b9400a63 6b14007f 54fffb09 f9400273 b5ffff93 f943fec0
+[    6.140694] bbc0  d2800013 94277b8f aa1303e0 a94153f3 a9425bf5 a94363f7 a9446bf9 a94573fb
+[    6.140712] bbe0  a8c67bfd d50323bf d65f03c0 aa1a03e0 97da088c f9400273 b5fffd93 17fffff0
+[    6.140731] bc00  aa1e03e9 d503201f d503233f a9bd7bfd d2810002 910003fd a90153f3 b0007e73
+[    6.140750] bc20  911d4273 a9025bf5 aa0003f6 aa0103f5 f9402e60 52819801 97defa52 aa0003f4
+[    6.140768] bc40  f9401e60 d2800702 5281b801 97defa4d aa0003f3 f100029f fa401804 54000260
+[    6.140786] bc60  aa1403e2 911fe283 52800021 92800000 b9000a61 f9000a60 f9001276 d503201f
+[    6.140805] bc80  f8008453 eb03005f 54ffffc1 f903fe95 aa1403e0 a94153f3 a9425bf5 a8c37bfd
+[    6.140823] bca0  d50323bf d65f03c0 aa1403e0 97def2d6 aa1303e0 d2800014 97def2d3 17fffff5
+[    6.140842] bcc0* aa1e03e9 d503201f d503233f d50323bf d65f03c0 aa1e03e9 d503201f f9400424
+[    6.140861] bce0  d503233f 52800000 f9400443 eb03009f 54000060 d50323bf d65f03c0 f9400040
+[    6.140878] bd00  d50323bf f9400021 eb00003f 1a9f17e0 d65f03c0 aa1e03e9 d503201f d503233f
+[    6.140896] bd20  a9bf7bfd 910003fd a9400420 d63f0020 a8c17bfd d50323bf d65f03c0 d503201f
+[    6.140914] bd40  aa1e03e9 d503201f eb01005f d503233f 1a9f17e0 d50323bf d65f03c0 d503201f
+[    6.140932] bd60  aa1e03e9 d503201f f9400040 d503233f d50323bf f9400021 eb00003f 1a9f17e0
+[    6.140950] bd80  d65f03c0 aa1e03e9 d503201f f9400020 d503233f d50323bf eb02001f 1a9f17e0
+[    6.140969] bda0  d65f03c0 aa1e03e9 d503201f d503233f a9bd7bfd 910003fd a90153f3 aa0003f4
+[    6.140988] bdc0  aa0103f3 b1020020 54000422 9000d783 f90013f5 32180041 92800002 f9400863
+[    6.141006] bde0  d50320ff aa0403f5 9ac32042 b7b802be 9240d842 8a2203c2 97defcfe aa0003e2
+[    6.141025] be00  b4000240 a9027c5f 91020040 f9000042 a900d042 a901cc55 a9037c5f a9047c5f
+[    6.141043] be20  a9057c5f a9067c5f a9077c5f a94153f3 f94013f5 a8c37bfd d50323bf d65f03c0
+[    6.141062] be40  aa0203c2 17ffffed f94013f5 d2800000 a94153f3 a8c37bfd d50323bf d65f03c0
+[    6.141080] be60  aa1e03e9 d503201f d503233f a9bf7bfd 910003fd f9400020 b9400821 97de98f9
+[    6.141098] be80  a8c17bfd d50323bf d65f03c0 d503201f aa1e03e9 d503201f d503233f a9bf7bfd
+[    6.141116] bea0  910003fd f9400020 97dde4bb a8c17bfd d50323bf d65f03c0 d503201f d503201f
+[    6.141136]
+               X8: 0xffffffc008a9bf80:
+[    6.141141] bd80  d65f03c0 aa1e03e9 d503201f f9400020 d503233f d50323bf eb02001f 1a9f17e0
+[    6.141159] bda0  d65f03c0 aa1e03e9 d503201f d503233f a9bd7bfd 910003fd a90153f3 aa0003f4
+[    6.141178] bdc0  aa0103f3 b1020020 54000422 9000d783 f90013f5 32180041 92800002 f9400863
+[    6.141196] bde0  d50320ff aa0403f5 9ac32042 b7b802be 9240d842 8a2203c2 97defcfe aa0003e2
+[    6.141215] be00  b4000240 a9027c5f 91020040 f9000042 a900d042 a901cc55 a9037c5f a9047c5f
+[    6.141234] be20  a9057c5f a9067c5f a9077c5f a94153f3 f94013f5 a8c37bfd d50323bf d65f03c0
+[    6.141252] be40  aa0203c2 17ffffed f94013f5 d2800000 a94153f3 a8c37bfd d50323bf d65f03c0
+[    6.141270] be60  aa1e03e9 d503201f d503233f a9bf7bfd 910003fd f9400020 b9400821 97de98f9
+[    6.141288] be80  a8c17bfd d50323bf d65f03c0 d503201f aa1e03e9 d503201f d503233f a9bf7bfd
+[    6.141306] bea0  910003fd f9400020 97dde4bb a8c17bfd d50323bf d65f03c0 d503201f d503201f
+[    6.141325] bec0  aa1e03e9 d503201f b40001a0 aa0003e1 f8580000 d1020021 eb01001f 54000121
+[    6.141343] bee0  d503233f a9bf7bfd 910003fd 97def246 a8c17bfd d50323bf d65f03c0 d65f03c0
+[    6.141363] bf00  d4210000 aa1e03e9 d503201f d000dae2 d503233f a9be7bfd 910003fd b9448842
+[    6.141381] bf20  a90153f3 aa0003f4 aa0103f3 350001e2 f9400260 eb00027f 54000161 f9415a80
+[    6.141398] bf40  f9015a93 91080281 910aa294 a9000274 f9000013 a94153f3 a8c27bfd d50323bf
+[    6.141417] bf60  d65f03c0 d4210000 b0007762 91396042 9426e55f 17ffffef d503201f d503201f
+[    6.141435] bf80* aa1e03e9 d503201f d503233f d50323bf d65f03c0 d503233f a9be7bfd 910003fd
+[    6.141454] bfa0  f9000bf3 d53b4233 12190261 340001e1 d2800002 52800023 f9800011 885ffc01
+[    6.141472] bfc0  4a020024 35000064 88047c03 35ffff84 350001c1 aa1303e0 f9400bf3 a8c27bfd
+[    6.141491] bfe0  d50323bf d65f03c0 9000daa3 d2801402 d2800c01 b949a063 7100007f 9a82d021
+[    6.141510] c000  d50342df 17ffffeb 97d87fee aa1303e0 f9400bf3 a8c27bfd d50323bf d65f03c0
+[    6.141529] c020  aa1e03e9 d503201f d503233f d50323bf d65f03c0 aa1e03e9 d503201f d503233f
+[    6.141548] c040  a9bd7bfd 90007764 910003fd 91398084 12800003 a90153f3 aa0003f4 f0ffffe0
+[    6.141567] c060  91345000 a9025bf5 aa0103f5 aa0203f6 d2800201 52819802 97ffff4b b4000320
+[    6.141585] c080  aa0003f3 910a8280 a9005676 97ffffc2 d1020261 aa0003f3 aa1403e0 97ffff9a
+[    6.141603] c0a0  910a8281 52800000 089ffc20 d51b4233 f000da80 b949a800 7100001f 540000ec
+[    6.141622] c0c0  52800000 a94153f3 a9425bf5 a8c37bfd d50323bf d65f03c0 d5033f9f 17fffff9
+[    6.141641] c0e0  12800160 17fffff8 d503201f d503201f aa1e03e9 d503201f d503233f a9bb7bfd
+[    6.141659] c100  910003fd a90153f3 aa0003f4 910a8000 a9025bf5 aa0103f6 aa0303f5 a90363f7
+[    6.141677] c120  aa0203f7 f90023f9 97ffff9b f9415a93 910aa299 aa0003f8 eb13033f 54000140
+[    6.141696] c140  f9400a63 aa1503e2 91020261 aa1403e0 eb0302df 540000c0 f9400673 eb13033f
+[    6.141714] c160  54ffff01 d2800013 14000004 b4000077 d63f02e0 34ffff20 910a8281 52800000
+[    6.141733]
+               X9: 0xffffffc0088723f4:
+[    6.141738] 21f4  91030296 f9400260 b40000c0 39406261 37100861 f9402a61 aa1603e0 97ea9c94
+[    6.141756] 2214  f000dcf5 910ce2b5 910de2b7 91020298 aa1703e0 943023ee aa1803e0 94302179
+[    6.141774] 2234  34000480 b940b280 d5384101 11000400 f9005681 b900b280 910de2a0 943021ec
+[    6.141792] 2254  a9408662 f9000441 d2802004 d2802443 f2fbd5a4 f2fbd5a3 aa1403e0 f9000022
+[    6.141810] 2274  a9008e64 b9401281 b9000a9f 51000421 b9001281 97fff5b7 f9402a60 97e6691c
+[    6.141831] 2294  aa1303e0 97e7995b f9405e80 97e2aee0 aa1603e0 94087113 a94153f3 a9425bf5
+[    6.141849] 22b4  a94363f7 a8c47bfd d50323bf d65f03c0 f9405681 d5384100 eb00003f 54000180
+[    6.141868] 22d4  aa1703e0 943021ca d2800001 aa1803e0 94302677 2a0003f8 aa1703e0 943023bc
+[    6.141886] 22f4  31008f1f 54fffaa0 17ffffcf b940b280 11000400 b900b280 17ffffd0 aa1603e1
+[    6.141904] 2314  94087648 17ffffbc d4210000 17ffffb3 aa1e03e9 d503201f 7100001f 5400040d
+[    6.141921] 2334  d503233f a9bd7bfd 51000400 910003fd a9025bf5 91008036 52800302 f000dcf5
+[    6.141939] 2354  910ce2b5 9ba25816 910b42b5 a90153f3 91002033 aa1503e0 f9400274 9430239c
+[    6.141959] 2374  aa1403e0 b4000094 b140069f 54000048 97ffff8f aa1503e0 9430219d f801867f
+[    6.141978] 2394  eb16027f 54fffe81 a94153f3 a9425bf5 a8c37bfd d50323bf d65f03c0 d65f03c0
+[    6.141997] 23b4  aa1e03e9 d503201f d503233f a9be7bfd 910003fd a90153f3 f000dcf4 910ce294
+[    6.142016] 23d4  aa0003f3 910b4280 94302381 b40000b3 b140067f 54000068 aa1303e0 97ffff74
+[    6.142035] 23f4* 910b4280 94302182 a94153f3 a8c27bfd d50323bf d65f03c0 d503201f aa1e03e9
+[    6.142053] 2414  d503201f d503233f a9bb7bfd 910003fd a90153f3 a9025bf5 f9403c15 f94216a0
+[    6.142071] 2434  97f3ac83 f000dce0 910ce000 91108016 f9421013 f9400274 eb16027f 54000500
+[    6.142089] 2454  a90363f7 d2802458 910b4017 a9046bf9 d2802019 f2fbd5b9 f2fbd5b8 14000005
+[    6.142107] 2474  aa1403f3 f9400294 eb16027f 54000340 f9400a60 f9403c01 eb0102bf 54ffff21
+[    6.142125] 2494  f900401f aa1703e0 a9400662 f9000441 f9000022 a9006279 f9400a7a 9430234c
+[    6.142145] 24b4  b40000ba b140075f 54000068 aa1a03e0 97ffff3f aa1703e0 9430214d aa1303e0
+[    6.142163] 24d4  aa1403f3 97e798cb f9400294 eb16027f 54fffd01 a94363f7 a9446bf9 f941d6a0
+[    6.142181] 24f4  97e798c4 aa1503e0 97e798c2 a94153f3 a9425bf5 a8c57bfd d50323bf d65f03c0
+[    6.142200] 2514  d503233f a9b87bfd d5384104 910003fd a9025bf5 2a0203f6 2a0303f5 a90363f7
+[    6.142218] 2534  aa1e03f7 a9046bf9 f9002bfb aa0003fb f9429085 f9003fa5 d2800005 b40008c1
+[    6.142237] 2554  aa0103fa aa0103e0 97fb5959 11000418 52800281 2a184038 f9404363 d53cd041
+[    6.142258] 2574  f9403f62 8b010059 b4000703 a90153b3 11008013 121d7273 51001273 9101b3a2
+[    6.142276] 2594  9101c3a1 2a1303e0 97e3f9aa aa0003f4 b40006e0 b000e8c2 92800001 aa1703fe
+[    6.142295] 25b4  d50320ff f9400842 f9403ba0 9ac22021 b7b8049e 9240d821 8a2103de 910003e2
+[    6.142313] 25d4  d28000a1 f900741d a90ff802 f9008401 aa1a03e1 b9000a98 91005280 97fb987c
+[    6.142332]
+               X10: 0xffffff81004cbb52:
+[    6.142337] b950  00bb2a00 ffffff81 00bb2a80 ffffff81 00bb2b00 ffffff81 00bb2b80 ffffff81
+[    6.142356] b970  00bb2c00 ffffff81 00bb2c80 ffffff81 00bb2d00 ffffff81 00bb2d80 ffffff81
+[    6.142375] b990  00bb2e00 ffffff81 00bb2e80 ffffff81 00bb2f00 ffffff81 00bb2f80 ffffff81
+[    6.142392] b9b0  00bb4000 ffffff81 00bb4080 ffffff81 00bb4100 ffffff81 00bb4180 ffffff81
+[    6.142411] b9d0  00bb4200 ffffff81 00bb4280 ffffff81 00bb4300 ffffff81 00bb4380 ffffff81
+[    6.142431] b9f0  00bb4400 ffffff81 00bb4480 ffffff81 00bb4500 ffffff81 00bb4580 ffffff81
+[    6.142449] ba10  00bb4600 ffffff81 00bb4680 ffffff81 00bb4700 ffffff81 00bb4780 ffffff81
+[    6.142468] ba30  00bb4800 ffffff81 00bb4880 ffffff81 00bb4900 ffffff81 00bb4980 ffffff81
+[    6.142487] ba50  00bb4a00 ffffff81 00bb4a80 ffffff81 00bb4b00 ffffff81 00bb4b80 ffffff81
+[    6.142506] ba70  00bb4c00 ffffff81 00bb4c80 ffffff81 00bb4d00 ffffff81 00bb4d80 ffffff81
+[    6.142525] ba90  00bb4e00 ffffff81 00bb4e80 ffffff81 00bb4f00 ffffff81 00bb4f80 ffffff81
+[    6.142544] bab0  00bb5000 ffffff81 00bb5080 ffffff81 00bb5100 ffffff81 00bb5180 ffffff81
+[    6.142562] bad0  00bb5200 ffffff81 00bb5280 ffffff81 00bb5300 ffffff81 00bb5380 ffffff81
+[    6.142581] baf0  00bb5400 ffffff81 00bb5480 ffffff81 00bb5500 ffffff81 00bb5580 ffffff81
+[    6.142599] bb10  00bb5600 ffffff81 00bb5680 ffffff81 00bb5700 ffffff81 00bb5780 ffffff81
+[    6.142618] bb30  00000000 00000000 00000000 00000000 00000000 00000000 004cbb50 ffffff81
+[    6.142636] bb50* 00030006 00000000 00000000 00000000 00bb3b18 ffffff81 004cbb68 ffffff81
+[    6.142654] bb70  004cbb68 ffffff81 004cb90a ffffff81 004cbd9a ffffff81 004cc002 ffffff81
+[    6.142673] bb90  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142691] bbb0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142709] bbd0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142727] bbf0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142745] bc10  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142763] bc30  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142782] bc50  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142800] bc70  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142817] bc90  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142835] bcb0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142853] bcd0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142871] bcf0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142889] bd10  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142907] bd30  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142924] bd50  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.142943]
+               X11: 0xffffff81004cbb50:
+[    6.142948] b950  00bb2a00 ffffff81 00bb2a80 ffffff81 00bb2b00 ffffff81 00bb2b80 ffffff81
+[    6.142967] b970  00bb2c00 ffffff81 00bb2c80 ffffff81 00bb2d00 ffffff81 00bb2d80 ffffff81
+[    6.142986] b990  00bb2e00 ffffff81 00bb2e80 ffffff81 00bb2f00 ffffff81 00bb2f80 ffffff81
+[    6.143005] b9b0  00bb4000 ffffff81 00bb4080 ffffff81 00bb4100 ffffff81 00bb4180 ffffff81
+[    6.143024] b9d0  00bb4200 ffffff81 00bb4280 ffffff81 00bb4300 ffffff81 00bb4380 ffffff81
+[    6.143042] b9f0  00bb4400 ffffff81 00bb4480 ffffff81 00bb4500 ffffff81 00bb4580 ffffff81
+[    6.143060] ba10  00bb4600 ffffff81 00bb4680 ffffff81 00bb4700 ffffff81 00bb4780 ffffff81
+[    6.143079] ba30  00bb4800 ffffff81 00bb4880 ffffff81 00bb4900 ffffff81 00bb4980 ffffff81
+[    6.143098] ba50  00bb4a00 ffffff81 00bb4a80 ffffff81 00bb4b00 ffffff81 00bb4b80 ffffff81
+[    6.143118] ba70  00bb4c00 ffffff81 00bb4c80 ffffff81 00bb4d00 ffffff81 00bb4d80 ffffff81
+[    6.143136] ba90  00bb4e00 ffffff81 00bb4e80 ffffff81 00bb4f00 ffffff81 00bb4f80 ffffff81
+[    6.143155] bab0  00bb5000 ffffff81 00bb5080 ffffff81 00bb5100 ffffff81 00bb5180 ffffff81
+[    6.143173] bad0  00bb5200 ffffff81 00bb5280 ffffff81 00bb5300 ffffff81 00bb5380 ffffff81
+[    6.143191] baf0  00bb5400 ffffff81 00bb5480 ffffff81 00bb5500 ffffff81 00bb5580 ffffff81
+[    6.143209] bb10  00bb5600 ffffff81 00bb5680 ffffff81 00bb5700 ffffff81 00bb5780 ffffff81
+[    6.143227] bb30  00000000 00000000 00000000 00000000 00000000 00000000 004cbb50 ffffff81
+[    6.143246] bb50* 00030006 00000000 00000000 00000000 00bb3b18 ffffff81 004cbb68 ffffff81
+[    6.143264] bb70  004cbb68 ffffff81 004cb90a ffffff81 004cbd9a ffffff81 004cc002 ffffff81
+[    6.143283] bb90  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143300] bbb0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143318] bbd0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143336] bbf0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143354] bc10  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143372] bc30  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143390] bc50  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143409] bc70  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143425] bc90  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143442] bcb0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143461] bcd0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143478] bcf0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143495] bd10  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143512] bd30  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143534]
+               X19: 0xffffff8101f04700:
+[    6.143539] 4500  01f02a80 ffffff81 fe710a78 fffffffe 00000002 00000000 00b77c00 ffffff81
+[    6.143558] 4520  ff081d50 ffffff81 ff081b60 ffffff81 00000000 00000000 01f02b00 ffffff81
+[    6.143576] 4540  fe710a78 fffffffe 00000003 00000000 00b77c00 ffffff81 00b9ae80 ffffff81
+[    6.143594] 4560  00bb2680 ffffff81 00000001 00000000 01f02b80 ffffff81 fe710a78 fffffffe
+[    6.143612] 4580  00000003 00000000 00b77c00 ffffff81 00b98300 ffffff81 00bb2700 ffffff81
+[    6.143630] 45a0  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143648] 45c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143666] 45e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143685] 4600  0a64b718 ffffffc0 01f04400 ffffff81 0887bbf0 ffffffc0 09937290 ffffffc0
+[    6.143703] 4620  00000008 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143721] 4640  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143738] 4660  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143755] 4680  01f04700 ffffff81 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143773] 46a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143790] 46c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143807] 46e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143826] 4700* 02038420 ffffff81 01bf4d08 ffffff81 003a1028 ffffff81 00000005 00000000
+[    6.143844] 4720  00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143863] 4740  00000000 00000000 00000000 00000000 00b5b880 ffffff81 00000000 00000000
+[    6.143880] 4760  00000000 00000000 00000000 00000000 00000000 00000000 003a1000 ffffff81
+[    6.143898] 4780  0040a000 ffffff81 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143916] 47a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143935] 47c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143952] 47e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.143970] 4800  00000000 00000000 01f04808 ffffff81 01f04808 ffffff81 08a8e6c4 ffffffc0
+[    6.143988] 4820  08a8e870 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.144006] 4840  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.144024] 4860  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.144041] 4880  00000000 00000000 00a7b6a0 ffffff81 00a7b6a8 ffffff81 01f04290 ffffff81
+[    6.144060] 48a0  00000001 00000000 01f048a8 ffffff81 01f048a8 ffffff81 00000000 00000000
+[    6.144077] 48c0  00000000 00000000 02039430 ffffff81 00000000 00000000 00000000 00000000
+[    6.144095] 48e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.144113]
+               X20: 0xffffffc00a411338:
+[    6.144118] 1138  38e00002 00000000 0000a600 ffffff81 00000008 00000000 00000000 00000000
+[    6.144137] 1158  00000000 00000000 0a411160 ffffffc0 0a411160 ffffffc0 0a411170 ffffffc0
+[    6.144155] 1178  0a411170 ffffffc0 0886a8a0 ffffffc0 0a4005f0 ffffffc0 00000000 00000000
+[    6.144174] 1198  09935a40 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.144192] 11b8  0a411258 ffffffc0 00000000 00000000 0886b220 ffffffc0 0886b3a0 ffffffc0
+[    6.144209] 11d8  0886bd40 ffffffc0 00000000 00000000 0886b980 ffffffc0 00000000 00000000
+[    6.144228] 11f8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.144246] 1218  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.144263] 1238  00a39200 ffffff81 00000000 00000000 00000000 04000005 00000000 00000000
+[    6.144281] 1258  09583c38 ffffffc0 00000000 00000000 0a411318 ffffffc0 0a4112f8 ffffffc0
+[    6.144300] 1278  0a4112d8 ffffffc0 0a4112b8 ffffffc0 0a411298 ffffffc0 00000000 00000000
+[    6.144318] 1298  098c6f68 ffffffc0 00000124 00000000 0886b5f4 ffffffc0 00000000 00000000
+[    6.144336] 12b8  09913870 ffffffc0 00000124 00000000 0886b3e0 ffffffc0 00000000 00000000
+[    6.144353] 12d8  099a6380 ffffffc0 00000124 00000000 0886b424 ffffffc0 00000000 00000000
+[    6.144370] 12f8  09a185c8 ffffffc0 00000124 00000000 0886b480 ffffffc0 00000000 00000000
+[    6.144389] 1318  09a0dc48 ffffffc0 00000124 00000000 0886b4c0 ffffffc0 00000000 00000000
+[    6.144407] 1338* 098a69b8 ffffffc0 00000124 00000000 088717e0 ffffffc0 00000000 00000000
+[    6.144425] 1358  099370b0 ffffffc0 00000124 00000000 08870374 ffffffc0 00000000 00000000
+[    6.144443] 1378  098b1ca0 ffffffc0 00000124 00000000 08870420 ffffffc0 00000000 00000000
+[    6.144461] 1398  09937070 ffffffc0 00000124 00000000 08873ce4 ffffffc0 00000000 00000000
+[    6.144479] 13b8  09937120 ffffffc0 00000124 00000000 08871b74 ffffffc0 00000000 00000000
+[    6.144496] 13d8  09937118 ffffffc0 00000124 00000000 08871db0 ffffffc0 00000000 00000000
+[    6.144514] 13f8  0990ee48 ffffffc0 00000124 00000000 08872050 ffffffc0 00000000 00000000
+[    6.144533] 1418  099a6380 ffffffc0 00000124 00000000 088702e4 ffffffc0 00000000 00000000
+[    6.144551] 1438  09937470 ffffffc0 00000124 00000000 08870234 ffffffc0 00000000 00000000
+[    6.144569] 1458  099370e8 ffffffc0 00000124 00000000 08870850 ffffffc0 00000000 00000000
+[    6.144587] 1478  099370d8 ffffffc0 00000124 00000000 088703b4 ffffffc0 00000000 00000000
+[    6.144606] 1498  09937108 ffffffc0 00000124 00000000 08870770 ffffffc0 00000000 00000000
+[    6.144625] 14b8  099370f8 ffffffc0 00000124 00000000 088707e0 ffffffc0 00000000 00000000
+[    6.144644] 14d8  09936fd0 ffffffc0 00000124 00000000 08871174 ffffffc0 00000000 00000000
+[    6.144662] 14f8  09937000 ffffffc0 00000124 00000000 088711f0 ffffffc0 00000000 00000000
+[    6.144681] 1518  09936fe8 ffffffc0 00000124 00000000 08871264 ffffffc0 00000000 00000000
+[    6.144699]
+               X21: 0xffffffc00a64b718:
+[    6.144704] b518  00000000 00000000 01f04600 ffffff81 01f04400 ffffff81 020386c8 ffffff81
+[    6.144722] b538  08a9bcc0 ffffffc0 08a9bf80 ffffffc0 088723f4 ffffffc0 004cbb52 ffffff81
+[    6.144740] b558  004cbb50 ffffff81 00000040 00000000 726f7272 21212120 21212121 21212121
+[    6.144758] b578  ffffffff ffffffff 0000fa75 00000000 0001b6ff 00000000 00000030 00000000
+[    6.144777] b598  01f04700 ffffff81 0a411338 ffffffc0 0a64b718 ffffffc0 00000003 00000000
+[    6.144795] b5b8  02038420 ffffff81 0a5f9488 ffffffc0 098a3da0 ffffffc0 ff05cd48 ffffff81
+[    6.144814] b5d8  0a428f20 ffffffc0 00000000 00000000 0a64b650 ffffffc0 088723f4 ffffffc0
+[    6.144833] b5f8  0a64b650 ffffffc0 0887231c ffffffc0 80c00009 00000000 0a64b630 ffffffc0
+[    6.144852] b618  0807edd8 ffffffc0 ffffffff ffffffff 02038420 ffffff81 0a64b650 ffffffc0
+[    6.144870] b638  0887231c ffffffc0 00000000 00000000 fffffffa 00000000 0a64b690 ffffffc0
+[    6.144888] b658  088723f4 ffffffc0 01f04700 ffffff81 0a411338 ffffffc0 0a64b718 ffffffc0
+[    6.144907] b678  00000003 00000000 02038420 ffffff81 0a5f9488 ffffffc0 0a64b6b0 ffffffc0
+[    6.144925] b698  0887bc0c ffffffc0 01f04600 ffffff81 01f04400 ffffff81 0a64b6c0 ffffffc0
+[    6.144943] b6b8  08a9c3b8 ffffffc0 0a64b730 ffffffc0 08a9d954 ffffffc0 02038420 ffffff81
+[    6.144962] b6d8  0a5f9340 ffffffc0 fffffffa 00000000 00000000 00000000 0a453760 ffffffc0
+[    6.144981] b6f8  0a528bd8 ffffffc0 00000000 00000000 08a90ee4 ffffffc0 0a64b730 ffffffc0
+[    6.144998] b718* 01f04300 ffffff81 01f04600 ffffff81 8fd11b00 54dae1af 0a64b750 ffffffc0
+[    6.145018] b738  08a968dc ffffffc0 02038420 ffffff81 0a5f9340 ffffffc0 0a64b7b0 ffffffc0
+[    6.145036] b758  08a97098 ffffffc0 02038420 ffffff81 0a453760 ffffffc0 0a528bd8 ffffffc0
+[    6.145054] b778  02038420 ffffff81 ff05cd68 ffffff81 ff05cd70 ffffff81 ff05cd48 ffffff81
+[    6.145072] b798  ff05cd48 ffffff81 0a428f20 ffffffc0 02038420 ffffff81 0a64b7e0 ffffffc0
+[    6.145091] b7b8  08a973fc ffffffc0 00000001 00000000 0a453760 ffffffc0 0a64b898 ffffffc0
+[    6.145109] b7d8  02038420 ffffff81 0a64b810 ffffffc0 08a93e20 ffffffc0 00000000 00000000
+[    6.145127] b7f8  0a64b898 ffffffc0 08a97324 ffffffc0 00000001 00000000 0a64b860 ffffffc0
+[    6.145145] b818  08a96c84 ffffffc0 02038420 ffffff81 02038420 ffffff81 020384a0 ffffff81
+[    6.145163] b838  08a96c6c ffffffc0 02038420 ffffff81 00a7bec8 ffffff81 01fa5e68 ffffff81
+[    6.145181] b858  8fd11b00 54dae1af 0a64b8b0 ffffffc0 08a9748c ffffffc0 02038420 ffffff81
+[    6.145199] b878  02038420 ffffff81 0a45ead8 ffffffc0 01cbb8f0 ffffff81 0a64b8f0 ffffffc0
+[    6.145217] b898  02038420 ffffff81 00000001 00000000 8fd11b00 54dae1af 0a64b8c0 ffffffc0
+[    6.145236] b8b8  08a954e4 ffffffc0 0a64b8f0 ffffffc0 08a92460 ffffffc0 02038420 ffffff81
+[    6.145254] b8d8  00000000 00000000 0a428978 ffffffc0 00000000 00000000 0a64b980 ffffffc0
+[    6.145272] b8f8  08a9290c ffffffc0 02038420 ffffff81 0a64ba58 ffffffc0 01cbb880 ffffff81
+[    6.145292]
+               X23: 0xffffff8102038420:
+[    6.145297] 8220  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145315] 8240  02038240 ffffff81 02038240 ffffff81 00000000 00000000 00000000 00000000
+[    6.145334] 8260  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145352] 8280  02038280 ffffff81 02038280 ffffff81 00000000 00000000 00000000 00000000
+[    6.145370] 82a0  00000000 00000000 00000000 00000000 05900002 00000000 00000000 00000000
+[    6.145390] 82c0  020382c0 ffffff81 020382c0 ffffff81 01fac080 ffffff81 00000000 00000000
+[    6.145408] 82e0  08dd0650 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145427] 8300  00000000 00000000 02038308 ffffff81 02038308 ffffff81 02038018 ffffff81
+[    6.145444] 8320  00000000 00000000 0a341bb8 ffffffc0 00000000 00000000 00000001 00000001
+[    6.145462] 8340  00000000 00000000 09669e50 ffffffc0 02038350 ffffff81 02038350 ffffff81
+[    6.145480] 8360  05900002 00000001 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145498] 8380  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145516] 83a0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145535] 83c0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145553] 83e0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145572] 8400  005d0000 32397467 00003137 00000000 00000000 00000000 01cbb880 ffffff81
+[    6.145590] 8420* 01f02100 ffffff81 01f890a8 ffffff81 02039438 ffffff81 01cbb8f0 ffffff81
+[    6.145611] 8440  0037e900 ffffff81 0a428a80 ffffffc0 01f01500 ffffff81 00000007 00000007
+[    6.145628] 8460  01cbb8f0 ffffff81 01efdf00 ffffff81 00000000 00000000 0a45ea58 ffffffc0
+[    6.145647] 8480  0a45ead8 ffffffc0 0a453760 ffffffc0 00000000 00000000 02040200 ffffff81
+[    6.145665] 84a0  00298000 ffffff81 00000000 00000000 020384b0 ffffff81 020384b0 ffffff81
+[    6.145684] 84c0  02038820 ffffff81 02039420 ffffff81 020384d0 ffffff81 020384d0 ffffff81
+[    6.145702] 84e0  020384e0 ffffff81 020384e0 ffffff81 00000000 00000000 00000000 00000104
+[    6.145720] 8500  00000000 00000000 01f89188 ffffff81 02038100 ffffff81 ffffffff 00000000
+[    6.145738] 8520  00000000 00000000 02038528 ffffff81 02038528 ffffff81 00000000 00000000
+[    6.145756] 8540  00000004 00000000 02038548 ffffff81 00000000 00000000 00000000 00000000
+[    6.145774] 8560  00000000 00000000 00000000 00000000 08aab174 ffffffc0 fef7b180 ffffff81
+[    6.145792] 8580  00000000 00000000 00000000 00000000 ffffffe0 0000000f 02038598 ffffff81
+[    6.145811] 85a0  02038598 ffffff81 08aab280 ffffffc0 00000000 00000000 020385b8 ffffff81
+[    6.145829] 85c0  020385b8 ffffff81 00000000 00000000 00000000 00000000 00000081 00000000
+[    6.145849] 85e0  00000000 00000002 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145867] 8600  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145885]
+               X24: 0xffffffc00a5f9488:
+[    6.145889] 9288  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.145908] 92a8  00000000 00000000 00000000 00000000 00000000 00000000 00000001 00000000
+[    6.145926] 92c8  00000000 00000000 00000000 00000000 00bef000 ffffff81 00c77680 ffffff81
+[    6.145944] 92e8  00000000 00000000 00405240 ffffff81 0037e900 ffffff81 0037ed00 ffffff81
+[    6.145964] 9308  00000000 00000000 00a11d80 ffffff81 00000000 00000000 0037e880 ffffff81
+[    6.145983] 9328  0037ec80 ffffff81 0037ed80 ffffff81 0037ee00 ffffff81 00000000 00000000
+[    6.146001] 9348  00000000 00000000 00000002 00000000 00000000 00000000 00000000 00000000
+[    6.146019] 9368  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146036] 9388  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146055] 93a8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146071] 93c8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146089] 93e8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146106] 9408  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146124] 9428  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146143] 9448  00000000 00000000 00000000 00000000 00000000 00000000 0037ee80 ffffff81
+[    6.146163] 9468  00000000 00000000 00000000 00000000 00000000 00000000 0037ef00 ffffff81
+[    6.146181] 9488* 00000000 00000000 00000000 00000000 00000000 00000000 00800900 ffffff81
+[    6.146201] 94a8  00292520 ffffff81 00000000 00000000 003a8000 ffffff81 00000000 00000000
+[    6.146219] 94c8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146238] 94e8  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146256] 9508  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146274] 9528  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146291] 9548  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146309] 9568  00010000 00000000 00000000 00000000 00000000 00000000 00800980 ffffff81
+[    6.146327] 9588  00000000 00000000 00000000 00000000 00000000 00000000 0a5f95a0 ffffffc0
+[    6.146345] 95a8  0a5f95a0 ffffffc0 00000000 00000000 0a5f95b8 ffffffc0 0a5f95b8 ffffffc0
+[    6.146365] 95c8  ffffffe0 0000000f 0a5f95d0 ffffffc0 0a5f95d0 ffffffc0 08abab00 ffffffc0
+[    6.146383] 95e8  00000000 00000000 00000000 00000000 00000000 00000000 08073c50 ffffffc0
+[    6.146400] 9608  00200002 00000000 00000000 00000000 00000000 00000000 08aba310 ffffffc0
+[    6.146420] 9628  0a4110b0 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146438] 9648  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146457] 9668  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.146476]
+               X25: 0xffffffc0098a3da0:
+[    6.146481] 3ba0  00000a75 00000000 69747268 3d72656d 66207025 74636e75 3d6e6f69 20737025
+[    6.146500] 3bc0  3d776f6e 756c6c25 0000000a 00000000 69747268 3d72656d 000a7025 00000000
+[    6.146518] 3be0  63696877 64253d68 70786520 73657269 6c6c253d 74692075 6c61765f 253d6575
+[    6.146537] 3c00  252e646c 646c3630 5f746920 65746e69 6c617672 646c253d 3630252e 000a646c
+[    6.146555] 3c20  63696877 64253d68 64697020 2064253d 3d776f6e 756c6c25 0000000a 00000000
+[    6.146573] 3c40  656d6974 70253d72 6e756620 6f697463 70253d6e 78652073 65726970 6c253d73
+[    6.146591] 3c60  745b2075 6f656d69 253d7475 205d646c 3d757063 69207525 253d7864 6c662075
+[    6.146609] 3c80  3d736761 000a7325 69747268 3d72656d 63207025 6b636f6c 253d6469 6f6d2073
+[    6.146629] 3ca0  253d6564 00000a73 69747268 3d72656d 66207025 74636e75 3d6e6f69 20737025
+[    6.146647] 3cc0  69707865 3d736572 756c6c25 666f7320 70786574 73657269 6c6c253d 6f6d2075
+[    6.146665] 3ce0  253d6564 00000a73 63637573 3d737365 64206425 6e657065 636e6564 73253d79
+[    6.146684] 3d00  0000000a 00000000 656d6974 25203a72 70205370 6d656572 6c207470 3a6b6165
+[    6.146701] 3d20  38302520 3e2d2078 38302520 00000a78 63733301 75646568 745f656c 6f656d69
+[    6.146720] 3d40  203a7475 6e6f7277 69742067 756f656d 61762074 2065756c 0a786c25 00000000
+[    6.146738] 3d60  454e4f4e 00000000 49534f50 49545f58 0052454d 00000000 46524550 4556455f
+[    6.146756] 3d80  0053544e 00000000 434f4c43 4e555f4b 42415453 0000454c 00534241 00000000
+[    6.146774] 3da0* 004c4552 00000000 7c534241 4e4e4950 00004445 00000000 7c4c4552 4e4e4950
+[    6.146792] 3dc0  00004445 00000000 7c534241 54464f53 00000000 00000000 7c4c4552 54464f53
+[    6.146810] 3de0  00000000 00000000 7c534241 4e4e4950 537c4445 0054464f 7c4c4552 4e4e4950
+[    6.146828] 3e00  537c4445 0054464f 434f4c43 45525f4b 49544c41 0000454d 434f4c43 4f4d5f4b
+[    6.146846] 3e20  4f544f4e 0043494e 434f4c43 4f425f4b 4954544f 0000454d 434f4c43 41545f4b
+[    6.146864] 3e40  00000049 00000000 63696877 00000068 69736e75 64656e67 6e6f6c20 6f6c2067
+[    6.146881] 3e60  0000676e 00000000 69707865 00736572 756c6176 65735f65 00000063 00000000
+[    6.146900] 3e80  756c6176 736e5f65 00006365 00000000 65746e69 6c617672 6365735f 00000000
+[    6.146918] 3ea0  65746e69 6c617672 65736e5f 00000063 69747268 0072656d 00343673 00000000
+[    6.146936] 3ec0  74666f73 69707865 00736572 00000000 6d756e65 74726820 72656d69 646f6d5f
+[    6.146954] 3ee0  00000065 00000000 636f6c63 5f64696b 00000074 00000000 636f6c63 0064696b
+[    6.146972] 3f00  65736162 006b6c63 4b434954 5045445f 53414d5f 43525f4b 00000055 00000000
+[    6.146990] 3f20  4b434954 5045445f 5449425f 5543525f 00000000 00000000 4b434954 5045445f
+[    6.147009] 3f40  53414d5f 4c435f4b 5f4b434f 54534e55 454c4241 00000000 4b434954 5045445f
+[    6.147027] 3f60  5449425f 4f4c435f 555f4b43 4154534e 00454c42 00000000 4b434954 5045445f
+[    6.147045] 3f80  53414d5f 43535f4b 00444548 00000000 4b434954 5045445f 5449425f 4843535f
+[    6.147064]
+               X26: 0xffffff81ff05cd48:
+[    6.147069] cb48  00000000 00000000 08fb8f84 ffffffc0 00000000 00000000 00000000 00000000
+[    6.147088] cb68  fe7191ed fffffffe 00000009 00000000 fe7109c8 fffffffe ff05cbc0 ffffff81
+[    6.147108] cb88  00976300 ffffff81 00000124 00000000 00000009 00000000 00000000 00000000
+[    6.147126] cba8  08fb8f84 ffffffc0 00000000 00000000 00000000 00000000 fe71a13f fffffffe
+[    6.147146] cbc8  00000004 00000000 fe7109e0 fffffffe ff05cc18 ffffff81 00976400 ffffff81
+[    6.147165] cbe8  00000124 00000000 00000004 00000000 00000000 00000000 08fb8f84 ffffffc0
+[    6.147183] cc08  00000000 00000000 00000000 00000000 fe71a147 fffffffe 00000004 00000000
+[    6.147201] cc28  fe7109f0 fffffffe ff05cc70 ffffff81 00976500 ffffff81 00000124 00000000
+[    6.147220] cc48  00000004 00000000 00000000 00000000 08fb8f84 ffffffc0 00000000 00000000
+[    6.147238] cc68  00000000 00000000 fe71a14d fffffffe 00000004 00000000 fe710a00 fffffffe
+[    6.147256] cc88  ff05ccc8 ffffff81 00976600 ffffff81 00000124 00000000 00000004 00000000
+[    6.147275] cca8  00000000 00000000 08fb8f84 ffffffc0 00000000 00000000 00000000 00000000
+[    6.147292] ccc8  098a69b8 ffffffc0 00000009 00000000 ff05cd20 ffffff81 00000000 00000000
+[    6.147311] cce8  00976700 ffffff81 00000124 00000000 00000009 00000000 00000000 00000000
+[    6.147329] cd08  08fb8f84 ffffffc0 00000000 00000000 00000000 00000000 78397467 73745f78
+[    6.147347] cd28  00000000 00000000 ff05d288 ffffff81 00000000 00000000 ff05ce00 ffffff81
+[    6.147366] cd48* 00000000 00000000 096acdc8 ffffffc0 02038420 ffffff81 ff05cd60 ffffff81
+[    6.147384] cd68  ff05cd60 ffffff81 ff05cd70 ffffff81 ff05cd70 ffffff81 00000001 00000000
+[    6.147402] cd88  ff05ce10 ffffff81 00000000 00000000 ff05bec0 ffffff81 00000000 00000000
+[    6.147421] cda8  ff05d298 ffffff81 00976880 ffffff81 ff05d320 ffffff81 ff05c850 ffffff81
+[    6.147440] cdc8  ff05bf40 ffffff81 0037ef80 ffffff81 0a487370 ffffffc0 00977180 ffffff81
+[    6.147461] cde8  00000001 00000003 00000008 00000000 00000000 00000000 32397467 745f3137
+[    6.147480] ce08  64354073 00000000 fe7189a8 fffffffe 0000000e 00000000 fe710a28 fffffffe
+[    6.147500] ce28  ff05ce68 ffffff81 00976800 ffffff81 00000124 00000000 0000000e 00000000
+[    6.147519] ce48  00000000 00000000 08fb8f84 ffffffc0 00000000 00000000 00000000 00000000
+[    6.147539] ce68  fe718ec3 fffffffe 00000004 00000000 fe710a44 fffffffe ff05cec0 ffffff81
+[    6.147556] ce88  00976a00 ffffff81 00000124 00000000 00000004 00000000 00000000 00000000
+[    6.147574] cea8  08fb8f84 ffffffc0 00000000 00000000 00000000 00000000 fe7189b3 fffffffe
+[    6.147591] cec8  00000004 00000000 fe710a54 fffffffe ff05cf18 ffffff81 00976b00 ffffff81
+[    6.147609] cee8  00000124 00000000 00000004 00000000 00000000 00000000 08fb8f84 ffffffc0
+[    6.147627] cf08  00000000 00000000 00000000 00000000 fe71919f fffffffe 00000008 00000000
+[    6.147646] cf28  fe710a64 fffffffe ff05cf70 ffffff81 00976c00 ffffff81 00000124 00000000
+[    6.147665]
+               X27: 0xffffffc00a428f20:
+[    6.147672] 8d20  00000000 00000000 0a428d28 ffffffc0 0a428d28 ffffffc0 095ef368 ffffffc0
+[    6.147690] 8d40  00000000 00000000 0a428dd0 ffffffc0 0a428db0 ffffffc0 0a428d90 ffffffc0
+[    6.147710] 8d60  0a428d70 ffffffc0 00000000 00000000 099880a0 ffffffc0 00000124 00000000
+[    6.147729] 8d80  08a8d8c0 ffffffc0 00000000 00000000 099880b0 ffffffc0 00000124 00000000
+[    6.147747] 8da0  08a8d900 ffffffc0 00000000 00000000 099880c0 ffffffc0 00000124 00000000
+[    6.147765] 8dc0  08a8d940 ffffffc0 00000000 00000000 099a6380 ffffffc0 00000124 00000000
+[    6.147784] 8de0  08a8d9c0 ffffffc0 00000000 00000000 08a94210 ffffffc0 095ef428 ffffffc0
+[    6.147801] 8e00  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.147819] 8e20  00000000 00000000 09988260 ffffffc0 000001a4 00000000 08a943b4 ffffffc0
+[    6.147837] 8e40  08a93bc0 ffffffc0 09988278 ffffffc0 00000080 00000000 00000000 00000000
+[    6.147855] 8e60  08a94340 ffffffc0 09907bb0 ffffffc0 00000080 00000000 00000000 00000000
+[    6.147874] 8e80  08a94150 ffffffc0 08a94194 ffffffc0 095ef438 ffffffc0 00000000 00000000
+[    6.147893] 8ea0  00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.147911] 8ec0  09907bb0 ffffffc0 00000080 00000000 00000000 00000000 08a94110 ffffffc0
+[    6.147930] 8ee0  09907be0 ffffffc0 00000080 00000000 00000000 00000000 08a947b4 ffffffc0
+[    6.147949] 8f00  09907bd8 ffffffc0 00000080 00000000 00000000 00000000 08a94a60 ffffffc0
+[    6.147969] 8f20* 00000000 00000000 00000000 00000000 0a428f30 ffffffc0 0a428f30 ffffffc0
+[    6.147988] 8f40  0a428f40 ffffffc0 0a428f40 ffffffc0 00b52da8 ffffff81 00b62aa8 ffffff81
+[    6.148005] 8f60  ffffffe0 0000000f 0a428f68 ffffffc0 0a428f68 ffffffc0 08a959f0 ffffffc0
+[    6.148024] 8f80  00000000 00000000 0a428f88 ffffffc0 0a428f88 ffffffc0 ffffffe0 0000000f
+[    6.148044] 8fa0  0a428fa0 ffffffc0 0a428fa0 ffffffc0 08a95fc0 ffffffc0 00000300 dead0000
+[    6.148063] 8fc0  00000000 00000000 00000000 00000000 08073c50 ffffffc0 00200000 00000000
+[    6.148081] 8fe0  00000000 00000000 00000000 00000000 099886d8 ffffffc0 00000080 00000000
+[    6.148099] 9000  00000000 00000000 08a95990 ffffffc0 099886c8 ffffffc0 00000124 00000000
+[    6.148118] 9020  08a95d60 ffffffc0 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.148136] 9040  0a429040 ffffffc0 0a429040 ffffffc0 0a3c3a40 ffffffc0 0a31d0f0 ffffffc0
+[    6.148155] 9060  08a98574 ffffffc0 095ef710 ffffffc0 00000000 00000000 00000000 00000000
+[    6.148174] 9080  08a984e0 ffffffc0 00000000 00000000 00000000 00000000 09988c30 ffffffc0
+[    6.148192] 90a0  00000124 00000000 08a99fc0 ffffffc0 00000000 00000000 0989f138 ffffffc0
+[    6.148211] 90c0  0014e808 ffffff81 0037e900 ffffff81 0037e918 ffffff81 0037e900 ffffff81
+[    6.148229] 90e0  0a428a80 ffffffc0 00a0a580 ffffff81 00000139 00000003 00000000 00000000
+[    6.148248] 9100  00358b00 ffffff81 00000000 00000000 00000000 00000000 00000000 00000000
+[    6.148267]
+               X29: 0xffffffc00a64b650:
+[    6.148272] b450  0a64b470 ffffffc0 08038b28 ffffffc0 0a64b500 ffffffc0 094755e8 ffffffc0
+[    6.148291] b470  0a64b4c0 ffffffc0 09475744 ffffffc0 0a64b500 ffffffc0 f2000800 00000000
+[    6.148310] b490  5bfdaff7 1f1aeeff 0887231c ffffffc0 80c00009 00000000 0a5f9488 ffffffc0
+[    6.148329] b4b0  0a64b4c0 ffffffc0 09475734 ffffffc0 0a64b4f0 ffffffc0 09475e0c ffffffc0
+[    6.148347] b4d0  01f04700 ffffff81 ffffffff 0000007f 0a64b650 ffffffc0 096684f8 ffffffc0
+[    6.148365] b4f0  0a64b630 ffffffc0 08012408 ffffffc0 00000001 00000000 00000000 00000000
+[    6.148383] b510  00000000 00000000 00000000 00000000 01f04600 ffffff81 01f04400 ffffff81
+[    6.148400] b530  020386c8 ffffff81 08a9bcc0 ffffffc0 08a9bf80 ffffffc0 088723f4 ffffffc0
+[    6.148420] b550  004cbb52 ffffff81 004cbb50 ffffff81 00000040 00000000 726f7272 21212120
+[    6.148439] b570  21212121 21212121 ffffffff ffffffff 0000fa75 00000000 0001b6ff 00000000
+[    6.148458] b590  00000030 00000000 01f04700 ffffff81 0a411338 ffffffc0 0a64b718 ffffffc0
+[    6.148476] b5b0  00000003 00000000 02038420 ffffff81 0a5f9488 ffffffc0 098a3da0 ffffffc0
+[    6.148493] b5d0  ff05cd48 ffffff81 0a428f20 ffffffc0 00000000 00000000 0a64b650 ffffffc0
+[    6.148512] b5f0  088723f4 ffffffc0 0a64b650 ffffffc0 0887231c ffffffc0 80c00009 00000000
+[    6.148530] b610  0a64b630 ffffffc0 0807edd8 ffffffc0 ffffffff ffffffff 02038420 ffffff81
+[    6.148548] b630  0a64b650 ffffffc0 0887231c ffffffc0 00000000 00000000 fffffffa 00000000
+[    6.148567] b650* 0a64b690 ffffffc0 088723f4 ffffffc0 01f04700 ffffff81 0a411338 ffffffc0
+[    6.148585] b670  0a64b718 ffffffc0 00000003 00000000 02038420 ffffff81 0a5f9488 ffffffc0
+[    6.148603] b690  0a64b6b0 ffffffc0 0887bc0c ffffffc0 01f04600 ffffff81 01f04400 ffffff81
+[    6.148623] b6b0  0a64b6c0 ffffffc0 08a9c3b8 ffffffc0 0a64b730 ffffffc0 08a9d954 ffffffc0
+[    6.148642] b6d0  02038420 ffffff81 0a5f9340 ffffffc0 fffffffa 00000000 00000000 00000000
+[    6.148660] b6f0  0a453760 ffffffc0 0a528bd8 ffffffc0 00000000 00000000 08a90ee4 ffffffc0
+[    6.148679] b710  0a64b730 ffffffc0 01f04300 ffffff81 01f04600 ffffff81 8fd11b00 54dae1af
+[    6.148698] b730  0a64b750 ffffffc0 08a968dc ffffffc0 02038420 ffffff81 0a5f9340 ffffffc0
+[    6.148717] b750  0a64b7b0 ffffffc0 08a97098 ffffffc0 02038420 ffffff81 0a453760 ffffffc0
+[    6.148735] b770  0a528bd8 ffffffc0 02038420 ffffff81 ff05cd68 ffffff81 ff05cd70 ffffff81
+[    6.148753] b790  ff05cd48 ffffff81 ff05cd48 ffffff81 0a428f20 ffffffc0 02038420 ffffff81
+[    6.148772] b7b0  0a64b7e0 ffffffc0 08a973fc ffffffc0 00000001 00000000 0a453760 ffffffc0
+[    6.148789] b7d0  0a64b898 ffffffc0 02038420 ffffff81 0a64b810 ffffffc0 08a93e20 ffffffc0
+[    6.148807] b7f0  00000000 00000000 0a64b898 ffffffc0 08a97324 ffffffc0 00000001 00000000
+[    6.148825] b810  0a64b860 ffffffc0 08a96c84 ffffffc0 02038420 ffffff81 02038420 ffffff81
+[    6.148843] b830  020384a0 ffffff81 08a96c6c ffffffc0 02038420 ffffff81 00a7bec8 ffffff81
+[    6.148884] ---[ end trace c73949606d8e15fd ]---
+[    6.155671] rtc-rx8010 5-0032: registered as rtc0
+[    6.157169] rtc-rx8010 5-0032: setting system clock to 2026-08-07T16:04:30 UTC (1786118670)
+[    6.159217] rkisp_hw fdff0000.rkisp: Adding to iommu group 7
+[    6.159432] rkisp_hw fdff0000.rkisp: is_thunderboot: 0
+[    6.159445] rkisp_hw fdff0000.rkisp: max input:0x0@0fps
+[    6.159475] rkisp_hw fdff0000.rkisp: can't request region for resource [mem 0xfdff0000-0xfdffffff]
+[    6.159673] rkisp_hw fdff0000.rkisp: no find phandle sram
+[    6.160215] rkisp rkisp-vir0: rkisp driver version: v02.02.01
+[    6.160361] rkisp rkisp-vir0: No memory-region-thunderboot specified
+[    6.160551] rkisp rkisp-vir0: Entity type for entity rkisp-isp-subdev was not initialized!
+[    6.160573] rkisp rkisp-vir0: Entity type for entity rkisp-csi-subdev was not initialized!
+[    6.163010] usbcore: registered new interface driver uvcvideo
+[    6.163029] USB Video Class driver (1.1.1)
+[    6.165055] cpu cpu0: leakage=31
+[    6.165144] cpu cpu0: pvtm = 89870, from nvmem
+[    6.165162] cpu cpu0: pvtm-volt-sel=2
+[    6.166076] cpu cpu0: _of_add_opp_table_v2: no supported OPPs
+[    6.166091] cpu cpu0: OPP table can't be empty
+[    6.167536] sdhci: Secure Digital Host Controller Interface driver
+[    6.167553] sdhci: Copyright(c) Pierre Ossman
+[    6.167559] Synopsys Designware Multimedia Card Interface Driver
+[    6.167979] sdhci-pltfm: SDHCI platform and OF driver helper
+[    6.168588] dwmmc_rockchip fe2b0000.dwmmc: IDMAC supports 32-bit address mode.
+[    6.168627] dwmmc_rockchip fe2b0000.dwmmc: Using internal DMA controller.
+[    6.168641] dwmmc_rockchip fe2b0000.dwmmc: Version ID is 270a
+[    6.168703] dwmmc_rockchip fe2b0000.dwmmc: DW MMC controller at irq 63,32 bit host data width,256 deep fifo
+[    6.169957] arm-scmi firmware:scmi: Failed. SCMI protocol 17 not active.
+[    6.170077] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    6.171066] cryptodev: driver 1.12 loaded.
+[    6.171125] hid: raw HID events driver (C) Jiri Kosina
+[    6.171513] usbcore: registered new interface driver usbhid
+[    6.171523] usbhid: USB HID core driver
+[    6.172562] rockchip,bus bus-npu: Failed to get leakage
+[    6.172628] rockchip,bus bus-npu: pvtm = 89870, from nvmem
+[    6.172644] rockchip,bus bus-npu: pvtm-volt-sel=1
+[    6.172872] rockchip,bus bus-npu: avs=0
+[    6.178442] usbcore: registered new interface driver snd-usb-audio
+[    6.180023] mmc_host mmc1: Bus speed (slot 0) = 375000Hz (slot req 400000Hz, actual 375000HZ div = 0)
+[    6.180384] rk817-codec rk817-codec: DMA mask not set
+[    6.185315] rockchip-pinctrl pinctrl: pin gpio3-21 already requested by fe6b0000.serial; cannot claim for fe460000.spdif
+[    6.185340] rockchip-pinctrl pinctrl: pin-117 (fe460000.spdif) status -22
+[    6.185350] rockchip-pinctrl pinctrl: could not request pin 117 (gpio3-21) from group spdifm1-tx  on device rockchip-pinctrl
+[    6.185357] rockchip-spdif fe460000.spdif: Error applying setting, reverse things back
+[    6.185379] rockchip-spdif: probe of fe460000.spdif failed with error -22
+[    6.186431] rk-multicodecs rk809-sound: Failed to get ADC channel
+[    6.186616] rk-multicodecs rk809-sound: ASoC: Property 'rockchip,audio-routing' does not exist or its length is not even
+[    6.186627] rk-multicodecs rk809-sound: Audio routing invalid/unspecified
+[    6.187937] rk817-codec rk817-codec: rk817_probe: chip_name:0x80, chip_ver:0x94
+[    6.194932] input: rockchip-rk809 Headset as /devices/platform/rk809-sound/sound/card0/input1
+[    6.196703] IPVS: Registered protocols (TCP, UDP)
+[    6.196763] IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+[    6.196886] IPVS: ipvs loaded.
+[    6.196898] IPVS: [rr] scheduler registered.
+[    6.197146] Initializing XFRM netlink socket
+[    6.197527] NET: Registered protocol family 10
+[    6.198401] Segment Routing with IPv6
+[    6.198485] NET: Registered protocol family 17
+[    6.198510] NET: Registered protocol family 15
+[    6.198570] Bridge firewalling registered
+[    6.198579] can: controller area network core
+[    6.198624] NET: Registered protocol family 29
+[    6.198633] can: raw protocol
+[    6.198643] can: broadcast manager protocol
+[    6.198655] can: netlink gateway - max_hops=1
+[    6.198865] Bluetooth: RFCOMM TTY layer initialized
+[    6.198885] Bluetooth: RFCOMM socket layer initialized
+[    6.198918] Bluetooth: RFCOMM ver 1.11
+[    6.198933] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[    6.198940] Bluetooth: BNEP filters: protocol multicast
+[    6.198950] Bluetooth: BNEP socket layer initialized
+[    6.198958] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[    6.198967] Bluetooth: HIDP socket layer initialized
+[    6.199006] [BT_RFKILL]: Enter rfkill_rk_init
+[    6.199014] [WLAN_RFKILL]: Enter rfkill_wlan_init
+[    6.199173] mmc0: SDHCI controller on fe310000.sdhci [fe310000.sdhci] using ADMA
+[    6.199794] Key type dns_resolver registered
+[    6.200764] ov5695 2-0036: driver version: 00.01.04
+[    6.200887] ov5695 2-0036: supply avdd not found, using dummy regulator
+[    6.201044] ov5695 2-0036: supply dovdd not found, using dummy regulator
+[    6.201092] ov5695 2-0036: supply dvdd not found, using dummy regulator
+[    6.203547] ov5695 2-0036: Detected OV005695 sensor
+[    6.203603] rockchip-csi2-dphy csi2-dphy0: dphy0 matches m00_b_ov5695 2-0036:bus type 5
+[    6.203950] rockchip-pinctrl pinctrl: pin gpio4-16 already requested by 2-0036; cannot claim for 2-0010
+[    6.203962] rockchip-pinctrl pinctrl: pin-144 (2-0010) status -22
+[    6.203971] rockchip-pinctrl pinctrl: could not request pin 144 (gpio4-16) from group cif-clk  on device rockchip-pinctrl
+[    6.203979] ov13850 2-0010: Error applying setting, reverse things back
+[    6.204001] ov13850: probe of 2-0010 failed with error -22
+[    6.204557] Loading compiled-in X.509 certificates
+[    6.206574] Btrfs loaded, crc32c=crc32c-generic
+[    6.206777] pstore: Using crash dump compression: deflate
+[    6.207783] rga: rga2, irq = 30, match scheduler
+[    6.208232] rga: rga2 hardware loaded successfully, hw_version:3.2.63318.
+[    6.208264] rga: rga2 probe successfully
+[    6.208603] rga_iommu: IOMMU binding successfully, default mapping core[0x4]
+[    6.208998] rga: Module initialized. v1.2.26
+[    6.231383] rockchip-pinctrl pinctrl: pin gpio3-21 already requested by fe6b0000.serial; cannot claim for fe460000.spdif
+[    6.231410] rockchip-pinctrl pinctrl: pin-117 (fe460000.spdif) status -22
+[    6.231420] rockchip-pinctrl pinctrl: could not request pin 117 (gpio3-21) from group spdifm1-tx  on device rockchip-pinctrl
+[    6.231429] rockchip-spdif fe460000.spdif: Error applying setting, reverse things back
+[    6.231454] rockchip-spdif: probe of fe460000.spdif failed with error -22
+[    6.232146] mpp_rkvenc fdf40000.rkvenc: Adding to iommu group 5
+[    6.232391] mpp_rkvenc fdf40000.rkvenc: probing start
+[    6.232820] mpp_rkvenc fdf40000.rkvenc: Failed to get leakage
+[    6.232879] mpp_rkvenc fdf40000.rkvenc: pvtm = 89870, from nvmem
+[    6.232894] mpp_rkvenc fdf40000.rkvenc: pvtm-volt-sel=1
+[    6.233128] mpp_rkvenc fdf40000.rkvenc: avs=0
+[    6.233263] mpp_rkvenc fdf40000.rkvenc: failed to find power_model node
+[    6.233274] mpp_rkvenc fdf40000.rkvenc: failed to initialize power model
+[    6.233282] mpp_rkvenc fdf40000.rkvenc: failed to get dynamic-coefficient
+[    6.233954] mpp_rkvenc fdf40000.rkvenc: probing finish
+[    6.234371] mpp_rkvdec2 fdf80200.rkvdec: Adding to iommu group 6
+[    6.234608] mpp_rkvdec2 fdf80200.rkvdec: rkvdec, probing start
+[    6.234948] mpp_rkvdec2 fdf80200.rkvdec: shared_niu_a is not found!
+[    6.234959] rkvdec2_init:1022: No niu aclk reset resource define
+[    6.234969] mpp_rkvdec2 fdf80200.rkvdec: shared_niu_h is not found!
+[    6.234975] rkvdec2_init:1025: No niu hclk reset resource define
+[    6.235272] mpp_rkvdec2 fdf80200.rkvdec: leakage=53
+[    6.235288] mpp_rkvdec2 fdf80200.rkvdec: leakage-volt-sel=0
+[    6.235328] mpp_rkvdec2 fdf80200.rkvdec: pvtm = 89870, from nvmem
+[    6.235341] mpp_rkvdec2 fdf80200.rkvdec: pvtm-volt-sel=1
+[    6.235553] mpp_rkvdec2 fdf80200.rkvdec: avs=0
+[    6.235681] mpp_rkvdec2 fdf80200.rkvdec: failed to find power_model node
+[    6.235692] mpp_rkvdec2 fdf80200.rkvdec: failed to initialize power model
+[    6.235700] mpp_rkvdec2 fdf80200.rkvdec: failed to get dynamic-coefficient
+[    6.235762] mmc0: Host Software Queue enabled
+[    6.235785] mmc0: new HS200 MMC card at address 0001
+[    6.235828] mpp_rkvdec2 fdf80200.rkvdec: sram_start 0x00000000fdcc0000
+[    6.235839] mpp_rkvdec2 fdf80200.rkvdec: rcb_iova 0x0000000010000000
+[    6.235847] mpp_rkvdec2 fdf80200.rkvdec: sram_size 45056
+[    6.235853] mpp_rkvdec2 fdf80200.rkvdec: rcb_size 65536
+[    6.235861] mpp_rkvdec2 fdf80200.rkvdec: min_width 512
+[    6.235919] mpp_rkvdec2 fdf80200.rkvdec: link mode probe finish
+[    6.235996] mpp_rkvdec2 fdf80200.rkvdec: probing finish
+[    6.236445] mmcblk0: mmc0:0001 BJTD4R 29.1 GiB
+[    6.236693] mmcblk0boot0: mmc0:0001 BJTD4R partition 1 4.00 MiB
+[    6.236910] mmcblk0boot1: mmc0:0001 BJTD4R partition 2 4.00 MiB
+[    6.237171] mmcblk0rpmb: mmc0:0001 BJTD4R partition 3 4.00 MiB, chardev (236:0)
+[    6.237319] mali fde60000.gpu: Kernel DDK version g17p0-01eac0
+[    6.237750] rockchip-dmc dmc: leakage=53
+[    6.237809] rockchip-dmc dmc: leakage-volt-sel=0
+[    6.237837] mali fde60000.gpu: leakage=8
+[    6.237859] rockchip-dmc dmc: pvtm = 89870, from nvmem
+[    6.237875] rockchip-dmc dmc: pvtm-volt-sel=1
+[    6.237881] mali fde60000.gpu: pvtm = 89870, from nvmem
+[    6.237895] mali fde60000.gpu: pvtm-volt-sel=2
+[    6.237904] rockchip-dmc dmc: _of_add_opp_table_v2: no supported OPPs
+[    6.237916] rockchip-dmc dmc: Invalid operating-points in device tree.
+[    6.237924] mali fde60000.gpu: _of_add_opp_table_v2: no supported OPPs
+[    6.237934] mali fde60000.gpu: Invalid operating-points in device tree.
+[    6.237941] mali fde60000.gpu: Failed to init_opp_table (-2)
+[    6.237952] rockchip-dmc: probe of dmc failed with error -2
+[    6.237959] W : [File] : drivers/gpu/arm/bifrost/platform/rk/mali_kbase_config_rk.c; [Line] : 143; [Func] : kbase_platform_rk_init(); power-off-delay-ms not available.
+[    6.238364] mali fde60000.gpu: GPU identified as 0x2 arch 7.4.0 r1p0 status 0
+[    6.238369] rockchip-iodomain fdc20000.syscon:io-domains: pmuio2(3300000 uV) supplied by vcc3v3_pmu
+[    6.238460] mali fde60000.gpu: No priority control manager is configured
+[    6.238503] rockchip-iodomain fdc20000.syscon:io-domains: vccio1(3000000 uV) supplied by vccio_acodec
+[    6.238623] mali fde60000.gpu: No memory group manager is configured
+[    6.238660] rockchip-iodomain fdc20000.syscon:io-domains: vccio3(3300000 uV) supplied by vccio_sd
+[    6.238812] rockchip-iodomain fdc20000.syscon:io-domains: vccio4(1800000 uV) supplied by vcc_1v8
+[    6.239011] rockchip-iodomain fdc20000.syscon:io-domains: vccio5(3300000 uV) supplied by vcc_3v3
+[    6.239106] rockchip-iodomain fdc20000.syscon:io-domains: vccio6(1800000 uV) supplied by vcc_1v8
+[    6.239196] rockchip-iodomain fdc20000.syscon:io-domains: vccio7(3300000 uV) supplied by vcc_3v3
+[    6.239824] mali fde60000.gpu: No OPPs found in device tree! Scaling timeouts using 100000 kHz
+[    6.240187] mali fde60000.gpu: Continuing without devfreq
+[    6.240998] mali fde60000.gpu: Probed as mali0
+[    6.241200]  mmcblk0: p1 p2 p3 p4 p5 p6
+[    6.244092] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp0 assign plane mask: 0x0, primary plane phy id: -1
+[    6.244120] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp1 assign plane mask: 0x2a, primary plane phy id: 5
+[    6.244131] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp2 assign plane mask: 0x15, primary plane phy id: 4
+[    6.244394] [drm] failed to init overlay plane Cluster0-win1
+[    6.244444] [drm] failed to init overlay plane Cluster1-win1
+[    6.244576] rockchip-drm display-subsystem: bound fe040000.vop (ops 0xffffffc0095ae288)
+[    6.244798] rockchip-drm display-subsystem: bound fdc60000.syscon:lvds (ops 0xffffffc0095c0330)
+[    6.255114] rockchip-drm display-subsystem: [drm] fb0: rockchipdrmfb frame buffer device
+[    6.255805] [drm] Initialized rockchip 3.0.0 20140818 for display-subsystem on minor 0
+[    6.256369] input: adc-keys as /devices/platform/adc-keys/input/input2
+[    6.259820] RKNPU fde40000.npu: Adding to iommu group 0
+[    6.260343] RKNPU fde40000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+[    6.260618] RKNPU fde40000.npu: can't request region for resource [mem 0xfde40000-0xfde4ffff]
+[    6.261132] [drm] Initialized rknpu 0.9.6 20240322 for fde40000.npu on minor 1
+[    6.261607] RKNPU fde40000.npu: leakage=3
+[    6.261652] RKNPU fde40000.npu: pvtm = 89870, from nvmem
+[    6.261671] RKNPU fde40000.npu: pvtm-volt-sel=2
+[    6.261705] RKNPU fde40000.npu: _of_add_opp_table_v2: no supported OPPs
+[    6.261715] RKNPU fde40000.npu: Invalid operating-points in device tree.
+[    6.261722] RKNPU fde40000.npu: RKNPU: failed to init_opp_table
+[    6.262860] Bluetooth: Starting self testing
+[    6.277694] Bluetooth: ECDH test passed in 14463 usecs
+[    6.282640] Bluetooth: SMP test passed in 4776 usecs
+[    6.282662] Bluetooth: Finished self testing
+[    6.282683] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    6.284425] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    6.285003] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    6.285017] cfg80211: failed to load regulatory.db
+[    6.285910] rockchip-pm rockchip-suspend: not set pwm-regulator-config
+[    6.285930] rockchip-suspend not set sleep-mode-config for mem-lite
+[    6.285937] rockchip-suspend not set wakeup-config for mem-lite
+[    6.285945] rockchip-suspend not set sleep-mode-config for mem-ultra
+[    6.285951] rockchip-suspend not set wakeup-config for mem-ultra
+[    6.287109] I : [File] : drivers/gpu/arm/mali400/mali/linux/mali_kernel_linux.c; [Line] : 406; [Func] : mali_module_init(); svn_rev_string_from_arm of this mali_ko is '', rk_ko_ver is '5', built at '17:07:21', on 'Jul 26 2026'.
+[    6.287542] Mali:
+[    6.287545] Mali device driver loaded
+[    6.287566] rkisp rkisp-vir0: clear unready subdev num: 1
+[    6.288155] rkisp-vir0: Async subdev notifier completed
+[    6.288170] ALSA device list:
+[    6.288177]   #0: rockchip-rk809
+[    6.323168] vendor storage:20190527 ret = 0
+[    6.339041] EXT4-fs (mmcblk0p6): recovery complete
+[    6.339625] EXT4-fs (mmcblk0p6): mounted filesystem with ordered data mode. Opts: (null)
+[    6.339698] VFS: Mounted root (ext4 filesystem) on device 179:6.
+[    6.340150] devtmpfs: mounted
+[    6.345401] Freeing unused kernel memory: 7232K
+[    6.359920] Run /sbin/init as init process
+[    6.359934]   with arguments:
+[    6.359937]     /sbin/init
+[    6.359939]   with environment:
+[    6.359942]     HOME=/
+[    6.359944]     TERM=linux
+[    6.359947]     storagemedia=emmc
+[    6.521629] systemd[1]: Failed to look up module alias 'autofs4': Function not implemented
+[    6.653123] systemd-fstab-generator[194]: Ignoring "noauto" for root device
+[    7.199851] rk-pcie 3c0000000.pcie: PCIe Link Fail
+[    7.199878] rk-pcie 3c0000000.pcie: failed to initialize host
+[    7.213128] rk-pcie 3c0800000.pcie: PCIe Link Fail
+[    7.213151] rk-pcie 3c0800000.pcie: failed to initialize host
+[    7.472548] EXT4-fs (mmcblk0p6): re-mounted. Opts: (null)
+[    7.881077] rkisp rkisp-vir0: first params buf queue
+[    7.957268] systemd-journald[214]: Received client request to flush runtime journal.
+[    7.968134] systemd-journald[214]: File /var/log/journal/7d6a26068dcb4b27b5466682fc4cb889/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[   10.148102] file system registered
+[   10.576238] read descriptors
+[   10.576258] read strings
+[   11.381968] dwc3 fcc00000.dwc3: device reset
+[   11.524628] dwc3 fcc00000.dwc3: device reset
+[   11.673006] android_work: sent uevent USB_STATE=CONNECTED
+[   11.673942] android_work: sent uevent USB_STATE=CONFIGURED
+[   11.903092] usb 5-1: USB disconnect, device number 2
+[   12.761405] 8723du: version magic '5.10.160 SMP mod_unload aarch64' should be '5.10.160-g4a31dcd15b09-dirty SMP mod_unload aarch64'
+[   12.812630] rtk_btusb: version magic '5.10.160 SMP mod_unload aarch64' should be '5.10.160-g4a31dcd15b09-dirty SMP mod_unload aarch64'
+[   13.448749] terry in : phy_rtl8211f_led_fixup
+[   13.451716] terry in : phy_rtl8211f_led_fixup
+[   13.493199] rk_gmac-dwmac fe010000.ethernet eth0: PHY [stmmac-1:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[   13.497867] dwmac4: Master AXI performs any burst length
+[   13.497894] rk_gmac-dwmac fe010000.ethernet eth0: No Safety Features support found
+[   13.497922] rk_gmac-dwmac fe010000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+[   13.498232] rk_gmac-dwmac fe010000.ethernet eth0: registered PTP clock
+[   13.531521] rk_gmac-dwmac fe010000.ethernet eth0: configuring for phy/rgmii link mode
+[   13.641811] terry in : phy_rtl8211f_led_fixup
+[   13.645391] terry in : phy_rtl8211f_led_fixup
+[   13.676496] rk_gmac-dwmac fe2a0000.ethernet eth1: PHY [stmmac-0:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[   13.684522] dwmac4: Master AXI performs any burst length
+[   13.684552] rk_gmac-dwmac fe2a0000.ethernet eth1: No Safety Features support found
+[   13.684583] rk_gmac-dwmac fe2a0000.ethernet eth1: IEEE 1588-2008 Advanced Timestamp supported
+[   13.684926] rk_gmac-dwmac fe2a0000.ethernet eth1: registered PTP clock
+[   13.695100] rk_gmac-dwmac fe2a0000.ethernet eth1: configuring for phy/rgmii link mode
+[   14.211121] ttyFIQ ttyFIQ0: tty_port_close_start: tty->count = 1 port count = 2
+[   16.980671] systemd-journald[214]: File /var/log/journal/7d6a26068dcb4b27b5466682fc4cb889/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[   17.103261] usb 6-1: new SuperSpeed Gen 1 USB device number 2 using xhci-hcd
+[   17.121071] usb 6-1: New USB device found, idVendor=2c7c, idProduct=0900, bcdDevice= 4.04
+[   17.121086] usb 6-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[   17.121090] usb 6-1: Product: RM500U-CN
+[   17.121094] usb 6-1: Manufacturer: Quectel
+[   17.121098] usb 6-1: SerialNumber: 0123456789ABCDEF
+[   17.200560] cdc_ncm 6-1:1.0: MAC-Address: f2:70:62:dc:0b:db
+[   17.201281] cdc_ncm 6-1:1.0 usb0: register 'cdc_ncm' at usb-xhci-hcd.0.auto-1, CDC NCM, f2:70:62:dc:0b:db
+[   17.202592] option 6-1:1.2: GSM modem (1-port) converter detected
+[   17.203346] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB0
+[   17.203808] option 6-1:1.3: GSM modem (1-port) converter detected
+[   17.209880] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB1
+[   17.210592] option 6-1:1.4: GSM modem (1-port) converter detected
+[   17.211520] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB2
+[   17.211977] option 6-1:1.5: GSM modem (1-port) converter detected
+[   17.212937] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB3
+[   17.213942] option 6-1:1.6: GSM modem (1-port) converter detected
+[   17.214846] usb 6-1: GSM modem (1-port) converter now attached to ttyUSB4
+[   17.428604] Freeing drm_logo memory: 736K
+[   17.497173] cdc_ncm 6-1:1.0 usb0: 3750 mbit/s downlink 3750 mbit/s uplink
+[   17.529178] cdc_ncm 6-1:1.0 usb0: 3750 mbit/s downlink 3750 mbit/s uplink
+[   37.853148] vcc3v3_lcd1_n: disabling
+[   60.405415] adbd (2036): /proc/2036/oom_adj is deprecated, please use /proc/2036/oom_score_adj instead.
+[  690.424774] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  690.426402] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  690.426441] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  723.779106] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  723.779119] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  723.790660] rkisp rkisp-vir0: first params buf queue
+[  747.187892] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  747.189528] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  747.189611] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  780.568334] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  780.568346] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  780.580292] rkisp rkisp-vir0: first params buf queue
+[  833.969132] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  833.970756] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  833.970797] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  839.958752] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  839.958765] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  839.970073] rkisp rkisp-vir0: first params buf queue
+[  889.850303] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  889.851935] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  889.851980] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[  895.838387] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[  895.838401] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[  895.849775] rkisp rkisp-vir0: first params buf queue
+[  928.105166] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[  928.106805] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[  928.106848] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[ 2524.114934] dwc3 fcc00000.dwc3: device reset
+[ 2524.147424] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[ 2524.147436] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[ 2524.158762] rkisp rkisp-vir0: first params buf queue
+[ 2524.225081] android_work: sent uevent USB_STATE=CONFIGURED
+[ 2524.227222] dwc3 fcc00000.dwc3: request ffffff810deb8b00 was not queued to ep0out
+[ 2524.227443] android_work: sent uevent USB_STATE=DISCONNECTED
+[ 2524.227660] read descriptors
+[ 2524.227674] read strings
+[ 2524.733256] dwc3 fcc00000.dwc3: device reset
+[ 2524.872294] dwc3 fcc00000.dwc3: device reset
+[ 2525.024852] android_work: sent uevent USB_STATE=CONNECTED
+[ 2525.025870] android_work: sent uevent USB_STATE=CONFIGURED
+[ 2608.506285] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[ 2608.508660] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[ 2608.508703] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[ 3822.719803] dwc3 fcc00000.dwc3: device reset
+[ 3822.844815] android_work: sent uevent USB_STATE=CONFIGURED
+[ 3822.846980] dwc3 fcc00000.dwc3: request ffffff8105e75e00 was not queued to ep0out
+[ 3822.847207] android_work: sent uevent USB_STATE=DISCONNECTED
+[ 3822.847445] read descriptors
+[ 3822.847460] read strings
+[ 3823.352253] dwc3 fcc00000.dwc3: device reset
+[ 3823.495975] dwc3 fcc00000.dwc3: device reset
+[ 3823.644571] android_work: sent uevent USB_STATE=CONNECTED
+[ 3823.645323] android_work: sent uevent USB_STATE=CONFIGURED
+[ 4605.657818] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[ 4605.657832] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[ 4605.669178] rkisp rkisp-vir0: first params buf queue
+[ 4682.308287] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[ 4682.310036] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[ 4682.310080] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[ 4685.733225] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[ 4685.733237] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[ 4685.747172] rkisp rkisp-vir0: first params buf queue
+[ 5291.805417] rockchip-vop2 fe040000.vop: [drm:vop2_crtc_atomic_disable] Crtc atomic disable vp2
+[37899.750755] rockchip-vop2 fe040000.vop: [drm:vop2_crtc_atomic_enable] Update mode to 1280x800p60, type: 7(if:8) for vp2 dclk: 82421000
+[37900.030333] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[37900.031989] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[37900.032035] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[37903.455603] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[37903.455617] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[37903.468080] rkisp rkisp-vir0: first params buf queue
+[37981.478548] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[37981.482176] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[37981.482221] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38011.567000] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38011.567013] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38011.578622] rkisp rkisp-vir0: first params buf queue
+[38011.643180] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38011.644817] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38011.644857] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38071.683614] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38071.683627] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38071.696182] rkisp rkisp-vir0: first params buf queue
+[38072.727636] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38072.729625] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38072.729670] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38132.768141] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38132.768154] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38132.780433] rkisp rkisp-vir0: first params buf queue
+[38133.794741] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38133.796469] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38133.796514] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38193.834915] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38193.834929] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38193.846375] rkisp rkisp-vir0: first params buf queue
+[38194.861965] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38194.863719] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38194.863761] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38254.903329] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38254.903342] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38254.915223] rkisp rkisp-vir0: first params buf queue
+[38255.929192] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38255.930824] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38255.930865] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38315.968757] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38315.968769] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38315.981355] rkisp rkisp-vir0: first params buf queue
+[38316.994102] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38316.995776] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38316.995817] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38347.046491] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38347.046504] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38347.058059] rkisp rkisp-vir0: first params buf queue
+[38347.128574] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38347.130280] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38347.130322] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38407.134730] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38407.134742] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38407.146161] rkisp rkisp-vir0: first params buf queue
+[38408.145191] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38408.147030] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38408.147073] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38468.152088] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38468.152101] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38468.163632] rkisp rkisp-vir0: first params buf queue
+[38469.162910] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38469.164598] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38469.164646] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38529.169211] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38529.169223] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38529.181167] rkisp rkisp-vir0: first params buf queue
+[38530.196316] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38530.198009] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38530.198053] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38590.202924] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38590.202937] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38590.215010] rkisp rkisp-vir0: first params buf queue
+[38591.214486] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38591.216474] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38591.216523] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38651.255938] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38651.255950] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38651.267480] rkisp rkisp-vir0: first params buf queue
+[38652.275381] rkisp-vir0: waiting on params stream off event timeout
+[38739.514541] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38739.516200] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38739.516247] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38819.491245] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38819.491258] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38819.502800] rkisp rkisp-vir0: first params buf queue
+[38819.573304] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38819.574924] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38819.574964] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38899.550859] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38899.550873] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38899.562001] rkisp rkisp-vir0: first params buf queue
+[38959.084732] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[38959.086593] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[38959.086639] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[38969.167834] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[38969.167846] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[38969.179055] rkisp rkisp-vir0: first params buf queue
+[39033.197560] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39033.201151] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39033.201195] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39037.293466] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39037.293479] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39037.305003] rkisp rkisp-vir0: first params buf queue
+[39038.298647] rkisp-vir0: waiting on params stream off event timeout
+[39038.376874] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39038.378611] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39038.378657] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39044.430912] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39044.430925] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39044.442240] rkisp rkisp-vir0: first params buf queue
+[39044.516530] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39044.518153] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39044.518194] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39048.607263] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39048.607276] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39048.618894] rkisp rkisp-vir0: first params buf queue
+[39048.684014] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39048.685634] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39048.685675] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39052.775683] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39052.775695] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39052.787355] rkisp rkisp-vir0: first params buf queue
+[39052.856129] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39052.857749] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39052.857788] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39056.980758] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39056.980772] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39056.992611] rkisp rkisp-vir0: first params buf queue
+[39057.057543] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39057.059155] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39057.059194] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39061.147998] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39061.148010] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39061.159198] rkisp rkisp-vir0: first params buf queue
+[39065.208409] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39065.210094] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39065.210135] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39071.264028] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39071.264042] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39071.275401] rkisp rkisp-vir0: first params buf queue
+[39071.346384] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39071.348013] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39071.348053] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39075.437476] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39075.437491] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39075.449561] rkisp rkisp-vir0: first params buf queue
+[39075.518032] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39075.519725] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39075.519770] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39079.608154] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39079.608167] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39079.620702] rkisp rkisp-vir0: first params buf queue
+[39133.700845] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39133.705379] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39133.705426] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39134.135443] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39134.135458] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39134.150980] rkisp rkisp-vir0: first params buf queue
+[39135.151954] rkisp-vir0: waiting on params stream off event timeout
+[39135.232077] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39135.233709] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39135.233751] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39135.661921] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39135.661935] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39135.673621] rkisp rkisp-vir0: first params buf queue
+[39135.749059] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39135.750683] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39135.750723] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39136.178601] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39136.178613] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39136.191389] rkisp rkisp-vir0: first params buf queue
+[39136.266011] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39136.267636] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39136.267678] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39136.695263] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39136.695276] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39136.707393] rkisp rkisp-vir0: first params buf queue
+[39136.783116] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39136.784737] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39136.784778] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39137.212005] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39137.212019] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39137.224393] rkisp rkisp-vir0: first params buf queue
+[39137.299864] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39137.301491] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39137.301533] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39137.729552] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39137.729565] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39137.741296] rkisp rkisp-vir0: first params buf queue
+[39137.816770] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39137.818390] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39137.818429] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39138.245858] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39138.245870] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39138.258229] rkisp rkisp-vir0: first params buf queue
+[39138.333946] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39138.335644] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39138.335690] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39138.762924] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39138.762936] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39138.774722] rkisp rkisp-vir0: first params buf queue
+[39138.850659] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39138.852274] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39138.852313] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39139.280258] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39139.280271] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39139.291668] rkisp rkisp-vir0: first params buf queue
+[39139.367633] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39139.369250] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39139.369292] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39139.796884] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39139.796897] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39139.809038] rkisp rkisp-vir0: first params buf queue
+[39139.884502] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39139.886120] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39139.886159] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39140.314711] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39140.314724] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39140.325949] rkisp rkisp-vir0: first params buf queue
+[39140.401537] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39140.403207] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39140.403246] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39140.831718] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39140.831731] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39140.844132] rkisp rkisp-vir0: first params buf queue
+[39140.918477] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39140.920162] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39140.920205] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39141.348589] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39141.348601] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39141.360643] rkisp rkisp-vir0: first params buf queue
+[39141.435549] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39141.437177] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39141.437220] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39141.865923] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39141.865936] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39141.877693] rkisp rkisp-vir0: first params buf queue
+[39142.885294] rkisp-vir0: waiting on params stream off event timeout
+[39142.952915] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39142.954532] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39142.954575] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39143.382995] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39143.383008] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39143.394357] rkisp rkisp-vir0: first params buf queue
+[39143.469964] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39143.471590] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39143.471630] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39143.899355] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39143.899370] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39143.912437] rkisp rkisp-vir0: first params buf queue
+[39143.988439] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39143.990538] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39143.990585] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39144.419422] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39144.419435] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39144.431469] rkisp rkisp-vir0: first params buf queue
+[39144.503827] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39144.505294] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39144.505336] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39144.933156] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39144.933169] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39144.945002] rkisp rkisp-vir0: first params buf queue
+[39145.020703] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39145.022350] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39145.022391] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39145.450199] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39145.450212] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39145.461564] rkisp rkisp-vir0: first params buf queue
+[39145.537629] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39145.539307] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39145.539348] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39145.966777] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39145.966789] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39145.978240] rkisp rkisp-vir0: first params buf queue
+[39146.054699] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39146.056320] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39146.056362] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39146.485488] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39146.485502] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39146.497932] rkisp rkisp-vir0: first params buf queue
+[39146.571495] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39146.573126] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39146.573166] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39147.001134] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39147.001148] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39147.012920] rkisp rkisp-vir0: first params buf queue
+[39147.088501] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39147.090188] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39147.090227] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39147.518615] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39147.518628] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39147.530244] rkisp rkisp-vir0: first params buf queue
+[39147.605628] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39147.607257] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39147.607295] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39148.035823] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39148.035835] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39148.047575] rkisp rkisp-vir0: first params buf queue
+[39148.122426] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39148.124051] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39148.124094] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39148.553074] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39148.553088] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39148.564866] rkisp rkisp-vir0: first params buf queue
+[39148.639401] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39148.641029] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39148.641069] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39149.069308] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39149.069319] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39149.081217] rkisp rkisp-vir0: first params buf queue
+[39149.156288] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39149.157914] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39149.157956] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39149.586340] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39149.586353] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39149.598035] rkisp rkisp-vir0: first params buf queue
+[39149.673452] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39149.675064] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39149.675104] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39150.103448] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39150.103462] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39150.115507] rkisp rkisp-vir0: first params buf queue
+[39150.190603] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39150.192278] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39150.192319] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39150.620946] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39150.620960] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39150.632561] rkisp rkisp-vir0: first params buf queue
+[39150.707279] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39150.708899] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39150.708938] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39151.138283] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39151.138296] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39151.150034] rkisp rkisp-vir0: first params buf queue
+[39151.224132] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39151.225753] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39151.225793] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39151.653766] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39151.653779] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39151.664977] rkisp rkisp-vir0: first params buf queue
+[39151.741243] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39151.742865] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39151.742904] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39152.171375] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39152.171388] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39152.184156] rkisp rkisp-vir0: first params buf queue
+[39152.258129] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39152.259763] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39152.259804] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39152.688363] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39152.688377] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39152.699739] rkisp rkisp-vir0: first params buf queue
+[39152.774986] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39152.776733] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39152.776775] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39153.205244] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39153.205256] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39153.217886] rkisp rkisp-vir0: first params buf queue
+[39153.292103] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39153.293727] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39153.293768] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39153.721571] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39153.721584] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39153.733208] rkisp rkisp-vir0: first params buf queue
+[39153.808985] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39153.810611] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39153.810653] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39154.238622] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39154.238636] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39154.250183] rkisp rkisp-vir0: first params buf queue
+[39154.325893] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39154.327522] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39154.327564] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39154.755279] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39154.755294] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39154.767011] rkisp rkisp-vir0: first params buf queue
+[39154.842869] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39154.844489] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39154.844529] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39155.273171] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39155.273184] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39155.284758] rkisp rkisp-vir0: first params buf queue
+[39155.359825] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39155.361445] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39155.361485] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39155.789142] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39155.789155] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39155.802468] rkisp rkisp-vir0: first params buf queue
+[39155.876758] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39155.878388] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39155.878439] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39156.306067] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39156.306080] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39156.317622] rkisp rkisp-vir0: first params buf queue
+[39156.393677] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39156.395316] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39156.395360] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39156.823074] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39156.823087] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39156.834631] rkisp rkisp-vir0: first params buf queue
+[39156.910745] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39156.912371] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39156.912409] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39157.340288] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39157.340300] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39157.351372] rkisp rkisp-vir0: first params buf queue
+[39157.427655] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39157.429340] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39157.429383] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39157.858179] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39157.858193] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39157.869571] rkisp rkisp-vir0: first params buf queue
+[39157.944568] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39157.946197] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39157.946236] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39158.374558] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39158.374572] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39158.386187] rkisp rkisp-vir0: first params buf queue
+[39158.461564] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39158.463246] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39158.463286] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39158.890661] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39158.890674] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39158.902382] rkisp rkisp-vir0: first params buf queue
+[39158.978409] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39158.980083] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39158.980124] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39159.407559] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39159.407571] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39159.419398] rkisp rkisp-vir0: first params buf queue
+[39159.495491] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39159.497178] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39159.497222] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39159.925250] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39159.925263] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39159.937306] rkisp rkisp-vir0: first params buf queue
+[39160.012403] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39160.014024] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39160.014065] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39160.442450] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39160.442463] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39160.453969] rkisp rkisp-vir0: first params buf queue
+[39160.529320] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39160.531006] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39160.531051] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39160.959696] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39160.959708] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39160.971721] rkisp rkisp-vir0: first params buf queue
+[39161.046268] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39161.047891] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39161.047930] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39161.476473] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39161.476486] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39161.487712] rkisp rkisp-vir0: first params buf queue
+[39161.563293] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39161.564917] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39161.564958] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39161.993328] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39161.993341] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39162.004769] rkisp rkisp-vir0: first params buf queue
+[39162.080303] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39162.081981] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39162.082021] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39162.510459] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39162.510471] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39162.522360] rkisp rkisp-vir0: first params buf queue
+[39162.597199] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39162.598839] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39162.598879] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39163.026706] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39163.026720] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39163.038112] rkisp rkisp-vir0: first params buf queue
+[39163.114125] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39163.115742] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39163.115781] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39163.544793] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39163.544806] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39163.556267] rkisp rkisp-vir0: first params buf queue
+[39163.631070] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39163.632759] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39163.632803] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39164.061131] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39164.061144] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39164.072434] rkisp rkisp-vir0: first params buf queue
+[39164.148039] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39164.149664] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39164.149704] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39164.577311] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39164.577324] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39164.589240] rkisp rkisp-vir0: first params buf queue
+[39164.664972] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39164.666653] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39164.666693] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39165.095258] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39165.095274] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39165.106925] rkisp rkisp-vir0: first params buf queue
+[39165.181940] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39165.183556] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39165.183596] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39165.611295] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39165.611309] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39165.623488] rkisp rkisp-vir0: first params buf queue
+[39165.698846] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39165.700476] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39165.700518] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39166.129192] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39166.129205] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39166.141290] rkisp rkisp-vir0: first params buf queue
+[39166.215868] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39166.217490] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39166.217532] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39166.645430] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39166.645444] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39166.657570] rkisp rkisp-vir0: first params buf queue
+[39166.732755] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39166.734438] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39166.734484] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39167.163323] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39167.163337] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39167.174850] rkisp rkisp-vir0: first params buf queue
+[39167.249676] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39167.251297] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39167.251338] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39167.678304] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39167.678318] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39167.690252] rkisp rkisp-vir0: first params buf queue
+[39167.766733] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39167.768360] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39167.768404] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39168.197487] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39168.197501] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39168.209373] rkisp rkisp-vir0: first params buf queue
+[39168.283617] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39168.285296] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39168.285337] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39168.712810] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39168.712823] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39168.726080] rkisp rkisp-vir0: first params buf queue
+[39168.800776] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39168.802484] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39168.802525] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39169.231201] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39169.231215] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39169.242524] rkisp rkisp-vir0: first params buf queue
+[39169.317536] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39169.319207] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39169.319247] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39169.747800] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39169.747814] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39169.759605] rkisp rkisp-vir0: first params buf queue
+[39169.834512] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39169.836135] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39169.836178] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39170.264902] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39170.264915] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39170.275967] rkisp rkisp-vir0: first params buf queue
+[39170.351468] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39170.353100] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39170.353140] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39170.782425] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39170.782438] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39170.794281] rkisp rkisp-vir0: first params buf queue
+[39170.868586] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39170.870393] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39170.870439] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39171.298425] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39171.298438] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39171.309836] rkisp rkisp-vir0: first params buf queue
+[39171.385367] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39171.386989] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39171.387030] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39171.816406] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39171.816419] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39171.829337] rkisp rkisp-vir0: first params buf queue
+[39171.902365] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39171.903993] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39171.904035] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39172.333162] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39172.333175] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39172.344602] rkisp rkisp-vir0: first params buf queue
+[39172.419329] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39172.420950] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39172.420991] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39172.849623] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39172.849635] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39172.861927] rkisp rkisp-vir0: first params buf queue
+[39172.936240] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39172.937921] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39172.937965] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39173.365769] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39173.365781] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39173.377999] rkisp rkisp-vir0: first params buf queue
+[39173.453166] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39173.454799] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39173.454837] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39173.881514] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39173.881527] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39173.892745] rkisp rkisp-vir0: first params buf queue
+[39173.953657] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39173.955332] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39173.955374] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39174.384167] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39174.384180] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39174.395151] rkisp rkisp-vir0: first params buf queue
+[39174.470490] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39174.471963] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39174.472005] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39174.900144] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39174.900156] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39174.911990] rkisp rkisp-vir0: first params buf queue
+[39174.987393] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39174.989030] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39174.989073] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39175.418175] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39175.418189] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39175.429876] rkisp rkisp-vir0: first params buf queue
+[39175.504367] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39175.505988] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39175.506027] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39175.933868] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39175.933881] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39175.945692] rkisp rkisp-vir0: first params buf queue
+[39176.021395] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39176.023007] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39176.023047] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39176.450414] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39176.450427] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39176.462664] rkisp rkisp-vir0: first params buf queue
+[39176.538240] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39176.539983] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39176.540026] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39176.967612] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39176.967625] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39176.978917] rkisp rkisp-vir0: first params buf queue
+[39177.055241] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39177.056927] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39177.056970] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39177.485894] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39177.485908] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39177.498109] rkisp rkisp-vir0: first params buf queue
+[39177.572087] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39177.573723] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39177.573764] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39178.001724] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39178.001737] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39178.013882] rkisp rkisp-vir0: first params buf queue
+[39178.089091] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39178.090716] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39178.090759] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39178.518570] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39178.518583] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39178.530369] rkisp rkisp-vir0: first params buf queue
+[39178.606115] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39178.607744] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39178.607786] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39179.035830] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39179.035843] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39179.047963] rkisp rkisp-vir0: first params buf queue
+[39179.122975] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39179.124606] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39179.124648] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39179.551923] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39179.551937] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39179.563782] rkisp rkisp-vir0: first params buf queue
+[39179.640009] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39179.641634] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39179.641676] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39180.068594] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39180.068610] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39180.081118] rkisp rkisp-vir0: first params buf queue
+[39180.156982] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39180.158657] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39180.158699] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39180.587661] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39180.587673] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39180.599380] rkisp rkisp-vir0: first params buf queue
+[39180.674070] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39180.675747] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39180.675788] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39181.102871] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39181.102883] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39181.114701] rkisp rkisp-vir0: first params buf queue
+[39181.190980] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39181.192606] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39181.192648] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39181.620265] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39181.620279] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39181.631798] rkisp rkisp-vir0: first params buf queue
+[39181.707767] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39181.709391] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39181.709431] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39182.138262] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39182.138275] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39182.149849] rkisp rkisp-vir0: first params buf queue
+[39182.225017] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39182.226699] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39182.226737] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39182.655262] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39182.655274] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39182.666791] rkisp rkisp-vir0: first params buf queue
+[39182.741578] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39182.743289] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39182.743331] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39183.171337] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39183.171350] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39183.182841] rkisp rkisp-vir0: first params buf queue
+[39183.258603] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39183.260291] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39183.260335] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39183.688325] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39183.688339] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39183.699646] rkisp rkisp-vir0: first params buf queue
+[39183.775525] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39183.777145] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39183.777185] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39184.205930] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39184.205943] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39184.218292] rkisp rkisp-vir0: first params buf queue
+[39184.292561] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39184.294187] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39184.294231] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39184.721514] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39184.721527] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39184.733344] rkisp rkisp-vir0: first params buf queue
+[39184.809524] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39184.811145] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39184.811185] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39185.239120] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39185.239133] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39185.251520] rkisp rkisp-vir0: first params buf queue
+[39185.326515] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39185.328202] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39185.328245] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39185.756051] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39185.756065] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39185.767842] rkisp rkisp-vir0: first params buf queue
+[39185.843557] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39185.845180] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39185.845269] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39186.274045] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39186.274058] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39186.285145] rkisp rkisp-vir0: first params buf queue
+[39186.360390] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39186.361943] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39186.361985] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39186.789442] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39186.789456] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39186.801375] rkisp rkisp-vir0: first params buf queue
+[39186.877234] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39186.878912] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39186.878953] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39187.307920] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39187.307932] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39187.319744] rkisp rkisp-vir0: first params buf queue
+[39246.696611] rkisp_hw fdff0000.rkisp: set isp clk = 297000000Hz
+[39246.698434] rockchip-csi2-dphy0: dphy0, data_rate_mbps 840
+[39246.698478] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:1, dphy0
+[39251.698226] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream_stop stream stop, dphy0
+[39251.698238] rockchip-csi2-dphy csi2-dphy0: csi2_dphy_s_stream stream on:0, dphy0
+[39251.710223] rkisp rkisp-vir0: first params buf queue

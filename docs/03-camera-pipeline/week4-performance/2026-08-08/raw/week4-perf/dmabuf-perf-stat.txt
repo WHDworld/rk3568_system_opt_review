@@ -1,0 +1,11 @@
+
+ Performance counter stats for process id '26204':
+
+     1,019,546,022      cycles
+       227,799,646      instructions              #    0.22  insn per cycle
+        22,367,522      cache-references
+         1,863,838      cache-misses              #    8.333 % of all cache refs
+             3,619      context-switches
+                 0      page-faults
+
+      60.003136279 seconds time elapsed

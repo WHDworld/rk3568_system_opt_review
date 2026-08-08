@@ -1,0 +1,4 @@
+drm_atomic_commit
+rockchip_drm_atomic_helper_commit_tail_rpm
+dma_fence_signal
+vb2_buffer_done

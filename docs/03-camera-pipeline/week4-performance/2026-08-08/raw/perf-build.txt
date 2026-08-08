@@ -1,0 +1,16 @@
+source=kernel/tools/perf from BSP Linux 5.10.160 tree
+compiler=aarch64-linux-gnu-gcc
+output=/tmp/rk3568-perf-build/perf
+file=ELF 64-bit LSB shared object, ARM aarch64, dynamically linked
+board_version=perf version 5.10.160
+build_exit=0
+
+Command:
+make -C kernel/tools/perf O=/tmp/rk3568-perf-build ARCH=arm64 \
+  CROSS_COMPILE=aarch64-linux-gnu- NO_LIBELF=1 NO_DWARF=1 \
+  NO_LIBUNWIND=1 NO_LIBAUDIT=1 NO_SLANG=1 NO_GTK2=1 NO_LIBBFD=1 \
+  NO_DEMANGLE=1 NO_LIBPYTHON=1 NO_LIBPERL=1 WERROR=0 -j4
+
+The minimal build disables symbol/DWARF features not needed by perf stat. Hardware PMU events
+cycles, instructions, cache-references, cache-misses, context-switches and page-faults were
+verified on the board before the A/B measurement.
